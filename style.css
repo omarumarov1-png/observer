@@ -62,6 +62,7 @@
 }
 
 * { box-sizing: border-box; }
+button { color: inherit; font: inherit; }
 
 body {
   margin: 0;
@@ -132,6 +133,15 @@ button.stat:hover { color: var(--navy); }
   padding: 0; cursor: pointer; transition: border-color 0.15s ease, transform 0.15s ease;
 }
 .icon-btn:hover { border-color: var(--navy); }
+
+.direction-toggle {
+  background: var(--navy-wash); border: 1.5px solid var(--navy); border-radius: 20px;
+  height: 32px; padding: 0 14px; font-family: var(--font-mono); font-size: 0.78rem;
+  font-weight: 700; color: var(--navy); cursor: pointer; white-space: nowrap;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.direction-toggle:hover { background: var(--navy); color: var(--paper-raised); }
+.direction-toggle:active { transform: scale(0.96); }
 .theme-toggle .icon-moon { display: none; }
 :root[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
 :root[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
@@ -248,7 +258,7 @@ button.stat:hover { color: var(--navy); }
 .options { display: flex; flex-direction: column; gap: 10px; }
 .option {
   text-align: left; padding: 14px 16px; border: 1.5px solid var(--line); border-radius: 8px;
-  background: var(--paper); font-family: var(--font-body); font-size: 0.98rem; cursor: pointer;
+  background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 0.98rem; cursor: pointer;
   transition: border-color 0.12s ease, background 0.12s ease;
 }
 .option:hover:not(:disabled) { border-color: var(--navy); }
@@ -260,7 +270,7 @@ button.stat:hover { color: var(--navy); }
 .bank-target { padding: 12px; border: 1.5px dashed var(--line); border-radius: 8px; margin-bottom: 18px; }
 .bank-tile {
   font-family: var(--font-body); font-size: 0.98rem; padding: 8px 14px; border-radius: 6px;
-  border: 1.5px solid var(--line); background: var(--paper); cursor: pointer;
+  border: 1.5px solid var(--line); background: var(--paper); color: var(--ink); cursor: pointer;
 }
 .bank-tile:hover { border-color: var(--navy); }
 .bank-tile.placed { opacity: 0.35; cursor: default; }

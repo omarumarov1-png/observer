@@ -4,6 +4,7 @@
   const PROGRESS_KEY = "nablyudatel-progress-v1";
   const THEME_KEY = "nablyudatel-theme";
   const SOUND_KEY = "nablyudatel-sound";
+  const DIRECTION_KEY = "nablyudatel-direction";
   const MAX_MISSED = 150;
   const REVISION_SIZE = 20;
   const ADVANCE_DELAY_CORRECT = 900;
@@ -20,6 +21,7 @@
   const practiceStatEl = document.getElementById("practiceStat");
   const themeToggleEl = document.getElementById("themeToggle");
   const soundToggleEl = document.getElementById("soundToggle");
+  const directionToggleEl = document.getElementById("directionToggle");
   const hoardModal = document.getElementById("hoardModal");
 
   let course = null;
@@ -29,6 +31,7 @@
   let session = null;
   let advanceTimer = null;
   let soundMuted = false;
+  let direction = "ru-en"; // "ru-en" = Russian shown, answer in English; "en-ru" = reverse
 
   // ---------- theme ----------
   function initTheme() {
@@ -46,6 +49,31 @@
     const next = currentEffectiveTheme() === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", next);
     localStorage.setItem(THEME_KEY, next);
+  }
+
+  // ---------- practice direction ----------
+  function initDirection() {
+    const stored = localStorage.getItem(DIRECTION_KEY);
+    direction = stored === "en-ru" ? "en-ru" : "ru-en";
+    updateDirectionToggleUI();
+  }
+  function updateDirectionToggleUI() {
+    directionToggleEl.textContent = direction === "ru-en" ? "RU → EN" : "EN → RU";
+    directionToggleEl.setAttribute(
+      "aria-label",
+      direction === "ru-en"
+        ? "Practicing Russian to English — click to switch to English to Russian"
+        : "Practicing English to Russian — click to switch to Russian to English"
+    );
+  }
+  function toggleDirection() {
+    direction = direction === "ru-en" ? "en-ru" : "ru-en";
+    localStorage.setItem(DIRECTION_KEY, direction);
+    updateDirectionToggleUI();
+    if (session && session.queue.length) {
+      cancelAdvance();
+      renderExercise();
+    }
   }
 
   // ---------- sound ----------
@@ -130,14 +158,16 @@
   function ruTokens(s) {
     return s.trim().replace(/[.,!?;:«»"—–]/g, "").split(/\s+/).filter(Boolean);
   }
+  function enTokens(s) {
+    return s.trim().replace(/[.,!?;:«»"—–]/g, "").split(/\s+/).filter(Boolean);
+  }
   function isLessonUnlocked(flatIndex) {
     if (flatIndex === 0) return true;
     return progress.completedLessons.includes(flatLessons[flatIndex - 1].id);
   }
   function harvestWords(ex) {
-    let words = [];
-    if (ex.type === "word-bank") words = ex.answer;
-    else if (ex.type === "multiple-choice" && ex.direction === "ru-en") words = ruTokens(ex.prompt);
+    // Always collect the Russian side — this is a Russian term bank regardless of practice direction.
+    const words = ruTokens(ex.ru);
     let added = 0;
     words.forEach(w => {
       if (!progress.wordHoard.includes(w)) { progress.wordHoard.push(w); added++; }
@@ -167,6 +197,7 @@
   async function boot() {
     initTheme();
     initSound();
+    initDirection();
     await loadCourseData();
     progress = loadProgress();
     refreshTopStats();
@@ -177,6 +208,7 @@
   function wireGlobalUi() {
     themeToggleEl.addEventListener("click", toggleTheme);
     soundToggleEl.addEventListener("click", toggleSound);
+    directionToggleEl.addEventListener("click", toggleDirection);
 
     wordsStatEl.addEventListener("click", () => {
       renderHoard();
@@ -445,17 +477,27 @@
 
   // ---- multiple choice ----
   function renderMultipleChoice(ex) {
-    const options = ex.options.map((opt, i) =>
+    const srcText = direction === "ru-en" ? ex.ru : ex.en;
+    const correctText = direction === "ru-en" ? ex.en : ex.ru;
+    const siblingTexts = (ex._sourceLesson.exercises || [])
+      .filter(e => !(e.ru === ex.ru && e.en === ex.en))
+      .map(e => direction === "ru-en" ? e.en : e.ru);
+    const pool = Array.from(new Set(siblingTexts.filter(t => t !== correctText)));
+    const distractors = shuffled(pool).slice(0, 3);
+    const options = shuffled([correctText, ...distractors]);
+    const answerIndex = options.indexOf(correctText);
+
+    const optionsHtml = options.map((opt, i) =>
       `<button class="option" data-i="${i}">${opt}</button>`
     ).join("");
-    const kicker = ex.direction === "ru-en" ? "Translate to English" : "Translate to Russian";
-    const promptClass = ex.direction === "ru-en" ? "prompt-native" : "prompt-en";
+    const kicker = direction === "ru-en" ? "Translate to English" : "Translate to Russian";
+    const promptClass = direction === "ru-en" ? "prompt-native" : "prompt-en";
 
     renderLessonChrome(`
       <div class="card">
         <div class="prompt-kicker">${kicker}</div>
-        <div class="${promptClass}">${ex.prompt}</div>
-        <div class="options">${options}</div>
+        <div class="${promptClass}">${srcText}</div>
+        <div class="options">${optionsHtml}</div>
       </div>
     `);
 
@@ -464,12 +506,12 @@
       btn.addEventListener("click", () => {
         buttons.forEach(b => b.disabled = true);
         const i = Number(btn.dataset.i);
-        const correct = i === ex.answerIndex;
+        const correct = i === answerIndex;
         btn.classList.add(correct ? "correct" : "incorrect");
-        if (!correct) buttons[ex.answerIndex].classList.add("correct");
+        if (!correct) buttons[answerIndex].classList.add("correct");
         afterAnswer(correct);
         const delay = correct ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_WRONG;
-        screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, ex.options[ex.answerIndex]));
+        screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, correctText));
         scheduleAdvance(delay);
       });
     });
@@ -477,14 +519,18 @@
 
   // ---- word bank ----
   function renderWordBank(ex) {
-    const bank = shuffled(ex.bank);
+    const srcText = direction === "ru-en" ? ex.ru : ex.en;
+    const tgtText = direction === "ru-en" ? ex.en : ex.ru;
+    const tgtTokens = direction === "ru-en" ? enTokens(tgtText) : ruTokens(tgtText);
+    const bank = shuffled(tgtTokens);
     let placed = [];
-    const kicker = ex.direction === "en-ru" ? "Translate to Russian" : "Translate to English";
+    const kicker = direction === "ru-en" ? "Translate to English" : "Translate to Russian";
+    const promptClass = direction === "ru-en" ? "prompt-native" : "prompt-en";
 
     renderLessonChrome(`
       <div class="card">
         <div class="prompt-kicker">${kicker}</div>
-        <div class="prompt-en">${ex.prompt}</div>
+        <div class="${promptClass}">${srcText}</div>
         <div class="bank-target" id="bankTarget"></div>
         <div class="bank-pool" id="bankPool"></div>
         <button class="check-btn" id="checkBtn" disabled>Check</button>
@@ -507,7 +553,7 @@
         `<button class="bank-tile ${usedIdx.has(i) ? "placed" : ""}" data-pool-i="${i}" ${usedIdx.has(i) ? "disabled" : ""}>${w}</button>`
       ).join("");
 
-      checkBtn.disabled = placed.length !== ex.answer.length;
+      checkBtn.disabled = placed.length !== tgtTokens.length;
 
       poolEl.querySelectorAll(".bank-tile:not(.placed)").forEach(btn => {
         btn.addEventListener("click", () => {
@@ -529,10 +575,10 @@
       poolEl.querySelectorAll(".bank-tile").forEach(b => b.disabled = true);
       targetEl.querySelectorAll(".bank-tile").forEach(b => b.disabled = true);
       checkBtn.disabled = true;
-      const correct = placed.length === ex.answer.length && placed.every((w, i) => w === ex.answer[i]);
+      const correct = placed.length === tgtTokens.length && placed.every((w, i) => w === tgtTokens[i]);
       afterAnswer(correct);
       const delay = correct ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_WRONG;
-      screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, ex.answer.join(" ")));
+      screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, tgtTokens.join(" ")));
       scheduleAdvance(delay);
     });
   }
