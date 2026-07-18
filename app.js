@@ -162,17 +162,30 @@
     refreshVoices();
     window.speechSynthesis.onvoiceschanged = refreshVoices;
   }
+  const SPEECH_RATE = 0.85;
   function speak(text, lang) {
     if (soundMuted || !("speechSynthesis" in window)) return;
     try {
       window.speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(text);
       u.lang = lang;
-      u.rate = 0.92;
+      u.rate = SPEECH_RATE;
       const voice = lang === "ru-RU" ? _preferredVoiceRu : _preferredVoiceEn;
       if (voice) u.voice = voice;
       window.speechSynthesis.speak(u);
     } catch (e) { /* TTS unavailable */ }
+  }
+  // Keep the auto-advance timer from cutting off the spoken answer — estimate
+  // how long the TTS will take (~2.3 words/sec at rate 1.0, scaled by our
+  // slower rate) and never advance sooner than that, plus a trailing pause.
+  function speechDurationMs(text) {
+    if (!text) return 0;
+    const words = text.trim().split(/\s+/).filter(Boolean).length;
+    return (words / (2.3 * SPEECH_RATE)) * 1000 + 1000;
+  }
+  function answerAdvanceDelay(correct, text) {
+    const base = correct ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_WRONG;
+    return Math.max(base, speechDurationMs(text));
   }
   function speakAnswer(text) {
     speak(text, direction === "ru-en" ? "en-US" : "ru-RU");
@@ -531,8 +544,7 @@
     else if (ex.type === "word-bank") renderWordBank(ex);
   }
 
-  function renderFeedback(correct, correctText) {
-    const delay = correct ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_WRONG;
+  function renderFeedback(correct, correctText, delay) {
     return `
       <div class="feedback ${correct ? "correct" : "incorrect"}" role="status">
         <button class="speak-btn" id="feedbackSpeakBtn" title="Play pronunciation" aria-label="Play pronunciation">🔊</button>
@@ -618,8 +630,8 @@
         btn.classList.add(correct ? "correct" : "incorrect");
         if (!correct) buttons[answerIndex].classList.add("correct");
         afterAnswer(correct);
-        const delay = correct ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_WRONG;
-        screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, correctText));
+        const delay = answerAdvanceDelay(correct, correctText);
+        screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, correctText, delay));
         wireFeedbackReplay(correctText);
         scheduleAdvance(delay);
       });
@@ -656,9 +668,9 @@
       targetEl.querySelectorAll(".bank-tile").forEach(b => b.disabled = true);
       const correct = placed.length === tgtTokens.length && placed.every((w, i) => w === tgtTokens[i]);
       afterAnswer(correct);
-      const delay = correct ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_WRONG;
       const answerText = tgtTokens.join(" ");
-      screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, answerText));
+      const delay = answerAdvanceDelay(correct, answerText);
+      screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, answerText, delay));
       wireFeedbackReplay(answerText);
       scheduleAdvance(delay);
     }
