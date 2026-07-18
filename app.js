@@ -110,6 +110,63 @@
   function playCorrectSound() { beep(880, 0.15); }
   function playIncorrectSound() { beep(220, 0.25); }
 
+  // ---------- text-to-speech ----------
+  // Ranked by how natural/pleasant they sound among voices that ship free
+  // with the browser/OS (no paid API, no extra download): Chrome's Google
+  // voices and Edge's neural voices lead, then other common system voices
+  // before falling back to anything in that language.
+  const VOICE_RANK_EN = [
+    /Google US English/i,
+    /Microsoft (Aria|Jenny|Emma).*(Natural|Online)/i,
+    /Samantha/i,
+    /Microsoft Zira/i,
+    /Ava|Nicky|Zoe/i,
+    /Microsoft (David|Mark)/i,
+  ];
+  const VOICE_RANK_RU = [
+    /Google русский/i,
+    /Microsoft (Svetlana|Dariya).*(Natural|Online)/i,
+    /Milena/i,
+    /Microsoft (Irina|Pavel)/i,
+    /Yuri/i,
+  ];
+  let _voices = [];
+  let _preferredVoiceEn = null;
+  let _preferredVoiceRu = null;
+  function pickVoice(lang, rankList) {
+    const pool = _voices.filter(v => v.lang === lang || v.lang.startsWith(lang.slice(0, 2)));
+    for (const pattern of rankList) {
+      const match = pool.find(v => pattern.test(v.name));
+      if (match) return match;
+    }
+    return pool[0] || null;
+  }
+  function refreshVoices() {
+    if (!("speechSynthesis" in window)) return;
+    _voices = window.speechSynthesis.getVoices() || [];
+    _preferredVoiceEn = pickVoice("en-US", VOICE_RANK_EN);
+    _preferredVoiceRu = pickVoice("ru-RU", VOICE_RANK_RU);
+  }
+  if ("speechSynthesis" in window) {
+    refreshVoices();
+    window.speechSynthesis.onvoiceschanged = refreshVoices;
+  }
+  function speak(text, lang) {
+    if (soundMuted || !("speechSynthesis" in window)) return;
+    try {
+      window.speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = lang;
+      u.rate = 0.92;
+      const voice = lang === "ru-RU" ? _preferredVoiceRu : _preferredVoiceEn;
+      if (voice) u.voice = voice;
+      window.speechSynthesis.speak(u);
+    } catch (e) { /* TTS unavailable */ }
+  }
+  function speakAnswer(text) {
+    speak(text, direction === "ru-en" ? "en-US" : "ru-RU");
+  }
+
   // ---------- persistence ----------
   function loadProgress() {
     try {
@@ -467,6 +524,7 @@
     const delay = correct ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_WRONG;
     return `
       <div class="feedback ${correct ? "correct" : "incorrect"}" role="status">
+        <button class="speak-btn" id="feedbackSpeakBtn" title="Play pronunciation" aria-label="Play pronunciation">🔊</button>
         <div class="feedback-text">
           <div class="title">${correct ? "Correct" : "Not quite"}</div>
           ${correct ? "" : `<div class="detail">${correctText}</div>`}
@@ -475,10 +533,15 @@
       </div>
     `;
   }
+  function wireFeedbackReplay(text) {
+    const btn = document.getElementById("feedbackSpeakBtn");
+    if (btn) btn.addEventListener("click", () => speakAnswer(text));
+  }
 
   function afterAnswer(correct) {
     const ex = currentExercise();
     correct ? playCorrectSound() : playIncorrectSound();
+    speakAnswer(direction === "ru-en" ? ex.en : ex.ru);
     if (correct) {
       session.solved.add(ex._idx);
       session.combo++;
@@ -546,6 +609,7 @@
         afterAnswer(correct);
         const delay = correct ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_WRONG;
         screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, correctText));
+        wireFeedbackReplay(correctText);
         scheduleAdvance(delay);
       });
     });
@@ -582,7 +646,9 @@
       const correct = placed.length === tgtTokens.length && placed.every((w, i) => w === tgtTokens[i]);
       afterAnswer(correct);
       const delay = correct ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_WRONG;
-      screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, tgtTokens.join(" ")));
+      const answerText = tgtTokens.join(" ");
+      screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, answerText));
+      wireFeedbackReplay(answerText);
       scheduleAdvance(delay);
     }
 

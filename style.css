@@ -284,14 +284,21 @@ button.stat:hover { color: var(--navy); }
 .bank-tile:hover { border-color: var(--navy); }
 .bank-tile.placed { opacity: 0.35; cursor: default; }
 
-.feedback { position: fixed; left: 0; right: 0; bottom: 0; padding: 18px 20px; display: flex; align-items: center; justify-content: space-between; }
+.feedback { position: fixed; left: 0; right: 0; bottom: 0; padding: 18px 20px; display: flex; align-items: center; gap: 14px; justify-content: space-between; }
 .feedback.correct { background: var(--navy-wash); border-top: 2px solid var(--navy); }
 .feedback.incorrect { background: var(--stamp-wash); border-top: 2px solid var(--stamp); }
+.feedback-text { flex: 1; min-width: 0; }
 .feedback-text .title { font-weight: 700; font-size: 1.05rem; }
 .feedback.correct .title { color: var(--navy); }
 .feedback.incorrect .title { color: var(--stamp); }
 .feedback-text .detail { font-size: 0.88rem; color: var(--ink-soft); margin-top: 2px; }
-.feedback-timer { width: 40px; height: 4px; border-radius: 2px; background: var(--ink-soft); animation: shrink linear forwards; }
+.feedback-timer { width: 40px; height: 4px; border-radius: 2px; background: var(--ink-soft); animation: shrink linear forwards; flex-shrink: 0; }
+.speak-btn {
+  background: var(--gold-wash); border: 1px solid var(--gold); border-radius: 50%; width: 34px; height: 34px;
+  display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; font-size: 1rem;
+  color: var(--gold); transition: background 0.12s ease, color 0.12s ease;
+}
+.speak-btn:hover { background: var(--gold); color: #fff; }
 @keyframes shrink { from { width: 40px; } to { width: 0; } }
 
 .summary { text-align: center; padding: 50px 20px; }
