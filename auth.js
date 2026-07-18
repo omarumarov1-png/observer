@@ -14,11 +14,28 @@
 
   const APP_ID = "nablyudatel";
   const SDK = "https://www.gstatic.com/firebasejs/10.14.1/";
+  // The owner's account is always auto-approved (and self-heals if the
+  // Firestore flag is ever accidentally left off) — everyone else who signs
+  // in starts as "pending" until approved manually via the Firebase Console:
+  // Firestore -> apps/nablyudatel/users/{uid} -> set approved: true.
+  const OWNER_EMAIL = "omarumarov1@gmail.com";
 
   const gateEl = document.getElementById("authGate");
   const appRootEl = document.getElementById("app");
   const accountBtn = document.getElementById("accountToggle");
   const accountModal = document.getElementById("accountModal");
+  const pendingEl = document.getElementById("pendingGate");
+  const pendingEmailEl = document.getElementById("pendingEmail");
+  const pendingSignOutBtn = document.getElementById("pendingSignOutBtn");
+
+  function showPending(user) {
+    if (!pendingEl) return;
+    if (pendingEmailEl) pendingEmailEl.textContent = user.email || user.displayName || "";
+    pendingEl.classList.remove("hidden");
+  }
+  function hidePending() {
+    if (pendingEl) pendingEl.classList.add("hidden");
+  }
 
   function revealApp() {
     gateEl.classList.add("hidden");
@@ -150,6 +167,9 @@
       accountModal.addEventListener("click", e => { if (e.target === accountModal) accountModal.classList.add("hidden"); });
       signOutBtn.addEventListener("click", () => signOut(auth));
     }
+    if (pendingSignOutBtn) {
+      pendingSignOutBtn.addEventListener("click", () => signOut(auth));
+    }
 
     window.CloudSync = {
       appId: APP_ID,
@@ -180,6 +200,8 @@
       window.CloudSync.user = user;
       if (user) {
         const ref = doc(db, "apps", APP_ID, "users", user.uid);
+        const isOwner = !!(user.email && user.email.toLowerCase() === OWNER_EMAIL);
+        let approved = isOwner;
         try {
           const existing = await getDoc(ref);
           const patch = {
@@ -187,9 +209,23 @@
             displayName: user.displayName || null,
             lastSeen: serverTimestamp(),
           };
-          if (!existing.exists()) patch.createdAt = serverTimestamp();
+          if (!existing.exists()) {
+            patch.createdAt = serverTimestamp();
+            patch.approved = isOwner; // owner auto-approved; everyone else starts pending
+          } else if (isOwner && existing.data().approved !== true) {
+            patch.approved = true; // never let the owner get locked out
+          }
           await setDoc(ref, patch, { merge: true });
-        } catch (e) { /* offline — profile touch skipped */ }
+          approved = isOwner || (existing.exists() ? existing.data().approved === true : isOwner);
+        } catch (e) { /* offline — profile touch skipped, fall back to isOwner only */ }
+
+        if (!approved) {
+          gateEl.classList.add("hidden");
+          appRootEl.classList.add("hidden");
+          showPending(user);
+          return;
+        }
+        hidePending();
 
         revealApp();
         if (accountBtn) {
@@ -199,6 +235,7 @@
         startApp();
       } else {
         window.__appStarted = false;
+        hidePending();
         gateEl.classList.remove("hidden");
         appRootEl.classList.add("hidden");
         if (accountBtn) accountBtn.classList.add("hidden");

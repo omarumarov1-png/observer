@@ -142,6 +142,15 @@ button.stat:hover { color: var(--navy); }
 }
 .direction-toggle:hover { background: var(--navy); color: var(--paper-raised); }
 .direction-toggle:active { transform: scale(0.96); }
+
+/* Wraps direction/account/theme/sound toggles so they can collapse into a
+   dropdown on narrow screens; `display: contents` makes the wrapper
+   invisible to flex layout on wider screens, so it changes nothing there. */
+.mobile-menu { display: contents; }
+.mobile-menu-panel { display: contents; }
+.menu-toggle { display: none; }
+.menu-label { display: none; }
+
 .theme-toggle .icon-moon { display: none; }
 :root[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
 :root[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
@@ -274,13 +283,6 @@ button.stat:hover { color: var(--navy); }
 }
 .bank-tile:hover { border-color: var(--navy); }
 .bank-tile.placed { opacity: 0.35; cursor: default; }
-.check-btn {
-  margin-top: 20px; width: 100%; padding: 13px; border-radius: 8px; border: none;
-  background: var(--navy); color: var(--paper-raised); font-family: var(--font-body); font-weight: 700;
-  font-size: 1rem; cursor: pointer; box-shadow: 0 3px 0 var(--btn-shadow);
-}
-.check-btn:hover:not(:disabled) { background: var(--navy-bright); }
-.check-btn:disabled { opacity: 0.4; cursor: default; }
 
 .feedback { position: fixed; left: 0; right: 0; bottom: 0; padding: 18px 20px; display: flex; align-items: center; justify-content: space-between; }
 .feedback.correct { background: var(--navy-wash); border-top: 2px solid var(--navy); }
@@ -372,6 +374,33 @@ button.stat:hover { color: var(--navy); }
 @media (max-width: 640px) {
   .topbar { flex-wrap: wrap; row-gap: 12px; padding: 14px 16px 16px; }
   .stats { width: 100%; flex-wrap: wrap; justify-content: flex-end; row-gap: 8px; }
+
+  /* Direction/account/theme/sound controls collapse into a menu button so
+     the bar stays to one tidy row instead of wrapping several deep. */
+  .mobile-menu { display: block; position: relative; }
+  .mobile-menu-panel { display: none; }
+  .menu-toggle {
+    display: flex; align-items: center; justify-content: center;
+    width: 32px; height: 32px; border-radius: 50%;
+    border: 1.5px solid var(--line); background: none; padding: 0; cursor: pointer;
+  }
+  .menu-toggle:hover { border-color: var(--navy); }
+
+  .mobile-menu-panel.open {
+    display: flex; flex-direction: column; gap: 8px;
+    position: absolute; top: calc(100% + 10px); right: 0;
+    background: var(--paper-raised); border: 1px solid var(--line); border-radius: 12px;
+    padding: 10px; box-shadow: 0 8px 24px var(--shadow); z-index: 30; min-width: 160px;
+  }
+
+  .mobile-menu .direction-toggle,
+  .mobile-menu .account-toggle,
+  .mobile-menu .theme-toggle,
+  .mobile-menu .sound-toggle {
+    width: 100%; height: auto; justify-content: flex-start;
+    border-radius: 8px; padding: 8px 10px; gap: 8px;
+  }
+  .mobile-menu .menu-label { display: inline; font-size: 0.85rem; font-weight: 600; }
 }
 @media (max-width: 480px) {
   .hero h1 { font-size: 2rem; }

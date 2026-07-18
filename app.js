@@ -8,7 +8,7 @@
   const MAX_MISSED = 150;
   const REVISION_SIZE = 20;
   const ADVANCE_DELAY_CORRECT = 900;
-  const ADVANCE_DELAY_WRONG = 2000;
+  const ADVANCE_DELAY_WRONG = 5000;
 
   const screenEl = document.getElementById("screen");
   const streakEl = document.getElementById("streakCount");
@@ -22,6 +22,9 @@
   const themeToggleEl = document.getElementById("themeToggle");
   const soundToggleEl = document.getElementById("soundToggle");
   const directionToggleEl = document.getElementById("directionToggle");
+  const mobileMenuEl = document.getElementById("mobileMenu");
+  const menuToggleBtnEl = document.getElementById("menuToggleBtn");
+  const mobileMenuPanelEl = document.getElementById("mobileMenuPanel");
   const hoardModal = document.getElementById("hoardModal");
 
   let course = null;
@@ -243,6 +246,23 @@
     });
     hoardModal.addEventListener("click", e => {
       if (e.target === hoardModal) hoardModal.classList.add("hidden");
+    });
+
+    function closeMobileMenu() {
+      mobileMenuPanelEl.classList.remove("open");
+      menuToggleBtnEl.setAttribute("aria-expanded", "false");
+    }
+    menuToggleBtnEl.addEventListener("click", () => {
+      const nowOpen = mobileMenuPanelEl.classList.toggle("open");
+      menuToggleBtnEl.setAttribute("aria-expanded", String(nowOpen));
+    });
+    mobileMenuPanelEl.querySelectorAll("button").forEach(btn => {
+      btn.addEventListener("click", closeMobileMenu);
+    });
+    document.addEventListener("click", e => {
+      if (mobileMenuPanelEl.classList.contains("open") && !mobileMenuEl.contains(e.target)) {
+        closeMobileMenu();
+      }
     });
 
     document.addEventListener("keydown", e => {
@@ -547,13 +567,24 @@
         <div class="${promptClass}">${srcText}</div>
         <div class="bank-target" id="bankTarget"></div>
         <div class="bank-pool" id="bankPool"></div>
-        <button class="check-btn" id="checkBtn" disabled>Check</button>
       </div>
     `);
 
     const targetEl = document.getElementById("bankTarget");
     const poolEl = document.getElementById("bankPool");
-    const checkBtn = document.getElementById("checkBtn");
+    let submitted = false;
+
+    function submit() {
+      if (submitted) return;
+      submitted = true;
+      poolEl.querySelectorAll(".bank-tile").forEach(b => b.disabled = true);
+      targetEl.querySelectorAll(".bank-tile").forEach(b => b.disabled = true);
+      const correct = placed.length === tgtTokens.length && placed.every((w, i) => w === tgtTokens[i]);
+      afterAnswer(correct);
+      const delay = correct ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_WRONG;
+      screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, tgtTokens.join(" ")));
+      scheduleAdvance(delay);
+    }
 
     function renderTiles() {
       targetEl.innerHTML = placed.map((w, i) => `<button class="bank-tile" data-target-i="${i}">${w}</button>`).join("");
@@ -567,16 +598,18 @@
         `<button class="bank-tile ${usedIdx.has(i) ? "placed" : ""}" data-pool-i="${i}" ${usedIdx.has(i) ? "disabled" : ""}>${w}</button>`
       ).join("");
 
-      checkBtn.disabled = placed.length !== tgtTokens.length;
-
       poolEl.querySelectorAll(".bank-tile:not(.placed)").forEach(btn => {
         btn.addEventListener("click", () => {
           placed.push(btn.textContent);
           renderTiles();
+          // Auto-submit the moment every slot is filled — no separate
+          // Check tap needed, matching the one-tap feel of multiple choice.
+          if (placed.length === tgtTokens.length) setTimeout(submit, 150);
         });
       });
       targetEl.querySelectorAll(".bank-tile").forEach(btn => {
         btn.addEventListener("click", () => {
+          if (submitted) return;
           const i = Number(btn.dataset.targetI);
           placed.splice(i, 1);
           renderTiles();
@@ -584,17 +617,6 @@
       });
     }
     renderTiles();
-
-    checkBtn.addEventListener("click", () => {
-      poolEl.querySelectorAll(".bank-tile").forEach(b => b.disabled = true);
-      targetEl.querySelectorAll(".bank-tile").forEach(b => b.disabled = true);
-      checkBtn.disabled = true;
-      const correct = placed.length === tgtTokens.length && placed.every((w, i) => w === tgtTokens[i]);
-      afterAnswer(correct);
-      const delay = correct ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_WRONG;
-      screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, tgtTokens.join(" ")));
-      scheduleAdvance(delay);
-    });
   }
 
   // ---------- SESSION COMPLETE ----------
