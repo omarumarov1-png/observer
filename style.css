@@ -206,6 +206,15 @@ button.stat:hover { color: var(--navy); }
   padding: 24px 10px 10px; margin-top: 4px; max-height: 60vh; overflow-y: auto;
 }
 .roadmap-path-svg { position: absolute; top: 0; left: 0; z-index: 0; pointer-events: none; }
+.roadmap-jump {
+  position: absolute; right: 8px; z-index: 3; width: 40px; height: 40px; border-radius: 50%;
+  border: 1.5px solid var(--line); background: var(--paper-raised); color: var(--ink-soft);
+  font-size: 1.05rem; display: flex; align-items: center; justify-content: center; cursor: pointer;
+  box-shadow: 0 2px 6px var(--shadow); opacity: 0.85; transition: opacity 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.roadmap-jump:hover { opacity: 1; border-color: var(--navy); color: var(--navy); }
+.roadmap-jump-top { top: 8px; }
+.roadmap-jump-bottom { bottom: 8px; }
 .roadmap-row { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 100%; margin-bottom: 22px; }
 .roadmap-row.left { align-items: flex-start; padding-left: 12%; }
 .roadmap-row.right { align-items: flex-end; padding-right: 12%; }

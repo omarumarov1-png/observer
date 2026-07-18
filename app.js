@@ -392,25 +392,36 @@
   // Traces an actual road through the zigzagged lesson nodes — measured
   // from real layout rather than guessed from CSS, since the left/center/
   // right offsets are percentage-based and shift with container width.
+  // The walked stretch (behind completed lessons) is a solid gradient line
+  // brightening toward the peak; the road ahead is a soft dashed track —
+  // together they read as progress climbing toward the summit.
   function drawRoadmapPath() {
     const roadmapEl = document.getElementById("roadmapEl");
     if (!roadmapEl) return;
-    const nodes = Array.from(roadmapEl.querySelectorAll(".roadmap-node, .roadmap-next-node"));
-    if (nodes.length < 2) return;
+    const nodeEls = Array.from(roadmapEl.querySelectorAll(".roadmap-node, .roadmap-next-node"));
+    if (nodeEls.length < 2) return;
     const containerRect = roadmapEl.getBoundingClientRect();
-    const points = nodes.map(n => {
+    const points = nodeEls.map(n => {
       const r = n.getBoundingClientRect();
       return {
         x: r.left + r.width / 2 - containerRect.left + roadmapEl.scrollLeft,
         y: r.top + r.height / 2 - containerRect.top + roadmapEl.scrollTop,
+        done: n.classList.contains("done"),
       };
     });
-    let d = `M ${points[0].x} ${points[0].y}`;
-    for (let i = 1; i < points.length; i++) {
-      const prev = points[i - 1], curr = points[i];
-      const midY = (prev.y + curr.y) / 2;
-      d += ` C ${prev.x} ${midY}, ${curr.x} ${midY}, ${curr.x} ${curr.y}`;
+    function segmentPath(pts) {
+      let d = `M ${pts[0].x} ${pts[0].y}`;
+      for (let i = 1; i < pts.length; i++) {
+        const prev = pts[i - 1], curr = pts[i];
+        const midY = (prev.y + curr.y) / 2;
+        d += ` C ${prev.x} ${midY}, ${curr.x} ${midY}, ${curr.x} ${curr.y}`;
+      }
+      return d;
     }
+    let doneCount = 0;
+    while (doneCount < points.length && points[doneCount].done) doneCount++;
+    const walkedPts = points.slice(0, Math.min(doneCount + 1, points.length));
+    const aheadPts = points.slice(Math.max(doneCount, 0));
     let svg = roadmapEl.querySelector(".roadmap-path-svg");
     if (!svg) {
       svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -419,7 +430,12 @@
     }
     svg.setAttribute("width", roadmapEl.scrollWidth);
     svg.setAttribute("height", roadmapEl.scrollHeight);
-    svg.innerHTML = `<path d="${d}" fill="none" stroke="var(--paper-deep)" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 15"/>`;
+    let inner = `<defs><linearGradient id="roadmapGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="var(--navy)"/><stop offset="100%" stop-color="var(--gold)"/>
+    </linearGradient></defs>`;
+    if (aheadPts.length >= 2) inner += `<path d="${segmentPath(aheadPts)}" fill="none" stroke="var(--paper-deep)" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 15"/>`;
+    if (walkedPts.length >= 2) inner += `<path d="${segmentPath(walkedPts)}" fill="none" stroke="url(#roadmapGrad)" stroke-width="5" stroke-linecap="round"/>`;
+    svg.innerHTML = inner;
   }
   let _roadmapResizeQueued = false;
   window.addEventListener("resize", () => {
@@ -512,9 +528,23 @@
       </div>
       ${!levelLessons.length
         ? `<div class="level-locked-note">Lessons for ${level.badge} are still being prepared and will appear here soon.</div>`
-        : `<div class="roadmap" id="roadmapEl">${nodesHtml}</div>`
+        : `<div class="roadmap" id="roadmapEl">
+            <button class="roadmap-jump roadmap-jump-top" id="jumpTopBtn" title="Jump to top" aria-label="Jump to top">⇈</button>
+            ${nodesHtml}
+            <button class="roadmap-jump roadmap-jump-bottom" id="jumpBottomBtn" title="Jump to first lesson" aria-label="Jump to first lesson">⇊</button>
+           </div>`
       }
     `;
+
+    const jumpTopBtn = document.getElementById("jumpTopBtn");
+    const jumpBottomBtn = document.getElementById("jumpBottomBtn");
+    if (jumpTopBtn) jumpTopBtn.addEventListener("click", () => {
+      document.getElementById("roadmapEl").scrollTo({ top: 0, behavior: "smooth" });
+    });
+    if (jumpBottomBtn) jumpBottomBtn.addEventListener("click", () => {
+      const el = document.getElementById("roadmapEl");
+      el.scrollTo({ top: el.scrollHeight, behavior: "smooth" });
+    });
 
     document.getElementById("prevLevelBtn").addEventListener("click", () => {
       if (!prevLevel) return;
