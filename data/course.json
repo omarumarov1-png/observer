@@ -6851,6 +6851,1424 @@
                 "answerIndex": 3
               }
             ]
+          },
+          {
+            "id": "l3-6",
+            "number": 26,
+            "title": "Assisted & Proxy Voting",
+            "titleNative": "Голосование с помощью и по доверенности",
+            "description": "Helping voters who need assistance",
+            "exercises": [
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Избиратель с ограниченными возможностями попросил помощи при заполнении бюллетеня.",
+                "options": [
+                  "The assisting person has no right to influence the voter's choice.",
+                  "The observer noted the staff's respectful attitude toward voters with disabilities.",
+                  "A voter with disabilities asked for help filling out the ballot.",
+                  "A voting proxy must be notarized."
+                ],
+                "answerIndex": 2
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The law allows proxy voting in exceptional cases.",
+                "bank": [
+                  "голосование",
+                  "исключительных",
+                  "разрешает",
+                  "по",
+                  "Закон",
+                  "случаях",
+                  "в",
+                  "доверенности"
+                ],
+                "answer": [
+                  "Закон",
+                  "разрешает",
+                  "голосование",
+                  "по",
+                  "доверенности",
+                  "в",
+                  "исключительных",
+                  "случаях"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Сопровождающее лицо не имеет права влиять на выбор избирателя.",
+                "options": [
+                  "The proxy must present a document confirming their authority.",
+                  "A voter with disabilities asked for help filling out the ballot.",
+                  "The assisting person has no right to influence the voter's choice.",
+                  "The rules for assisted voting are explained to the voter in advance."
+                ],
+                "answerIndex": 2
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "A voter who cannot read received help from a commission member.",
+                "bank": [
+                  "не",
+                  "получил",
+                  "Избиратель",
+                  "комиссии",
+                  "помощь",
+                  "умеющий",
+                  "члена",
+                  "читать"
+                ],
+                "answer": [
+                  "Избиратель",
+                  "не",
+                  "умеющий",
+                  "читать",
+                  "получил",
+                  "помощь",
+                  "члена",
+                  "комиссии"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Доверенное лицо должно предъявить документ, подтверждающий полномочия.",
+                "options": [
+                  "The number of assisted voting cases slightly increased at this polling station.",
+                  "The rules for assisted voting are explained to the voter in advance.",
+                  "The law allows proxy voting in exceptional cases.",
+                  "The proxy must present a document confirming their authority."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The commission recorded every instance of assistance provided to a voter.",
+                "bank": [
+                  "оказания",
+                  "случай",
+                  "каждый",
+                  "Комиссия",
+                  "зафиксировала",
+                  "помощи",
+                  "избирателю"
+                ],
+                "answer": [
+                  "Комиссия",
+                  "зафиксировала",
+                  "каждый",
+                  "случай",
+                  "оказания",
+                  "помощи",
+                  "избирателю"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Избиратель выбрал сопровождающего по своему усмотрению.",
+                "options": [
+                  "The commission recorded every instance of assistance provided to a voter.",
+                  "The rules for assisted voting are explained to the voter in advance.",
+                  "The law allows proxy voting in exceptional cases.",
+                  "The voter chose the assisting person at their own discretion."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Proxy voting is strictly limited by law.",
+                "bank": [
+                  "доверенности",
+                  "Голосование",
+                  "строго",
+                  "по",
+                  "ограничено",
+                  "законом"
+                ],
+                "answer": [
+                  "Голосование",
+                  "по",
+                  "доверенности",
+                  "строго",
+                  "ограничено",
+                  "законом"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Наблюдатели следили за тем, чтобы помощь не превращалась в давление.",
+                "options": [
+                  "Observers monitored to ensure that assistance did not turn into pressure.",
+                  "A voter who cannot read received help from a commission member.",
+                  "The observer noted the staff's respectful attitude toward voters with disabilities.",
+                  "Proxy voting is strictly limited by law."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "A family member helped an elderly relative get to the voting booth.",
+                "bank": [
+                  "для",
+                  "семьи",
+                  "дойти",
+                  "родственнику",
+                  "кабины",
+                  "пожилому",
+                  "голосования",
+                  "Член",
+                  "до",
+                  "помог"
+                ],
+                "answer": [
+                  "Член",
+                  "семьи",
+                  "помог",
+                  "пожилому",
+                  "родственнику",
+                  "дойти",
+                  "до",
+                  "кабины",
+                  "для",
+                  "голосования"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Комиссия отказала в помощи, так как избиратель не подтвердил необходимость.",
+                "options": [
+                  "A voter who cannot read received help from a commission member.",
+                  "Observers monitored to ensure that assistance did not turn into pressure.",
+                  "The commission refused assistance because the voter did not confirm the need.",
+                  "The rules for assisted voting are explained to the voter in advance."
+                ],
+                "answerIndex": 2
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The number of assisted voting cases slightly increased at this polling station.",
+                "bank": [
+                  "этом",
+                  "на",
+                  "незначительно",
+                  "помощью",
+                  "с",
+                  "голосования",
+                  "выросло",
+                  "случаев",
+                  "Число",
+                  "участке"
+                ],
+                "answer": [
+                  "Число",
+                  "случаев",
+                  "голосования",
+                  "с",
+                  "помощью",
+                  "незначительно",
+                  "выросло",
+                  "на",
+                  "этом",
+                  "участке"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Доверенность на голосование должна быть нотариально заверена.",
+                "options": [
+                  "A voting proxy must be notarized.",
+                  "Proxy voting is strictly limited by law.",
+                  "The commission recorded every instance of assistance provided to a voter.",
+                  "A voter who cannot read received help from a commission member."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The observer noted the staff's respectful attitude toward voters with disabilities.",
+                "bank": [
+                  "с",
+                  "уважительное",
+                  "инвалидностью",
+                  "Наблюдатель",
+                  "избирателям",
+                  "персонала",
+                  "отметил",
+                  "к",
+                  "отношение"
+                ],
+                "answer": [
+                  "Наблюдатель",
+                  "отметил",
+                  "уважительное",
+                  "отношение",
+                  "персонала",
+                  "к",
+                  "избирателям",
+                  "с",
+                  "инвалидностью"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Правила голосования с помощью разъясняются избирателю заранее.",
+                "options": [
+                  "A voter who cannot read received help from a commission member.",
+                  "The rules for assisted voting are explained to the voter in advance.",
+                  "A voting proxy must be notarized.",
+                  "Observers monitored to ensure that assistance did not turn into pressure."
+                ],
+                "answerIndex": 1
+              }
+            ]
+          },
+          {
+            "id": "l3-7",
+            "number": 27,
+            "title": "Spoiled & Invalid Ballots",
+            "titleNative": "Испорченные и недействительные бюллетени",
+            "description": "Handling invalid votes during the count",
+            "exercises": [
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Избиратель случайно испортил бюллетень и попросил новый.",
+                "options": [
+                  "The number of invalid ballots is indicated separately in the final protocol.",
+                  "Spoiled ballots are cancelled and not counted.",
+                  "The voter accidentally spoiled the ballot and asked for a new one.",
+                  "A blank ballot with no marks is considered invalid."
+                ],
+                "answerIndex": 2
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "A ballot is declared invalid if it lacks the polling station's stamp.",
+                "bank": [
+                  "при",
+                  "отсутствии",
+                  "участка",
+                  "недействительным",
+                  "печати",
+                  "Бюллетень",
+                  "признаётся"
+                ],
+                "answer": [
+                  "Бюллетень",
+                  "признаётся",
+                  "недействительным",
+                  "при",
+                  "отсутствии",
+                  "печати",
+                  "участка"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Комиссия отложила недействительные бюллетени в отдельный конверт.",
+                "options": [
+                  "The observer asked for clarification on the criteria for ballot invalidity.",
+                  "A mark for more than one candidate makes the ballot invalid.",
+                  "The number of invalid ballots is indicated separately in the final protocol.",
+                  "The commission set aside the invalid ballots in a separate envelope."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "A mark for more than one candidate makes the ballot invalid.",
+                "bank": [
+                  "кандидатов",
+                  "сразу",
+                  "делает",
+                  "за",
+                  "бюллетень",
+                  "недействительным",
+                  "нескольких",
+                  "Отметка"
+                ],
+                "answer": [
+                  "Отметка",
+                  "сразу",
+                  "за",
+                  "нескольких",
+                  "кандидатов",
+                  "делает",
+                  "бюллетень",
+                  "недействительным"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Испорченные бюллетени погашаются и не учитываются при подсчёте.",
+                "options": [
+                  "An unclear mark on the ballot caused a dispute among commission members.",
+                  "A spoiled ballot stays with the voter until it is replaced with a new one.",
+                  "Spoiled ballots are cancelled and not counted.",
+                  "The commission unanimously recognized the disputed ballot as valid."
+                ],
+                "answerIndex": 2
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The number of invalid ballots is indicated separately in the final protocol.",
+                "bank": [
+                  "итоговом",
+                  "отдельно",
+                  "в",
+                  "Число",
+                  "недействительных",
+                  "бюллетеней",
+                  "протоколе",
+                  "указывается"
+                ],
+                "answer": [
+                  "Число",
+                  "недействительных",
+                  "бюллетеней",
+                  "указывается",
+                  "в",
+                  "итоговом",
+                  "протоколе",
+                  "отдельно"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Наблюдатель попросил разъяснить критерии недействительности бюллетеня.",
+                "options": [
+                  "Spoiled ballots are cancelled and not counted.",
+                  "An unclear mark on the ballot caused a dispute among commission members.",
+                  "The number of invalid ballots is indicated separately in the final protocol.",
+                  "The observer asked for clarification on the criteria for ballot invalidity."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "A blank ballot with no marks is considered invalid.",
+                "bank": [
+                  "недействительным",
+                  "отметок",
+                  "бюллетень",
+                  "Пустой",
+                  "без",
+                  "считается"
+                ],
+                "answer": [
+                  "Пустой",
+                  "бюллетень",
+                  "без",
+                  "отметок",
+                  "считается",
+                  "недействительным"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Комиссия единогласно признала спорный бюллетень действительным.",
+                "options": [
+                  "The commission unanimously recognized the disputed ballot as valid.",
+                  "The commission set aside the invalid ballots in a separate envelope.",
+                  "An unclear mark on the ballot caused a dispute among commission members.",
+                  "The number of invalid ballots is indicated separately in the final protocol."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The percentage of invalid ballots turned out to be lower than in the previous election.",
+                "bank": [
+                  "чем",
+                  "недействительных",
+                  "выборах",
+                  "прошлых",
+                  "на",
+                  "бюллетеней",
+                  "ниже",
+                  "Процент",
+                  "оказался"
+                ],
+                "answer": [
+                  "Процент",
+                  "недействительных",
+                  "бюллетеней",
+                  "оказался",
+                  "ниже",
+                  "чем",
+                  "на",
+                  "прошлых",
+                  "выборах"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Представители партий имеют право оспорить решение о недействительности бюллетеня.",
+                "options": [
+                  "The commission unanimously recognized the disputed ballot as valid.",
+                  "An unclear mark on the ballot caused a dispute among commission members.",
+                  "The number of invalid ballots is indicated separately in the final protocol.",
+                  "Party representatives have the right to challenge a decision on ballot invalidity."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Every invalid ballot was shown to observers before being set aside.",
+                "bank": [
+                  "Каждый",
+                  "перед",
+                  "откладыванием",
+                  "демонстрировался",
+                  "бюллетень",
+                  "недействительный",
+                  "наблюдателям"
+                ],
+                "answer": [
+                  "Каждый",
+                  "недействительный",
+                  "бюллетень",
+                  "демонстрировался",
+                  "наблюдателям",
+                  "перед",
+                  "откладыванием"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Испорченный бюллетень остаётся у избирателя до замены новым.",
+                "options": [
+                  "A spoiled ballot stays with the voter until it is replaced with a new one.",
+                  "Every invalid ballot was shown to observers before being set aside.",
+                  "A ballot is declared invalid if it lacks the polling station's stamp.",
+                  "Party representatives have the right to challenge a decision on ballot invalidity."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "An unclear mark on the ballot caused a dispute among commission members.",
+                "bank": [
+                  "Неясная",
+                  "комиссии",
+                  "отметка",
+                  "среди",
+                  "спор",
+                  "вызвала",
+                  "членов",
+                  "бюллетене",
+                  "на"
+                ],
+                "answer": [
+                  "Неясная",
+                  "отметка",
+                  "на",
+                  "бюллетене",
+                  "вызвала",
+                  "спор",
+                  "среди",
+                  "членов",
+                  "комиссии"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Прозрачное определение недействительных бюллетеней укрепляет доверие к подсчёту.",
+                "options": [
+                  "Spoiled ballots are cancelled and not counted.",
+                  "The percentage of invalid ballots turned out to be lower than in the previous election.",
+                  "The observer asked for clarification on the criteria for ballot invalidity.",
+                  "Transparent determination of invalid ballots strengthens confidence in the count."
+                ],
+                "answerIndex": 3
+              }
+            ]
+          },
+          {
+            "id": "l3-8",
+            "number": 28,
+            "title": "Incidents & Irregularities",
+            "titleNative": "Инциденты и нарушения",
+            "description": "Recognizing and responding to problems on voting day",
+            "exercises": [
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Наблюдатель зафиксировал инцидент в своём отчёте с указанием времени.",
+                "options": [
+                  "Witnesses to the incident gave statements to commission representatives.",
+                  "The observer recorded the incident in their report with the time noted.",
+                  "A prompt response to violations prevented the escalation of the conflict.",
+                  "The unauthorized presence of an outside person in the voting booth was stopped."
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "A conflict occurred at the polling station between representatives of two parties.",
+                "bank": [
+                  "произошёл",
+                  "представителями",
+                  "конфликт",
+                  "двух",
+                  "На",
+                  "участке",
+                  "партий",
+                  "между"
+                ],
+                "answer": [
+                  "На",
+                  "участке",
+                  "произошёл",
+                  "конфликт",
+                  "между",
+                  "представителями",
+                  "двух",
+                  "партий"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Комиссия немедленно отреагировала на сообщение о нарушении процедуры.",
+                "options": [
+                  "The number of registered incidents remained minor across the country.",
+                  "Witnesses to the incident gave statements to commission representatives.",
+                  "The commission temporarily suspended voting due to a security threat.",
+                  "The commission immediately responded to a report of a procedural violation."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The unauthorized presence of an outside person in the voting booth was stopped.",
+                "bank": [
+                  "Незаконное",
+                  "лица",
+                  "присутствие",
+                  "пресечено",
+                  "для",
+                  "голосования",
+                  "в",
+                  "кабине",
+                  "было",
+                  "постороннего"
+                ],
+                "answer": [
+                  "Незаконное",
+                  "присутствие",
+                  "постороннего",
+                  "лица",
+                  "в",
+                  "кабине",
+                  "для",
+                  "голосования",
+                  "было",
+                  "пресечено"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Наблюдатель сообщил координатору о серьёзном нарушении на участке.",
+                "options": [
+                  "The commission temporarily suspended voting due to a security threat.",
+                  "The observer reported a serious violation at the polling station to the coordinator.",
+                  "Witnesses to the incident gave statements to commission representatives.",
+                  "The commission immediately responded to a report of a procedural violation."
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The police intervened after an attempt to disturb public order.",
+                "bank": [
+                  "общественного",
+                  "вмешалась",
+                  "порядка",
+                  "попытки",
+                  "нарушения",
+                  "Полиция",
+                  "после"
+                ],
+                "answer": [
+                  "Полиция",
+                  "вмешалась",
+                  "после",
+                  "попытки",
+                  "нарушения",
+                  "общественного",
+                  "порядка"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Комиссия составила акт о выявленном нарушении процедуры голосования.",
+                "options": [
+                  "Every serious incident is subject to investigation by the higher-level commission.",
+                  "The commission drew up a report on the detected violation of the voting procedure.",
+                  "The number of registered incidents remained minor across the country.",
+                  "A conflict occurred at the polling station between representatives of two parties."
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "An incident involving an attempted ballot-box stuffing was prevented in time.",
+                "bank": [
+                  "вброса",
+                  "предотвращён",
+                  "вовремя",
+                  "Инцидент",
+                  "с",
+                  "бюллетеней",
+                  "попыткой",
+                  "был"
+                ],
+                "answer": [
+                  "Инцидент",
+                  "с",
+                  "попыткой",
+                  "вброса",
+                  "бюллетеней",
+                  "был",
+                  "предотвращён",
+                  "вовремя"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Наблюдатели сравнили серьёзность нарушений на разных участках.",
+                "options": [
+                  "The police intervened after an attempt to disturb public order.",
+                  "The unauthorized presence of an outside person in the voting booth was stopped.",
+                  "Observers compared the severity of violations at different polling stations.",
+                  "The observer recorded the incident in their report with the time noted."
+                ],
+                "answerIndex": 2
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Minor procedural violations were resolved on the spot.",
+                "bank": [
+                  "были",
+                  "нарушения",
+                  "на",
+                  "процедурные",
+                  "Незначительные",
+                  "устранены",
+                  "месте"
+                ],
+                "answer": [
+                  "Незначительные",
+                  "процедурные",
+                  "нарушения",
+                  "были",
+                  "устранены",
+                  "на",
+                  "месте"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Комиссия временно приостановила голосование из-за угрозы безопасности.",
+                "options": [
+                  "The commission temporarily suspended voting due to a security threat.",
+                  "Every serious incident is subject to investigation by the higher-level commission.",
+                  "The unauthorized presence of an outside person in the voting booth was stopped.",
+                  "The police intervened after an attempt to disturb public order."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Every serious incident is subject to investigation by the higher-level commission.",
+                "bank": [
+                  "инцидент",
+                  "комиссией",
+                  "подлежит",
+                  "Каждый",
+                  "серьёзный",
+                  "расследованию",
+                  "вышестоящей"
+                ],
+                "answer": [
+                  "Каждый",
+                  "серьёзный",
+                  "инцидент",
+                  "подлежит",
+                  "расследованию",
+                  "вышестоящей",
+                  "комиссией"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Свидетели инцидента дали показания представителям комиссии.",
+                "options": [
+                  "A prompt response to violations prevented the escalation of the conflict.",
+                  "The commission drew up a report on the detected violation of the voting procedure.",
+                  "A conflict occurred at the polling station between representatives of two parties.",
+                  "Witnesses to the incident gave statements to commission representatives."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The number of registered incidents remained minor across the country.",
+                "bank": [
+                  "зарегистрированных",
+                  "по",
+                  "всей",
+                  "инцидентов",
+                  "оставалось",
+                  "Число",
+                  "незначительным",
+                  "стране"
+                ],
+                "answer": [
+                  "Число",
+                  "зарегистрированных",
+                  "инцидентов",
+                  "оставалось",
+                  "незначительным",
+                  "по",
+                  "всей",
+                  "стране"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Оперативное реагирование на нарушения предотвратило эскалацию конфликта.",
+                "options": [
+                  "The observer recorded the incident in their report with the time noted.",
+                  "A prompt response to violations prevented the escalation of the conflict.",
+                  "The commission temporarily suspended voting due to a security threat.",
+                  "Minor procedural violations were resolved on the spot."
+                ],
+                "answerIndex": 1
+              }
+            ]
+          },
+          {
+            "id": "l3-9",
+            "number": 29,
+            "title": "Election Day Communication",
+            "titleNative": "Связь в день голосования",
+            "description": "Reporting channels and coordination on voting day",
+            "exercises": [
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Каждый наблюдатель обязан регулярно выходить на связь с координатором.",
+                "options": [
+                  "Every observer is required to regularly check in with the coordinator.",
+                  "Each observer team reported to the coordinator at the end of the day.",
+                  "Backup communication devices were used in areas with weak signal.",
+                  "Effective communication on voting day ensures a timely response to problems."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The precinct commission reports turnout data every two hours.",
+                "bank": [
+                  "данные",
+                  "сообщает",
+                  "о",
+                  "два",
+                  "каждые",
+                  "часа",
+                  "явке",
+                  "Участковая",
+                  "комиссия"
+                ],
+                "answer": [
+                  "Участковая",
+                  "комиссия",
+                  "сообщает",
+                  "данные",
+                  "о",
+                  "явке",
+                  "каждые",
+                  "два",
+                  "часа"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Центр связи миссии работал непрерывно в течение всего дня голосования.",
+                "options": [
+                  "The mission's communication center operated continuously throughout voting day.",
+                  "A mobile network outage temporarily hindered data transmission from a remote polling station.",
+                  "Voter turnout data was transmitted to the commission via a secure channel.",
+                  "The precinct commission reports turnout data every two hours."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The observer used a mobile application to submit the report in real time.",
+                "bank": [
+                  "Наблюдатель",
+                  "передачи",
+                  "времени",
+                  "приложение",
+                  "для",
+                  "отчёта",
+                  "в",
+                  "мобильное",
+                  "реальном",
+                  "использовал"
+                ],
+                "answer": [
+                  "Наблюдатель",
+                  "использовал",
+                  "мобильное",
+                  "приложение",
+                  "для",
+                  "передачи",
+                  "отчёта",
+                  "в",
+                  "реальном",
+                  "времени"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Сбой мобильной связи временно затруднил передачу данных с отдалённого участка.",
+                "options": [
+                  "A mobile network outage temporarily hindered data transmission from a remote polling station.",
+                  "Effective communication on voting day ensures a timely response to problems.",
+                  "Communication between the polling stations and the central commission was not interrupted for a minute.",
+                  "Observers immediately reported any deviations from standard procedure."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The coordinator maintained contact with all observer teams simultaneously.",
+                "bank": [
+                  "связь",
+                  "всеми",
+                  "со",
+                  "поддерживал",
+                  "одновременно",
+                  "наблюдателей",
+                  "Координатор",
+                  "группами"
+                ],
+                "answer": [
+                  "Координатор",
+                  "поддерживал",
+                  "связь",
+                  "со",
+                  "всеми",
+                  "группами",
+                  "наблюдателей",
+                  "одновременно"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Данные о явке избирателей передавались в комиссию по защищённому каналу.",
+                "options": [
+                  "Voter turnout data was transmitted to the commission via a secure channel.",
+                  "The mission's situation room collected information from all regions of the country.",
+                  "Observers used code designations for the rapid transmission of information.",
+                  "The coordinator maintained contact with all observer teams simultaneously."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Each observer team reported to the coordinator at the end of the day.",
+                "bank": [
+                  "дня",
+                  "координатором",
+                  "наблюдателей",
+                  "группа",
+                  "отчитывалась",
+                  "конце",
+                  "в",
+                  "Каждая",
+                  "перед"
+                ],
+                "answer": [
+                  "Каждая",
+                  "группа",
+                  "наблюдателей",
+                  "отчитывалась",
+                  "перед",
+                  "координатором",
+                  "в",
+                  "конце",
+                  "дня"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Резервные средства связи использовались в районах со слабым сигналом.",
+                "options": [
+                  "Backup communication devices were used in areas with weak signal.",
+                  "Voter turnout data was transmitted to the commission via a secure channel.",
+                  "The coordinator maintained contact with all observer teams simultaneously.",
+                  "The mission's situation room collected information from all regions of the country."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Observers immediately reported any deviations from standard procedure.",
+                "bank": [
+                  "процедуры",
+                  "от",
+                  "Наблюдатели",
+                  "о",
+                  "немедленно",
+                  "любых",
+                  "отклонениях",
+                  "сообщали",
+                  "стандартной"
+                ],
+                "answer": [
+                  "Наблюдатели",
+                  "немедленно",
+                  "сообщали",
+                  "о",
+                  "любых",
+                  "отклонениях",
+                  "от",
+                  "стандартной",
+                  "процедуры"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Ситуационный центр миссии собирал информацию со всех регионов страны.",
+                "options": [
+                  "Every observer is required to regularly check in with the coordinator.",
+                  "The coordinator maintained contact with all observer teams simultaneously.",
+                  "The mission's situation room collected information from all regions of the country.",
+                  "A mobile network outage temporarily hindered data transmission from a remote polling station."
+                ],
+                "answerIndex": 2
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Communication between the polling stations and the central commission was not interrupted for a minute.",
+                "bank": [
+                  "на",
+                  "участками",
+                  "не",
+                  "между",
+                  "прерывалась",
+                  "Связь",
+                  "комиссией",
+                  "центральной",
+                  "ни",
+                  "и",
+                  "минуту"
+                ],
+                "answer": [
+                  "Связь",
+                  "между",
+                  "участками",
+                  "и",
+                  "центральной",
+                  "комиссией",
+                  "не",
+                  "прерывалась",
+                  "ни",
+                  "на",
+                  "минуту"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Наблюдатели использовали кодовые обозначения для оперативной передачи информации.",
+                "options": [
+                  "The mission's communication center operated continuously throughout voting day.",
+                  "Observers used code designations for the rapid transmission of information.",
+                  "A mobile network outage temporarily hindered data transmission from a remote polling station.",
+                  "Backup communication devices were used in areas with weak signal."
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The coordinator requested additional information following the first report.",
+                "bank": [
+                  "запросил",
+                  "дополнительную",
+                  "первого",
+                  "по",
+                  "Координатор",
+                  "итогам",
+                  "доклада",
+                  "информацию"
+                ],
+                "answer": [
+                  "Координатор",
+                  "запросил",
+                  "дополнительную",
+                  "информацию",
+                  "по",
+                  "итогам",
+                  "первого",
+                  "доклада"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Эффективная связь в день голосования обеспечивает своевременное реагирование на проблемы.",
+                "options": [
+                  "Effective communication on voting day ensures a timely response to problems.",
+                  "Observers immediately reported any deviations from standard procedure.",
+                  "Every observer is required to regularly check in with the coordinator.",
+                  "Each observer team reported to the coordinator at the end of the day."
+                ],
+                "answerIndex": 0
+              }
+            ]
+          },
+          {
+            "id": "l3-10",
+            "number": 30,
+            "title": "Voter Turnout & Statistics",
+            "titleNative": "Явка избирателей и статистика",
+            "description": "Tracking and interpreting participation data",
+            "exercises": [
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Явка избирателей к полудню составила тридцать процентов.",
+                "options": [
+                  "The mission's analysts examined turnout statistics by age group.",
+                  "The official turnout was announced after the vote count was completed.",
+                  "Voter turnout by noon was thirty percent.",
+                  "The final turnout data was included in the mission's concluding report."
+                ],
+                "answerIndex": 2
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The commission publishes turnout data every four hours.",
+                "bank": [
+                  "явке",
+                  "публикует",
+                  "четыре",
+                  "о",
+                  "Комиссия",
+                  "данные",
+                  "часа",
+                  "каждые"
+                ],
+                "answer": [
+                  "Комиссия",
+                  "публикует",
+                  "данные",
+                  "о",
+                  "явке",
+                  "каждые",
+                  "четыре",
+                  "часа"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Итоговая явка на этих выборах превысила показатель прошлых выборов.",
+                "options": [
+                  "The final turnout in this election exceeded the figure from the previous election.",
+                  "Statistics showed an increase in participation among young voters.",
+                  "Low turnout raised questions about the legitimacy of the election results.",
+                  "Turnout in rural areas is traditionally higher than in cities."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Turnout statistics vary depending on the region of the country.",
+                "bank": [
+                  "региона",
+                  "различается",
+                  "в",
+                  "зависимости",
+                  "страны",
+                  "явки",
+                  "Статистика",
+                  "от"
+                ],
+                "answer": [
+                  "Статистика",
+                  "явки",
+                  "различается",
+                  "в",
+                  "зависимости",
+                  "от",
+                  "региона",
+                  "страны"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Низкая явка вызвала вопросы о легитимности результатов выборов.",
+                "options": [
+                  "The discrepancy in turnout statistics was explained by a technical error.",
+                  "Low turnout raised questions about the legitimacy of the election results.",
+                  "Statistics showed an increase in participation among young voters.",
+                  "Voter turnout by noon was thirty percent."
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The mission's analysts examined turnout statistics by age group.",
+                "bank": [
+                  "статистику",
+                  "по",
+                  "Аналитики",
+                  "изучили",
+                  "миссии",
+                  "возрастным",
+                  "группам",
+                  "явки"
+                ],
+                "answer": [
+                  "Аналитики",
+                  "миссии",
+                  "изучили",
+                  "статистику",
+                  "явки",
+                  "по",
+                  "возрастным",
+                  "группам"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Явка в сельских районах традиционно выше, чем в городах.",
+                "options": [
+                  "The mission's analysts examined turnout statistics by age group.",
+                  "The discrepancy in turnout statistics was explained by a technical error.",
+                  "Turnout in rural areas is traditionally higher than in cities.",
+                  "Turnout statistics are used to assess public interest in the election."
+                ],
+                "answerIndex": 2
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The commission compared the turnout data with figures from previous elections.",
+                "bank": [
+                  "показателями",
+                  "данные",
+                  "Комиссия",
+                  "предыдущих",
+                  "о",
+                  "с",
+                  "сравнила",
+                  "выборов",
+                  "явке"
+                ],
+                "answer": [
+                  "Комиссия",
+                  "сравнила",
+                  "данные",
+                  "о",
+                  "явке",
+                  "с",
+                  "показателями",
+                  "предыдущих",
+                  "выборов"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Статистика показала рост участия молодых избирателей.",
+                "options": [
+                  "The final turnout in this election exceeded the figure from the previous election.",
+                  "Statistics showed an increase in participation among young voters.",
+                  "The commission publishes turnout data every four hours.",
+                  "The final turnout data was included in the mission's concluding report."
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The official turnout was announced after the vote count was completed.",
+                "bank": [
+                  "завершения",
+                  "Официальная",
+                  "была",
+                  "явка",
+                  "объявлена",
+                  "подсчёта",
+                  "голосов",
+                  "после"
+                ],
+                "answer": [
+                  "Официальная",
+                  "явка",
+                  "была",
+                  "объявлена",
+                  "после",
+                  "завершения",
+                  "подсчёта",
+                  "голосов"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Расхождение в статистике явки было объяснено технической ошибкой.",
+                "options": [
+                  "Turnout in rural areas is traditionally higher than in cities.",
+                  "The commission compared the turnout data with figures from previous elections.",
+                  "The final turnout in this election exceeded the figure from the previous election.",
+                  "The discrepancy in turnout statistics was explained by a technical error."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Each polling station provides separate data on the number of voters.",
+                "bank": [
+                  "отдельные",
+                  "числе",
+                  "участок",
+                  "данные",
+                  "Каждый",
+                  "о",
+                  "предоставляет",
+                  "проголосовавших"
+                ],
+                "answer": [
+                  "Каждый",
+                  "участок",
+                  "предоставляет",
+                  "отдельные",
+                  "данные",
+                  "о",
+                  "числе",
+                  "проголосовавших"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Аналитический отдел миссии подготовил график динамики явки в течение дня.",
+                "options": [
+                  "The mission's analysts examined turnout statistics by age group.",
+                  "Low turnout raised questions about the legitimacy of the election results.",
+                  "The commission compared the turnout data with figures from previous elections.",
+                  "The mission's analytical department prepared a graph of turnout dynamics throughout the day."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Turnout statistics are used to assess public interest in the election.",
+                "bank": [
+                  "оценки",
+                  "для",
+                  "общественного",
+                  "интереса",
+                  "выборам",
+                  "Статистика",
+                  "явки",
+                  "используется",
+                  "к"
+                ],
+                "answer": [
+                  "Статистика",
+                  "явки",
+                  "используется",
+                  "для",
+                  "оценки",
+                  "общественного",
+                  "интереса",
+                  "к",
+                  "выборам"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Итоговые данные о явке были включены в заключительный отчёт миссии.",
+                "options": [
+                  "The discrepancy in turnout statistics was explained by a technical error.",
+                  "The commission publishes turnout data every four hours.",
+                  "The final turnout data was included in the mission's concluding report.",
+                  "The official turnout was announced after the vote count was completed."
+                ],
+                "answerIndex": 2
+              }
+            ]
           }
         ]
       },
@@ -6862,7 +8280,7 @@
         "lessons": [
           {
             "id": "l4-1",
-            "number": 26,
+            "number": 31,
             "title": "Vote Tabulation & Transmission",
             "titleNative": "Табуляция и передача результатов",
             "description": "Summarizing and reporting official results",
@@ -7132,7 +8550,7 @@
           },
           {
             "id": "l4-2",
-            "number": 27,
+            "number": 32,
             "title": "Recounts & Results Disputes",
             "titleNative": "Пересчёт голосов и споры о результатах",
             "description": "Challenging and reviewing vote counts",
@@ -7406,7 +8824,7 @@
           },
           {
             "id": "l4-3",
-            "number": 28,
+            "number": 33,
             "title": "The Electoral Legal Framework",
             "titleNative": "Избирательное законодательство",
             "description": "Constitution, election law, and legal structure",
@@ -7676,7 +9094,7 @@
           },
           {
             "id": "l4-4",
-            "number": 29,
+            "number": 34,
             "title": "International Standards & Commitments",
             "titleNative": "Международные стандарты",
             "description": "OSCE commitments and democratic election principles",
@@ -7954,7 +9372,7 @@
           },
           {
             "id": "l4-5",
-            "number": 30,
+            "number": 35,
             "title": "Complaints, Appeals & Violations",
             "titleNative": "Жалобы, апелляции и нарушения",
             "description": "The dispute-resolution process and election violations",
@@ -8238,7 +9656,7 @@
         "lessons": [
           {
             "id": "l5-1",
-            "number": 31,
+            "number": 36,
             "title": "Methodology & Code of Conduct",
             "titleNative": "Методология наблюдения и кодекс поведения",
             "description": "How observers work and the rules that bind them",
@@ -8506,7 +9924,7 @@
           },
           {
             "id": "l5-2",
-            "number": 32,
+            "number": 37,
             "title": "Meetings with Stakeholders",
             "titleNative": "Встречи с заинтересованными сторонами",
             "description": "Engaging civil society, parties, media, and authorities",
@@ -8784,7 +10202,7 @@
           },
           {
             "id": "l5-3",
-            "number": 33,
+            "number": 38,
             "title": "Interim Reports & Preliminary Statements",
             "titleNative": "Промежуточные отчёты и заявления",
             "description": "Documenting findings and communicating conclusions",
@@ -9058,7 +10476,7 @@
           },
           {
             "id": "l5-4",
-            "number": 34,
+            "number": 39,
             "title": "Security & Logistics",
             "titleNative": "Безопасность и логистика",
             "description": "Field safety, transport, and mission logistics",
@@ -9336,7 +10754,7 @@
           },
           {
             "id": "l5-5",
-            "number": 35,
+            "number": 40,
             "title": "Long-Term vs Short-Term Observation",
             "titleNative": "Долгосрочное и краткосрочное наблюдение",
             "description": "How the two observer roles differ and complement each other",
@@ -9618,7 +11036,7 @@
         "lessons": [
           {
             "id": "l6-1",
-            "number": 36,
+            "number": 41,
             "title": "Media Monitoring",
             "titleNative": "Мониторинг средств массовой информации",
             "description": "Tracking fairness and balance in press coverage",
@@ -9898,7 +11316,7 @@
           },
           {
             "id": "l6-2",
-            "number": 37,
+            "number": 42,
             "title": "Campaign Finance Monitoring",
             "titleNative": "Мониторинг финансирования избирательных кампаний",
             "description": "Tracking donations, spending limits, and transparency",
@@ -10166,7 +11584,7 @@
           },
           {
             "id": "l6-3",
-            "number": 38,
+            "number": 43,
             "title": "Gender Equality in Elections",
             "titleNative": "Гендерное равенство на выборах",
             "description": "Women's representation and participation in the process",
@@ -10442,7 +11860,7 @@
           },
           {
             "id": "l6-4",
-            "number": 39,
+            "number": 44,
             "title": "Disability & Accessibility",
             "titleNative": "Люди с инвалидностью и доступность",
             "description": "Ensuring the process is accessible to everyone",
@@ -10714,7 +12132,7 @@
           },
           {
             "id": "l6-5",
-            "number": 40,
+            "number": 45,
             "title": "New Voting Technologies",
             "titleNative": "Новые технологии голосования",
             "description": "Electronic voting, e-tabulation, and cybersecurity",
