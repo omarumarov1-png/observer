@@ -389,6 +389,45 @@
     return html;
   }
 
+  // Traces an actual road through the zigzagged lesson nodes — measured
+  // from real layout rather than guessed from CSS, since the left/center/
+  // right offsets are percentage-based and shift with container width.
+  function drawRoadmapPath() {
+    const roadmapEl = document.getElementById("roadmapEl");
+    if (!roadmapEl) return;
+    const nodes = Array.from(roadmapEl.querySelectorAll(".roadmap-node, .roadmap-next-node"));
+    if (nodes.length < 2) return;
+    const containerRect = roadmapEl.getBoundingClientRect();
+    const points = nodes.map(n => {
+      const r = n.getBoundingClientRect();
+      return {
+        x: r.left + r.width / 2 - containerRect.left + roadmapEl.scrollLeft,
+        y: r.top + r.height / 2 - containerRect.top + roadmapEl.scrollTop,
+      };
+    });
+    let d = `M ${points[0].x} ${points[0].y}`;
+    for (let i = 1; i < points.length; i++) {
+      const prev = points[i - 1], curr = points[i];
+      const midY = (prev.y + curr.y) / 2;
+      d += ` C ${prev.x} ${midY}, ${curr.x} ${midY}, ${curr.x} ${curr.y}`;
+    }
+    let svg = roadmapEl.querySelector(".roadmap-path-svg");
+    if (!svg) {
+      svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      svg.setAttribute("class", "roadmap-path-svg");
+      roadmapEl.insertBefore(svg, roadmapEl.firstChild);
+    }
+    svg.setAttribute("width", roadmapEl.scrollWidth);
+    svg.setAttribute("height", roadmapEl.scrollHeight);
+    svg.innerHTML = `<path d="${d}" fill="none" stroke="var(--paper-deep)" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 15"/>`;
+  }
+  let _roadmapResizeQueued = false;
+  window.addEventListener("resize", () => {
+    if (_roadmapResizeQueued || !document.getElementById("roadmapEl")) return;
+    _roadmapResizeQueued = true;
+    requestAnimationFrame(() => { _roadmapResizeQueued = false; drawRoadmapPath(); });
+  });
+
   // The level whose roadmap should show by default: the one containing the
   // first unlocked-but-not-yet-completed lesson (i.e. "where the user is"),
   // falling back to the first level with lessons.
@@ -503,9 +542,10 @@
     });
 
     const target = screenEl.querySelector(".roadmap-node.current") || screenEl.querySelector(".roadmap-node.unlocked");
-    if (target) {
-      requestAnimationFrame(() => target.scrollIntoView({ block: "center", behavior: "auto" }));
-    }
+    requestAnimationFrame(() => {
+      drawRoadmapPath();
+      if (target) target.scrollIntoView({ block: "center", behavior: "auto" });
+    });
   }
 
   // ---------- LESSON / REVIEW ----------
