@@ -4097,6 +4097,1412 @@
                 "answerIndex": 2
               }
             ]
+          },
+          {
+            "id": "l2-6",
+            "number": 16,
+            "title": "Election Calendar & Budget",
+            "titleNative": "Избирательный календарь и бюджет",
+            "description": "Timelines and financing of the election process",
+            "exercises": [
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Избирательный календарь устанавливает сроки всех этапов выборов.",
+                "options": [
+                  "The election calendar was published on the commission's official website.",
+                  "The election calendar provides eight weeks for candidate registration.",
+                  "The election calendar establishes the deadlines for all stages of the election.",
+                  "The commission drew up a cost estimate for each polling station."
+                ],
+                "answerIndex": 2
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The election budget is approved by parliament a year before the vote.",
+                "bank": [
+                  "утверждается",
+                  "до",
+                  "выборов",
+                  "парламентом",
+                  "Бюджет",
+                  "голосования",
+                  "год",
+                  "за"
+                ],
+                "answer": [
+                  "Бюджет",
+                  "выборов",
+                  "утверждается",
+                  "парламентом",
+                  "за",
+                  "год",
+                  "до",
+                  "голосования"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Комиссия опубликовала подробный график предвыборных мероприятий.",
+                "options": [
+                  "The commission reported on the use of the budget after the election concluded.",
+                  "The financial transparency of the election budget earned observers' approval.",
+                  "The commission published a detailed schedule of pre-election activities.",
+                  "Insufficient funding hindered the work of precinct commissions."
+                ],
+                "answerIndex": 2
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The state allocated additional funds for organizing the election.",
+                "bank": [
+                  "Государство",
+                  "на",
+                  "выборов",
+                  "выделило",
+                  "организацию",
+                  "средства",
+                  "дополнительные"
+                ],
+                "answer": [
+                  "Государство",
+                  "выделило",
+                  "дополнительные",
+                  "средства",
+                  "на",
+                  "организацию",
+                  "выборов"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Избирательный календарь предусматривает восемь недель на регистрацию кандидатов.",
+                "options": [
+                  "The commission reported on the use of the budget after the election concluded.",
+                  "Every stage of the election process has a strictly established deadline.",
+                  "The election calendar establishes the deadlines for all stages of the election.",
+                  "The election calendar provides eight weeks for candidate registration."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The commission reported on the use of the budget after the election concluded.",
+                "bank": [
+                  "завершения",
+                  "выборов",
+                  "о",
+                  "Комиссия",
+                  "после",
+                  "расходовании",
+                  "бюджета",
+                  "отчиталась"
+                ],
+                "answer": [
+                  "Комиссия",
+                  "отчиталась",
+                  "о",
+                  "расходовании",
+                  "бюджета",
+                  "после",
+                  "завершения",
+                  "выборов"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Задержка финансирования поставила под угрозу сроки подготовки к выборам.",
+                "options": [
+                  "International donors partially financed the conduct of the election.",
+                  "The commission reported on the use of the budget after the election concluded.",
+                  "The election calendar establishes the deadlines for all stages of the election.",
+                  "A delay in financing jeopardized the timeline for election preparations."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The election budget includes expenses for staff training and logistics.",
+                "bank": [
+                  "обучение",
+                  "выборов",
+                  "персонала",
+                  "на",
+                  "логистику",
+                  "расходы",
+                  "и",
+                  "Бюджет",
+                  "включает"
+                ],
+                "answer": [
+                  "Бюджет",
+                  "выборов",
+                  "включает",
+                  "расходы",
+                  "на",
+                  "обучение",
+                  "персонала",
+                  "и",
+                  "логистику"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Изменение даты голосования потребовало пересмотра избирательного календаря.",
+                "options": [
+                  "Changing the voting date required revising the election calendar.",
+                  "The election budget includes expenses for staff training and logistics.",
+                  "The election calendar provides eight weeks for candidate registration.",
+                  "The state allocated additional funds for organizing the election."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "International donors partially financed the conduct of the election.",
+                "bank": [
+                  "проведение",
+                  "Международные",
+                  "частично",
+                  "профинансировали",
+                  "доноры",
+                  "выборов"
+                ],
+                "answer": [
+                  "Международные",
+                  "доноры",
+                  "частично",
+                  "профинансировали",
+                  "проведение",
+                  "выборов"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Комиссия составила смету расходов на каждый избирательный участок.",
+                "options": [
+                  "Every stage of the election process has a strictly established deadline.",
+                  "Changing the voting date required revising the election calendar.",
+                  "The commission drew up a cost estimate for each polling station.",
+                  "International donors partially financed the conduct of the election."
+                ],
+                "answerIndex": 2
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The financial transparency of the election budget earned observers' approval.",
+                "bank": [
+                  "прозрачность",
+                  "одобрение",
+                  "Финансовая",
+                  "выборов",
+                  "наблюдателей",
+                  "бюджета",
+                  "вызвала"
+                ],
+                "answer": [
+                  "Финансовая",
+                  "прозрачность",
+                  "бюджета",
+                  "выборов",
+                  "вызвала",
+                  "одобрение",
+                  "наблюдателей"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Избирательный календарь был опубликован на официальном сайте комиссии.",
+                "options": [
+                  "Insufficient funding hindered the work of precinct commissions.",
+                  "Changing the voting date required revising the election calendar.",
+                  "International donors partially financed the conduct of the election.",
+                  "The election calendar was published on the commission's official website."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Insufficient funding hindered the work of precinct commissions.",
+                "bank": [
+                  "работу",
+                  "участковых",
+                  "затруднило",
+                  "финансирование",
+                  "Недостаточное",
+                  "комиссий"
+                ],
+                "answer": [
+                  "Недостаточное",
+                  "финансирование",
+                  "затруднило",
+                  "работу",
+                  "участковых",
+                  "комиссий"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Каждый этап избирательного процесса имеет строго установленный срок.",
+                "options": [
+                  "A delay in financing jeopardized the timeline for election preparations.",
+                  "Every stage of the election process has a strictly established deadline.",
+                  "The election calendar provides eight weeks for candidate registration.",
+                  "The election budget includes expenses for staff training and logistics."
+                ],
+                "answerIndex": 1
+              }
+            ]
+          },
+          {
+            "id": "l2-7",
+            "number": 17,
+            "title": "Training of Election Officials",
+            "titleNative": "Обучение членов комиссий",
+            "description": "Preparing commission staff for their duties",
+            "exercises": [
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Все члены комиссии прошли обязательное обучение перед выборами.",
+                "options": [
+                  "The training covered ballot issuance and vote-counting procedures.",
+                  "Training materials were distributed to each training participant.",
+                  "All commission members completed mandatory training before the election.",
+                  "Experienced instructors conducted a practical session for new commission members."
+                ],
+                "answerIndex": 2
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The training covered ballot issuance and vote-counting procedures.",
+                "bank": [
+                  "подсчёта",
+                  "голосов",
+                  "бюллетеней",
+                  "выдачи",
+                  "процедуры",
+                  "и",
+                  "Тренинг",
+                  "охватил"
+                ],
+                "answer": [
+                  "Тренинг",
+                  "охватил",
+                  "процедуры",
+                  "выдачи",
+                  "бюллетеней",
+                  "и",
+                  "подсчёта",
+                  "голосов"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Учебные материалы были розданы каждому участнику тренинга.",
+                "options": [
+                  "Quality training reduces the likelihood of procedural errors on voting day.",
+                  "The training included a review of common mistakes from past elections.",
+                  "The training covered ballot issuance and vote-counting procedures.",
+                  "Training materials were distributed to each training participant."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Experienced instructors conducted a practical session for new commission members.",
+                "bank": [
+                  "занятие",
+                  "практическое",
+                  "для",
+                  "провели",
+                  "инструкторы",
+                  "новых",
+                  "комиссии",
+                  "членов",
+                  "Опытные"
+                ],
+                "answer": [
+                  "Опытные",
+                  "инструкторы",
+                  "провели",
+                  "практическое",
+                  "занятие",
+                  "для",
+                  "новых",
+                  "членов",
+                  "комиссии"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Тестирование по итогам обучения прошли все сотрудники участков.",
+                "options": [
+                  "Quality training reduces the likelihood of procedural errors on voting day.",
+                  "Video materials were used to clearly explain the procedures.",
+                  "All polling station staff passed the test at the end of the training.",
+                  "Experienced instructors conducted a practical session for new commission members."
+                ],
+                "answerIndex": 2
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The commission organized a refresher training a week before the vote.",
+                "bank": [
+                  "неделю",
+                  "голосования",
+                  "за",
+                  "Комиссия",
+                  "организовала",
+                  "повторный",
+                  "до",
+                  "тренинг"
+                ],
+                "answer": [
+                  "Комиссия",
+                  "организовала",
+                  "повторный",
+                  "тренинг",
+                  "за",
+                  "неделю",
+                  "до",
+                  "голосования"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Обучение включало разбор типичных ошибок прошлых выборов.",
+                "options": [
+                  "Training materials were distributed to each training participant.",
+                  "Practical sessions helped commission members master working with the equipment.",
+                  "Training of commission members was conducted in several languages.",
+                  "The training included a review of common mistakes from past elections."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Each instructor was responsible for preparing a certain number of polling stations.",
+                "bank": [
+                  "участков",
+                  "числа",
+                  "инструктор",
+                  "Каждый",
+                  "определённого",
+                  "подготовку",
+                  "отвечал",
+                  "за"
+                ],
+                "answer": [
+                  "Каждый",
+                  "инструктор",
+                  "отвечал",
+                  "за",
+                  "подготовку",
+                  "определённого",
+                  "числа",
+                  "участков"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Видеоматериалы использовались для наглядного объяснения процедур.",
+                "options": [
+                  "The training included a review of common mistakes from past elections.",
+                  "Quality training reduces the likelihood of procedural errors on voting day.",
+                  "All polling station staff passed the test at the end of the training.",
+                  "Video materials were used to clearly explain the procedures."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Training of commission members was conducted in several languages.",
+                "bank": [
+                  "членов",
+                  "комиссии",
+                  "нескольких",
+                  "Обучение",
+                  "языках",
+                  "на",
+                  "проводилось"
+                ],
+                "answer": [
+                  "Обучение",
+                  "членов",
+                  "комиссии",
+                  "проводилось",
+                  "на",
+                  "нескольких",
+                  "языках"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Программа обучения была разработана с учётом рекомендаций прошлых миссий.",
+                "options": [
+                  "Training of commission members was conducted in several languages.",
+                  "Video materials were used to clearly explain the procedures.",
+                  "All commission members completed mandatory training before the election.",
+                  "The training program was developed taking into account recommendations from past missions."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Practical sessions helped commission members master working with the equipment.",
+                "bank": [
+                  "с",
+                  "освоить",
+                  "комиссии",
+                  "Практические",
+                  "оборудованием",
+                  "занятия",
+                  "членам",
+                  "помогли",
+                  "работу"
+                ],
+                "answer": [
+                  "Практические",
+                  "занятия",
+                  "помогли",
+                  "членам",
+                  "комиссии",
+                  "освоить",
+                  "работу",
+                  "с",
+                  "оборудованием"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Каждый участник тренинга получил сертификат по его завершении.",
+                "options": [
+                  "Quality training reduces the likelihood of procedural errors on voting day.",
+                  "Video materials were used to clearly explain the procedures.",
+                  "Each training participant received a certificate upon its completion.",
+                  "All commission members completed mandatory training before the election."
+                ],
+                "answerIndex": 2
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Insufficient staff preparation caused delays at several polling stations.",
+                "bank": [
+                  "участках",
+                  "на",
+                  "персонала",
+                  "нескольких",
+                  "стала",
+                  "Недостаточная",
+                  "подготовка",
+                  "причиной",
+                  "задержек"
+                ],
+                "answer": [
+                  "Недостаточная",
+                  "подготовка",
+                  "персонала",
+                  "стала",
+                  "причиной",
+                  "задержек",
+                  "на",
+                  "нескольких",
+                  "участках"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Качественное обучение снижает вероятность процедурных ошибок в день голосования.",
+                "options": [
+                  "The training program was developed taking into account recommendations from past missions.",
+                  "Quality training reduces the likelihood of procedural errors on voting day.",
+                  "Video materials were used to clearly explain the procedures.",
+                  "Each training participant received a certificate upon its completion."
+                ],
+                "answerIndex": 1
+              }
+            ]
+          },
+          {
+            "id": "l2-8",
+            "number": 18,
+            "title": "Out-of-Country & Diaspora Voting",
+            "titleNative": "Голосование за рубежом",
+            "description": "Embassy voting and citizens abroad",
+            "exercises": [
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Граждане, проживающие за границей, голосуют в помещениях посольств.",
+                "options": [
+                  "The results of voting abroad were included in the overall final protocol.",
+                  "Citizens living abroad vote at embassy premises.",
+                  "Voters abroad vote according to the local time of the host country.",
+                  "The number of polling stations abroad increased this year."
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The consulate organized voting for compatriots abroad.",
+                "bank": [
+                  "организовало",
+                  "за",
+                  "для",
+                  "соотечественников",
+                  "Консульство",
+                  "рубежом",
+                  "голосование"
+                ],
+                "answer": [
+                  "Консульство",
+                  "организовало",
+                  "голосование",
+                  "для",
+                  "соотечественников",
+                  "за",
+                  "рубежом"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Избиратель зарегистрировался для голосования по почте.",
+                "options": [
+                  "The results of voting abroad were included in the overall final protocol.",
+                  "The diaspora showed high activity in this election.",
+                  "The voter registered to vote by mail.",
+                  "Mail-in ballots must arrive before the established deadline."
+                ],
+                "answerIndex": 2
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The number of polling stations abroad increased this year.",
+                "bank": [
+                  "за",
+                  "Число",
+                  "избирательных",
+                  "увеличилось",
+                  "рубежом",
+                  "этом",
+                  "году",
+                  "участков",
+                  "в"
+                ],
+                "answer": [
+                  "Число",
+                  "избирательных",
+                  "участков",
+                  "за",
+                  "рубежом",
+                  "увеличилось",
+                  "в",
+                  "этом",
+                  "году"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Дипломатическая миссия обеспечила безопасность избирательного участка.",
+                "options": [
+                  "The diplomatic mission ensured the security of the polling station.",
+                  "The consulate organized voting for compatriots abroad.",
+                  "The embassy organized additional operating hours for the polling station due to the large number of voters.",
+                  "The voter presented an international passport to confirm identity."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Voters abroad vote according to the local time of the host country.",
+                "bank": [
+                  "страны",
+                  "местному",
+                  "пребывания",
+                  "Избиратели",
+                  "за",
+                  "по",
+                  "рубежом",
+                  "голосуют",
+                  "времени"
+                ],
+                "answer": [
+                  "Избиратели",
+                  "за",
+                  "рубежом",
+                  "голосуют",
+                  "по",
+                  "местному",
+                  "времени",
+                  "страны",
+                  "пребывания"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Почтовые бюллетени должны прибыть до истечения установленного срока.",
+                "options": [
+                  "The consulate organized voting for compatriots abroad.",
+                  "Organizing the voting process abroad requires close coordination with diplomatic services.",
+                  "Mail-in ballots must arrive before the established deadline.",
+                  "The embassy organized additional operating hours for the polling station due to the large number of voters."
+                ],
+                "answerIndex": 2
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The commission abroad reports directly to the central election commission.",
+                "bank": [
+                  "за",
+                  "отчитывается",
+                  "перед",
+                  "комиссией",
+                  "центральной",
+                  "избирательной",
+                  "Комиссия",
+                  "рубежом",
+                  "напрямую"
+                ],
+                "answer": [
+                  "Комиссия",
+                  "за",
+                  "рубежом",
+                  "отчитывается",
+                  "напрямую",
+                  "перед",
+                  "центральной",
+                  "избирательной",
+                  "комиссией"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Диаспора проявила высокую активность на этих выборах.",
+                "options": [
+                  "The diaspora showed high activity in this election.",
+                  "Voting abroad is regulated by a separate section of the electoral code.",
+                  "The consulate organized voting for compatriots abroad.",
+                  "The commission abroad reports directly to the central election commission."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The embassy organized additional operating hours for the polling station due to the large number of voters.",
+                "bank": [
+                  "большого",
+                  "Посольство",
+                  "участка",
+                  "часы",
+                  "дополнительные",
+                  "избирателей",
+                  "организовало",
+                  "числа",
+                  "работы",
+                  "из-за"
+                ],
+                "answer": [
+                  "Посольство",
+                  "организовало",
+                  "дополнительные",
+                  "часы",
+                  "работы",
+                  "участка",
+                  "из-за",
+                  "большого",
+                  "числа",
+                  "избирателей"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Избиратель предъявил заграничный паспорт для подтверждения личности.",
+                "options": [
+                  "The voter presented an international passport to confirm identity.",
+                  "The diplomatic mission ensured the security of the polling station.",
+                  "Mail-in ballots must arrive before the established deadline.",
+                  "Organizing the voting process abroad requires close coordination with diplomatic services."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Voting abroad is regulated by a separate section of the electoral code.",
+                "bank": [
+                  "разделом",
+                  "рубежом",
+                  "регулируется",
+                  "Голосование",
+                  "избирательного",
+                  "отдельным",
+                  "за",
+                  "кодекса"
+                ],
+                "answer": [
+                  "Голосование",
+                  "за",
+                  "рубежом",
+                  "регулируется",
+                  "отдельным",
+                  "разделом",
+                  "избирательного",
+                  "кодекса"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Наблюдатели посетили несколько избирательных участков в соседних странах.",
+                "options": [
+                  "The embassy organized additional operating hours for the polling station due to the large number of voters.",
+                  "The consulate organized voting for compatriots abroad.",
+                  "The results of voting abroad were included in the overall final protocol.",
+                  "Observers visited several polling stations in neighboring countries."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The results of voting abroad were included in the overall final protocol.",
+                "bank": [
+                  "голосования",
+                  "включены",
+                  "в",
+                  "общий",
+                  "Результаты",
+                  "итоговый",
+                  "протокол",
+                  "за",
+                  "рубежом",
+                  "были"
+                ],
+                "answer": [
+                  "Результаты",
+                  "голосования",
+                  "за",
+                  "рубежом",
+                  "были",
+                  "включены",
+                  "в",
+                  "общий",
+                  "итоговый",
+                  "протокол"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Организация процесса голосования за рубежом требует тесной координации с дипломатическими службами.",
+                "options": [
+                  "The embassy organized additional operating hours for the polling station due to the large number of voters.",
+                  "The diaspora showed high activity in this election.",
+                  "Organizing the voting process abroad requires close coordination with diplomatic services.",
+                  "Voters abroad vote according to the local time of the host country."
+                ],
+                "answerIndex": 2
+              }
+            ]
+          },
+          {
+            "id": "l2-9",
+            "number": 19,
+            "title": "Ballot Design & Printing",
+            "titleNative": "Оформление и печать бюллетеней",
+            "description": "Producing secure, accurate ballots",
+            "exercises": [
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Дизайн бюллетеня был утверждён центральной избирательной комиссией.",
+                "options": [
+                  "The ballot design was approved by the central election commission.",
+                  "Each party checked the correct spelling of the name and symbol on the ballot.",
+                  "The transportation of ballots to polling stations was carried out under guard.",
+                  "The number of printed ballots exceeded the number of registered voters by five percent."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The ballots were printed on special secure paper.",
+                "bank": [
+                  "бумаге",
+                  "печатались",
+                  "защищённой",
+                  "на",
+                  "специальной",
+                  "Бюллетени"
+                ],
+                "answer": [
+                  "Бюллетени",
+                  "печатались",
+                  "на",
+                  "специальной",
+                  "защищённой",
+                  "бумаге"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Каждый бюллетень содержит уникальный водяной знак.",
+                "options": [
+                  "Each ballot contains a unique watermark.",
+                  "The ballot design was approved by the central election commission.",
+                  "Each party checked the correct spelling of the name and symbol on the ballot.",
+                  "The transportation of ballots to polling stations was carried out under guard."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The printing of ballots took place under the observation of representatives of all parties.",
+                "bank": [
+                  "всех",
+                  "под",
+                  "проходила",
+                  "Печать",
+                  "представителей",
+                  "партий",
+                  "наблюдением",
+                  "бюллетеней"
+                ],
+                "answer": [
+                  "Печать",
+                  "бюллетеней",
+                  "проходила",
+                  "под",
+                  "наблюдением",
+                  "представителей",
+                  "всех",
+                  "партий"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Типография доставила бюллетени на склад за неделю до выборов.",
+                "options": [
+                  "The order in which candidates appear on the ballot was determined by drawing lots.",
+                  "The ballot design was approved by the central election commission.",
+                  "The transportation of ballots to polling stations was carried out under guard.",
+                  "The printing house delivered the ballots to the warehouse a week before the election."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "An error in the ballot design was discovered and corrected in time.",
+                "bank": [
+                  "исправлена",
+                  "была",
+                  "вовремя",
+                  "в",
+                  "и",
+                  "бюллетеня",
+                  "оформлении",
+                  "Ошибка",
+                  "обнаружена"
+                ],
+                "answer": [
+                  "Ошибка",
+                  "в",
+                  "оформлении",
+                  "бюллетеня",
+                  "была",
+                  "обнаружена",
+                  "и",
+                  "исправлена",
+                  "вовремя"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Количество напечатанных бюллетеней превышало число зарегистрированных избирателей на пять процентов.",
+                "options": [
+                  "The number of printed ballots exceeded the number of registered voters by five percent.",
+                  "The printing house delivered the ballots to the warehouse a week before the election.",
+                  "Each party checked the correct spelling of the name and symbol on the ballot.",
+                  "The order in which candidates appear on the ballot was determined by drawing lots."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The order in which candidates appear on the ballot was determined by drawing lots.",
+                "bank": [
+                  "расположения",
+                  "в",
+                  "бюллетене",
+                  "кандидатов",
+                  "определялся",
+                  "жеребьёвкой",
+                  "Порядок"
+                ],
+                "answer": [
+                  "Порядок",
+                  "расположения",
+                  "кандидатов",
+                  "в",
+                  "бюллетене",
+                  "определялся",
+                  "жеребьёвкой"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Бюллетень был напечатан крупным шрифтом для удобства пожилых избирателей.",
+                "options": [
+                  "The order in which candidates appear on the ballot was determined by drawing lots.",
+                  "The ballot was printed in large print for the convenience of elderly voters.",
+                  "The ballot design was tested with a focus group of voters.",
+                  "The printing house delivered the ballots to the warehouse a week before the election."
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The commission stores undistributed ballots in a sealed room.",
+                "bank": [
+                  "бюллетени",
+                  "хранит",
+                  "опечатанном",
+                  "помещении",
+                  "Комиссия",
+                  "в",
+                  "нераспределённые"
+                ],
+                "answer": [
+                  "Комиссия",
+                  "хранит",
+                  "нераспределённые",
+                  "бюллетени",
+                  "в",
+                  "опечатанном",
+                  "помещении"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Дизайн бюллетеня прошёл тестирование с участием фокус-группы избирателей.",
+                "options": [
+                  "The ballot design was tested with a focus group of voters.",
+                  "The ballot was printed in large print for the convenience of elderly voters.",
+                  "The printing house delivered the ballots to the warehouse a week before the election.",
+                  "The transportation of ballots to polling stations was carried out under guard."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Each party checked the correct spelling of the name and symbol on the ballot.",
+                "bank": [
+                  "написания",
+                  "правильность",
+                  "бюллетене",
+                  "Каждая",
+                  "проверила",
+                  "символа",
+                  "партия",
+                  "на",
+                  "и",
+                  "названия"
+                ],
+                "answer": [
+                  "Каждая",
+                  "партия",
+                  "проверила",
+                  "правильность",
+                  "написания",
+                  "названия",
+                  "и",
+                  "символа",
+                  "на",
+                  "бюллетене"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Транспортировка бюллетеней на участки осуществлялась под охраной.",
+                "options": [
+                  "The ballots were printed on special secure paper.",
+                  "The ballot design was approved by the central election commission.",
+                  "Each party checked the correct spelling of the name and symbol on the ballot.",
+                  "The transportation of ballots to polling stations was carried out under guard."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Ballots for the referendum were printed as a separate print run.",
+                "bank": [
+                  "Бюллетени",
+                  "напечатаны",
+                  "тиражом",
+                  "референдума",
+                  "для",
+                  "отдельным",
+                  "были"
+                ],
+                "answer": [
+                  "Бюллетени",
+                  "для",
+                  "референдума",
+                  "были",
+                  "напечатаны",
+                  "отдельным",
+                  "тиражом"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Прозрачность процесса печати бюллетеней укрепляет доверие к выборам.",
+                "options": [
+                  "The ballot design was tested with a focus group of voters.",
+                  "The commission stores undistributed ballots in a sealed room.",
+                  "An error in the ballot design was discovered and corrected in time.",
+                  "Transparency of the ballot printing process strengthens trust in the election."
+                ],
+                "answerIndex": 3
+              }
+            ]
+          },
+          {
+            "id": "l2-10",
+            "number": 20,
+            "title": "Election Day Staffing",
+            "titleNative": "Персонал в день голосования",
+            "description": "Staffing, roles, and coordination on voting day",
+            "exercises": [
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "На каждом участке в день голосования работает не менее семи человек.",
+                "options": [
+                  "Staff receive compensation for working on voting day.",
+                  "Technical staff were responsible for the operation of the equipment throughout the day.",
+                  "At least seven people work at each polling station on voting day.",
+                  "A shortage of staff at some polling stations led to delays."
+                ],
+                "answerIndex": 2
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Reserve staff were prepared in case of absence of core commission members.",
+                "bank": [
+                  "на",
+                  "подготовлен",
+                  "был",
+                  "членов",
+                  "Резервный",
+                  "комиссии",
+                  "персонал",
+                  "случай",
+                  "отсутствия",
+                  "основных"
+                ],
+                "answer": [
+                  "Резервный",
+                  "персонал",
+                  "был",
+                  "подготовлен",
+                  "на",
+                  "случай",
+                  "отсутствия",
+                  "основных",
+                  "членов",
+                  "комиссии"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Каждому сотруднику участка присвоена определённая функция.",
+                "options": [
+                  "Each polling station worker was assigned a specific function.",
+                  "Every staff member is required to wear a badge indicating their role.",
+                  "A shortage of staff at some polling stations led to delays.",
+                  "Additional staff were sent to polling stations with high turnout."
+                ],
+                "answerIndex": 0
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The commission hired temporary staff only for voting day.",
+                "bank": [
+                  "дня",
+                  "временный",
+                  "персонал",
+                  "только",
+                  "голосования",
+                  "наняла",
+                  "Комиссия",
+                  "для"
+                ],
+                "answer": [
+                  "Комиссия",
+                  "наняла",
+                  "временный",
+                  "персонал",
+                  "только",
+                  "для",
+                  "дня",
+                  "голосования"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Работа персонала участка продолжается до завершения подсчёта голосов.",
+                "options": [
+                  "At least seven people work at each polling station on voting day.",
+                  "The work of the polling station staff continues until the vote count is completed.",
+                  "Reserve staff were prepared in case of absence of core commission members.",
+                  "Each polling station worker was assigned a specific function."
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The polling station manager coordinates the actions of all staff.",
+                "bank": [
+                  "всего",
+                  "участком",
+                  "Заведующий",
+                  "персонала",
+                  "действия",
+                  "координирует"
+                ],
+                "answer": [
+                  "Заведующий",
+                  "участком",
+                  "координирует",
+                  "действия",
+                  "всего",
+                  "персонала"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Сотрудники получают вознаграждение за работу в день голосования.",
+                "options": [
+                  "Polling station staff received instructions on what to do in case of an emergency.",
+                  "The polling station manager coordinates the actions of all staff.",
+                  "A shortage of staff at some polling stations led to delays.",
+                  "Staff receive compensation for working on voting day."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "A shortage of staff at some polling stations led to delays.",
+                "bank": [
+                  "на",
+                  "персонала",
+                  "задержкам",
+                  "некоторых",
+                  "к",
+                  "Нехватка",
+                  "участках",
+                  "привела"
+                ],
+                "answer": [
+                  "Нехватка",
+                  "персонала",
+                  "на",
+                  "некоторых",
+                  "участках",
+                  "привела",
+                  "к",
+                  "задержкам"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Каждый сотрудник участка прошёл проверку перед назначением на должность.",
+                "options": [
+                  "Polling station staff received instructions on what to do in case of an emergency.",
+                  "The commission hired temporary staff only for voting day.",
+                  "Well-coordinated staff work ensured the smooth operation of the polling station.",
+                  "Every polling station worker underwent a background check before being appointed."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "The commission distributed staff evenly across all polling stations in the region.",
+                "bank": [
+                  "региона",
+                  "по",
+                  "персонал",
+                  "равномерно",
+                  "Комиссия",
+                  "распределила",
+                  "участкам",
+                  "всем"
+                ],
+                "answer": [
+                  "Комиссия",
+                  "распределила",
+                  "персонал",
+                  "равномерно",
+                  "по",
+                  "всем",
+                  "участкам",
+                  "региона"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Технический персонал отвечал за работу оборудования на протяжении всего дня.",
+                "options": [
+                  "The commission distributed staff evenly across all polling stations in the region.",
+                  "Every polling station worker underwent a background check before being appointed.",
+                  "Reserve staff were prepared in case of absence of core commission members.",
+                  "Technical staff were responsible for the operation of the equipment throughout the day."
+                ],
+                "answerIndex": 3
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Additional staff were sent to polling stations with high turnout.",
+                "bank": [
+                  "высокой",
+                  "с",
+                  "был",
+                  "Дополнительный",
+                  "на",
+                  "явкой",
+                  "участки",
+                  "направлен",
+                  "персонал"
+                ],
+                "answer": [
+                  "Дополнительный",
+                  "персонал",
+                  "был",
+                  "направлен",
+                  "на",
+                  "участки",
+                  "с",
+                  "высокой",
+                  "явкой"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Персонал участка получил инструктаж о действиях в случае чрезвычайной ситуации.",
+                "options": [
+                  "Every polling station worker underwent a background check before being appointed.",
+                  "The polling station manager coordinates the actions of all staff.",
+                  "Polling station staff received instructions on what to do in case of an emergency.",
+                  "A shortage of staff at some polling stations led to delays."
+                ],
+                "answerIndex": 2
+              },
+              {
+                "type": "word-bank",
+                "direction": "en-ru",
+                "prompt": "Every staff member is required to wear a badge indicating their role.",
+                "bank": [
+                  "бейдж",
+                  "носить",
+                  "с",
+                  "указанием",
+                  "роли",
+                  "Каждый",
+                  "сотрудник",
+                  "обязан",
+                  "своей"
+                ],
+                "answer": [
+                  "Каждый",
+                  "сотрудник",
+                  "обязан",
+                  "носить",
+                  "бейдж",
+                  "с",
+                  "указанием",
+                  "своей",
+                  "роли"
+                ]
+              },
+              {
+                "type": "multiple-choice",
+                "direction": "ru-en",
+                "prompt": "Слаженная работа персонала обеспечила бесперебойную работу участка.",
+                "options": [
+                  "At least seven people work at each polling station on voting day.",
+                  "The work of the polling station staff continues until the vote count is completed.",
+                  "Well-coordinated staff work ensured the smooth operation of the polling station.",
+                  "Technical staff were responsible for the operation of the equipment throughout the day."
+                ],
+                "answerIndex": 2
+              }
+            ]
           }
         ]
       },
@@ -4108,7 +5514,7 @@
         "lessons": [
           {
             "id": "l3-1",
-            "number": 16,
+            "number": 21,
             "title": "Opening the Polling Station",
             "titleNative": "Открытие участка",
             "description": "Morning procedures before voting begins",
@@ -4378,7 +5784,7 @@
           },
           {
             "id": "l3-2",
-            "number": 17,
+            "number": 22,
             "title": "The Voting Process",
             "titleNative": "Процесс голосования",
             "description": "The mechanics of casting a ballot",
@@ -4642,7 +6048,7 @@
           },
           {
             "id": "l3-3",
-            "number": 18,
+            "number": 23,
             "title": "Voter Identification & Verification",
             "titleNative": "Идентификация избирателей",
             "description": "Checking identity documents and preventing fraud",
@@ -4910,7 +6316,7 @@
           },
           {
             "id": "l3-4",
-            "number": 19,
+            "number": 24,
             "title": "Queue Management & Security",
             "titleNative": "Очередь и безопасность",
             "description": "Crowd control and order at the polling station",
@@ -5176,7 +6582,7 @@
           },
           {
             "id": "l3-5",
-            "number": 20,
+            "number": 25,
             "title": "Closing & Counting",
             "titleNative": "Закрытие и подсчёт голосов",
             "description": "End-of-day procedures and the vote count",
@@ -5456,7 +6862,7 @@
         "lessons": [
           {
             "id": "l4-1",
-            "number": 21,
+            "number": 26,
             "title": "Vote Tabulation & Transmission",
             "titleNative": "Табуляция и передача результатов",
             "description": "Summarizing and reporting official results",
@@ -5726,7 +7132,7 @@
           },
           {
             "id": "l4-2",
-            "number": 22,
+            "number": 27,
             "title": "Recounts & Results Disputes",
             "titleNative": "Пересчёт голосов и споры о результатах",
             "description": "Challenging and reviewing vote counts",
@@ -6000,7 +7406,7 @@
           },
           {
             "id": "l4-3",
-            "number": 23,
+            "number": 28,
             "title": "The Electoral Legal Framework",
             "titleNative": "Избирательное законодательство",
             "description": "Constitution, election law, and legal structure",
@@ -6270,7 +7676,7 @@
           },
           {
             "id": "l4-4",
-            "number": 24,
+            "number": 29,
             "title": "International Standards & Commitments",
             "titleNative": "Международные стандарты",
             "description": "OSCE commitments and democratic election principles",
@@ -6548,7 +7954,7 @@
           },
           {
             "id": "l4-5",
-            "number": 25,
+            "number": 30,
             "title": "Complaints, Appeals & Violations",
             "titleNative": "Жалобы, апелляции и нарушения",
             "description": "The dispute-resolution process and election violations",
@@ -6832,7 +8238,7 @@
         "lessons": [
           {
             "id": "l5-1",
-            "number": 26,
+            "number": 31,
             "title": "Methodology & Code of Conduct",
             "titleNative": "Методология наблюдения и кодекс поведения",
             "description": "How observers work and the rules that bind them",
@@ -7100,7 +8506,7 @@
           },
           {
             "id": "l5-2",
-            "number": 27,
+            "number": 32,
             "title": "Meetings with Stakeholders",
             "titleNative": "Встречи с заинтересованными сторонами",
             "description": "Engaging civil society, parties, media, and authorities",
@@ -7378,7 +8784,7 @@
           },
           {
             "id": "l5-3",
-            "number": 28,
+            "number": 33,
             "title": "Interim Reports & Preliminary Statements",
             "titleNative": "Промежуточные отчёты и заявления",
             "description": "Documenting findings and communicating conclusions",
@@ -7652,7 +9058,7 @@
           },
           {
             "id": "l5-4",
-            "number": 29,
+            "number": 34,
             "title": "Security & Logistics",
             "titleNative": "Безопасность и логистика",
             "description": "Field safety, transport, and mission logistics",
@@ -7930,7 +9336,7 @@
           },
           {
             "id": "l5-5",
-            "number": 30,
+            "number": 35,
             "title": "Long-Term vs Short-Term Observation",
             "titleNative": "Долгосрочное и краткосрочное наблюдение",
             "description": "How the two observer roles differ and complement each other",
@@ -8212,7 +9618,7 @@
         "lessons": [
           {
             "id": "l6-1",
-            "number": 31,
+            "number": 36,
             "title": "Media Monitoring",
             "titleNative": "Мониторинг средств массовой информации",
             "description": "Tracking fairness and balance in press coverage",
@@ -8492,7 +9898,7 @@
           },
           {
             "id": "l6-2",
-            "number": 32,
+            "number": 37,
             "title": "Campaign Finance Monitoring",
             "titleNative": "Мониторинг финансирования избирательных кампаний",
             "description": "Tracking donations, spending limits, and transparency",
@@ -8760,7 +10166,7 @@
           },
           {
             "id": "l6-3",
-            "number": 33,
+            "number": 38,
             "title": "Gender Equality in Elections",
             "titleNative": "Гендерное равенство на выборах",
             "description": "Women's representation and participation in the process",
@@ -9036,7 +10442,7 @@
           },
           {
             "id": "l6-4",
-            "number": 34,
+            "number": 39,
             "title": "Disability & Accessibility",
             "titleNative": "Люди с инвалидностью и доступность",
             "description": "Ensuring the process is accessible to everyone",
@@ -9308,7 +10714,7 @@
           },
           {
             "id": "l6-5",
-            "number": 35,
+            "number": 40,
             "title": "New Voting Technologies",
             "titleNative": "Новые технологии голосования",
             "description": "Electronic voting, e-tabulation, and cybersecurity",
