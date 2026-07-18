@@ -1,4 +1,7 @@
-// Firebase project configuration for Nablyudatel.
+// Firebase project configuration for Observer (formerly "Nablyudatel" —
+// internal storage keys/Firestore appId stay "nablyudatel" for backward
+// compatibility with existing users' saved progress; only the user-facing
+// name changed).
 //
 // Replace the placeholder values below with the config object shown in:
 // Firebase Console -> Project settings (gear icon) -> General tab ->

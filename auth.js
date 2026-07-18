@@ -78,12 +78,18 @@
     const {
       getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup,
       createUserWithEmailAndPassword, signInWithEmailAndPassword,
-      sendPasswordResetEmail, signOut,
+      sendPasswordResetEmail, signOut, setPersistence, browserLocalPersistence,
     } = authApi;
     const { getFirestore, doc, getDoc, setDoc, serverTimestamp } = fsApi;
 
     const auth = getAuth(firebaseApp);
     const db = getFirestore(firebaseApp);
+    // Explicit local persistence (IndexedDB-backed) so a signed-in device
+    // stays signed in across restarts instead of relying on the SDK default.
+    // Note: Safari's Intelligent Tracking Prevention can still cap script-
+    // writable storage after ~7 days of no interaction with the site — that's
+    // an OS-level privacy policy no client-side code can fully override.
+    try { await setPersistence(auth, browserLocalPersistence); } catch (e) { /* fall back to default persistence */ }
 
     const googleBtn = document.getElementById("authGoogleBtn");
     const form = document.getElementById("authForm");
