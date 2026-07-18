@@ -35,6 +35,7 @@
   let advanceTimer = null;
   let soundMuted = false;
   let direction = "ru-en"; // "ru-en" = Russian shown, answer in English; "en-ru" = reverse
+  let currentLevelId = null;
 
   // ---------- theme ----------
   function initTheme() {
@@ -163,8 +164,8 @@
     window.speechSynthesis.onvoiceschanged = refreshVoices;
   }
   const SPEECH_RATE = 0.85;
-  function speak(text, lang) {
-    if (soundMuted || !("speechSynthesis" in window)) return;
+  function speak(text, lang, onEnd) {
+    if (soundMuted || !("speechSynthesis" in window)) { if (onEnd) onEnd(); return; }
     try {
       window.speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(text);
@@ -172,23 +173,34 @@
       u.rate = SPEECH_RATE;
       const voice = lang === "ru-RU" ? _preferredVoiceRu : _preferredVoiceEn;
       if (voice) u.voice = voice;
+      if (onEnd) { u.onend = onEnd; u.onerror = onEnd; }
       window.speechSynthesis.speak(u);
-    } catch (e) { /* TTS unavailable */ }
+    } catch (e) { if (onEnd) onEnd(); }
   }
-  // Keep the auto-advance timer from cutting off the spoken answer — estimate
-  // how long the TTS will take (~2.3 words/sec at rate 1.0, scaled by our
-  // slower rate) and never advance sooner than that, plus a trailing pause.
+  function speakAnswer(text, onEnd) {
+    speak(text, direction === "ru-en" ? "en-US" : "ru-RU", onEnd);
+  }
+  // Estimate for the feedback timer bar's animation-duration only (cosmetic;
+  // the actual advance is driven by the real TTS "end" event below).
   function speechDurationMs(text) {
     if (!text) return 0;
     const words = text.trim().split(/\s+/).filter(Boolean).length;
     return (words / (2.3 * SPEECH_RATE)) * 1000 + 1000;
   }
-  function answerAdvanceDelay(correct, text) {
+  function visualDelay(correct, text) {
     const base = correct ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_WRONG;
     return Math.max(base, speechDurationMs(text));
   }
-  function speakAnswer(text) {
-    speak(text, direction === "ru-en" ? "en-US" : "ru-RU");
+  // Advance the instant the spoken answer finishes playing — no estimate, no
+  // added pause, synced exactly to the real TTS "end" event. Falls back to
+  // the fixed delay only when there's nothing to speak or audio is off, so
+  // the learner still gets a moment to read.
+  function advanceAfterSpeech(text, fallbackDelay) {
+    if (!text || soundMuted || !("speechSynthesis" in window)) {
+      scheduleAdvance(fallbackDelay);
+      return;
+    }
+    speakAnswer(text, () => scheduleAdvance(0));
   }
 
   // ---------- persistence ----------
@@ -367,101 +379,133 @@
   }
 
   // ---------- HOME ----------
+  function waveformBars(pct, count = 14) {
+    const filled = Math.round((pct / 100) * count);
+    let html = "";
+    for (let i = 0; i < count; i++) {
+      const h = 8 + Math.round(Math.sin((i / count) * Math.PI) * 22);
+      html += `<div class="bar${i < filled ? " filled" : ""}" style="height:${h}px"></div>`;
+    }
+    return html;
+  }
+
+  // The level whose roadmap should show by default: the one containing the
+  // first unlocked-but-not-yet-completed lesson (i.e. "where the user is"),
+  // falling back to the first level with lessons.
+  function pickDefaultLevel() {
+    for (const level of course.levels) {
+      const levelLessons = flatLessons.filter(l => l.levelId === level.id);
+      if (!levelLessons.length) continue;
+      const hasCurrent = levelLessons.some(l => !progress.completedLessons.includes(l.id) && isLessonUnlocked(flatLessons.indexOf(l)));
+      if (hasCurrent) return level.id;
+    }
+    const firstBuilt = course.levels.find(lv => flatLessons.some(l => l.levelId === lv.id));
+    return firstBuilt ? firstBuilt.id : course.levels[0].id;
+  }
+
   function renderHome() {
+    if (!currentLevelId || !course.levels.some(l => l.id === currentLevelId)) {
+      currentLevelId = pickDefaultLevel();
+    }
+    renderLevelRoadmap();
+  }
+
+  // Each level gets its own roadmap: lessons as round nodes running bottom
+  // (lesson 1) to top (last lesson), like climbing toward the level's peak.
+  // Completing the level unlocks a "next level" node above the last lesson.
+  function renderLevelRoadmap() {
     const totalLessons = flatLessons.length;
-    const doneCount = flatLessons.filter(l => progress.completedLessons.includes(l.id)).length;
-    const pct = totalLessons ? Math.round((doneCount / totalLessons) * 100) : 0;
+    const doneLessons = flatLessons.filter(l => progress.completedLessons.includes(l.id)).length;
+    const overallPct = totalLessons ? Math.round((doneLessons / totalLessons) * 100) : 0;
 
-    const reviewCard = progress.missedBank.length > 0 ? `
-      <button class="review-card" id="reviewBtn">
-        <div>
-          <div class="review-title">Review your mistakes</div>
-          <div class="review-sub">${progress.missedBank.length} exercise${progress.missedBank.length === 1 ? "" : "s"} waiting</div>
+    const level = course.levels.find(l => l.id === currentLevelId);
+    const builtLevels = course.levels.filter(lv => lv.lessons.length > 0);
+    const builtIdx = builtLevels.findIndex(lv => lv.id === currentLevelId);
+    const prevLevel = builtIdx > 0 ? builtLevels[builtIdx - 1] : null;
+    const nextLevel = builtIdx >= 0 && builtIdx < builtLevels.length - 1 ? builtLevels[builtIdx + 1] : null;
+
+    const levelLessons = flatLessons.filter(l => l.levelId === level.id);
+    const levelDone = levelLessons.filter(l => progress.completedLessons.includes(l.id)).length;
+    const levelComplete = levelLessons.length > 0 && levelDone === levelLessons.length;
+
+    let nodesHtml = "";
+    levelLessons.forEach((lesson, i) => {
+      const flatIndex = flatLessons.indexOf(lesson);
+      const unlocked = isLessonUnlocked(flatIndex);
+      const done = progress.completedLessons.includes(lesson.id);
+      const isCurrent = unlocked && !done;
+      const offset = ["center", "left", "right"][i % 3];
+      nodesHtml += `
+        <div class="roadmap-row ${offset}">
+          <button class="roadmap-node ${done ? "done" : unlocked ? "unlocked" : "locked"} ${isCurrent ? "current" : ""}" data-lesson="${lesson.id}" ${unlocked ? "" : "disabled"} aria-label="${lesson.title}">
+            ${done ? "✓" : unlocked ? lesson.number : "🔒"}
+          </button>
+          <div class="roadmap-label"><span class="roadmap-label-en">${lesson.title}</span><span class="roadmap-label-native">${lesson.titleNative || ""}</span></div>
         </div>
-        <span class="review-arrow" aria-hidden="true">&rarr;</span>
-      </button>` : "";
-
-    const revisionCard = doneCount > 0 ? `
-      <button class="review-card revision-card" id="revisionBtn">
-        <div>
-          <div class="review-title">Practice</div>
-          <div class="review-sub">Old terms, shuffled and mixed across topics</div>
-        </div>
-        <span class="review-arrow" aria-hidden="true">&rarr;</span>
-      </button>` : "";
-
-    let flatCursor = -1;
-    let openAssigned = false;
-    const levelSections = course.levels.map(level => {
-      const levelDone = level.lessons.filter(l => progress.completedLessons.includes(l.id)).length;
-      const levelComplete = level.lessons.length > 0 && levelDone === level.lessons.length;
-      const nodes = level.lessons.map(lesson => {
-        flatCursor++;
-        const idx = flatCursor;
-        const unlocked = isLessonUnlocked(idx);
-        const done = progress.completedLessons.includes(lesson.id);
-        const stateClass = done ? "done" : unlocked ? "current" : "locked";
-        const status = done ? "Complete" : unlocked ? "Start" : "Locked";
-        return `
-          <li class="path-node ${stateClass}" data-lesson="${lesson.id}">
-            <div class="medallion">${done ? "&#10003;" : lesson.number}</div>
-            <div class="node-card">
-              <div>
-                <div class="node-title">${lesson.title}${lesson.titleNative ? `<span class="native">${lesson.titleNative}</span>` : ""}</div>
-                <div class="node-desc">${lesson.description || ""}</div>
-              </div>
-              <div class="node-status">${status}</div>
-            </div>
-          </li>`;
-      }).join("");
-
-      let open = false;
-      if (!openAssigned && !levelComplete && level.lessons.length > 0) { open = true; openAssigned = true; }
-
-      return `
-        <details class="level-section" ${open ? "open" : ""}>
-          <summary class="level-header">
-            <span class="level-badge">${level.badge}</span>
-            <div>
-              <h2>${level.label}${level.labelNative ? `<span class="native">${level.labelNative}</span>` : ""}</h2>
-            </div>
-            <span class="level-progress">${levelDone}/${level.lessons.length}</span>
-          </summary>
-          <ul class="path">${nodes || '<li class="node-desc" style="padding:0 0 12px;">More lessons coming soon.</li>'}</ul>
-        </details>
       `;
-    }).join("");
+    });
+    if (levelComplete && nextLevel) {
+      nodesHtml += `
+        <div class="roadmap-row center">
+          <button class="roadmap-next-node" id="nextLevelBtn" aria-label="Next level">🏁</button>
+          <div class="roadmap-label"><span class="roadmap-label-en">Level complete!</span><span class="roadmap-label-native">Next: ${nextLevel.badge}</span></div>
+        </div>
+      `;
+    }
 
     screenEl.innerHTML = `
-      <section class="hero">
-        <p class="eyebrow">${course.heroEyebrow || ""}</p>
-        <h1>${course.title}</h1>
-        ${course.heroNative ? `<p class="hero-native">${course.heroNative}</p>` : ""}
-        <p class="lede">${course.subtitle}. ${course.heroLedeSuffix || ""}</p>
-        <div class="progress-row">
-          <div class="ring" data-pct="${pct}" style="--pct:${pct}"></div>
-          <div class="progress-text">
-            <span class="label">Course progress</span>
-            <span class="value">${doneCount} / ${totalLessons} lessons</span>
-          </div>
+      <div class="level-progress-card">
+        <div class="waveform">${waveformBars(overallPct)}</div>
+        <div class="level-progress-info">
+          <div class="pct">${overallPct}%</div>
+          <div class="label">Overall progress</div>
+          <div class="count">${doneLessons} / ${totalLessons} lessons</div>
         </div>
-      </section>
-      ${reviewCard}
-      ${revisionCard}
-      ${levelSections}
+      </div>
+      <div class="roadmap-header">
+        <button class="roadmap-arrow" id="prevLevelBtn" ${prevLevel ? "" : "disabled"} aria-label="Previous level">‹</button>
+        <div class="roadmap-level-info">
+          <span class="level-badge">${level.badge}</span>
+          <h2>${level.label}${level.labelNative ? ` &middot; ${level.labelNative}` : ""}</h2>
+          <span class="level-count">${levelLessons.length ? `${levelDone}/${levelLessons.length}` : "coming soon"}</span>
+        </div>
+        <button class="roadmap-arrow" id="nextLevelNavBtn" ${nextLevel ? "" : "disabled"} aria-label="Next level">›</button>
+      </div>
+      ${!levelLessons.length
+        ? `<div class="level-locked-note">Lessons for ${level.badge} are still being prepared and will appear here soon.</div>`
+        : `<div class="roadmap" id="roadmapEl">${nodesHtml}</div>`
+      }
     `;
 
-    screenEl.querySelectorAll(".path-node:not(.locked)").forEach(node => {
-      node.querySelector(".node-card").addEventListener("click", () => {
-        const lessonId = node.dataset.lesson;
-        startLesson(flatLessons.find(l => l.id === lessonId));
+    document.getElementById("prevLevelBtn").addEventListener("click", () => {
+      if (!prevLevel) return;
+      currentLevelId = prevLevel.id;
+      renderLevelRoadmap();
+    });
+    document.getElementById("nextLevelNavBtn").addEventListener("click", () => {
+      if (!nextLevel) return;
+      currentLevelId = nextLevel.id;
+      renderLevelRoadmap();
+    });
+    const nextLevelBtn = document.getElementById("nextLevelBtn");
+    if (nextLevelBtn) {
+      nextLevelBtn.addEventListener("click", () => {
+        if (!nextLevel) return;
+        currentLevelId = nextLevel.id;
+        renderLevelRoadmap();
+      });
+    }
+    screenEl.querySelectorAll(".roadmap-node:not(.locked)").forEach(node => {
+      node.addEventListener("click", () => {
+        const lesson = flatLessons.find(l => l.id === node.dataset.lesson);
+        if (lesson) startLesson(lesson);
       });
     });
 
-    const reviewBtn = document.getElementById("reviewBtn");
-    if (reviewBtn) reviewBtn.addEventListener("click", startReview);
-    const revisionBtn = document.getElementById("revisionBtn");
-    if (revisionBtn) revisionBtn.addEventListener("click", startRevision);
+    const target = screenEl.querySelector(".roadmap-node.current") || screenEl.querySelector(".roadmap-node.unlocked");
+    if (target) {
+      requestAnimationFrame(() => target.scrollIntoView({ block: "center", behavior: "auto" }));
+    }
   }
 
   // ---------- LESSON / REVIEW ----------
@@ -564,7 +608,6 @@
   function afterAnswer(correct) {
     const ex = currentExercise();
     correct ? playCorrectSound() : playIncorrectSound();
-    speakAnswer(direction === "ru-en" ? ex.en : ex.ru);
     if (correct) {
       session.solved.add(ex._idx);
       session.combo++;
@@ -630,10 +673,10 @@
         btn.classList.add(correct ? "correct" : "incorrect");
         if (!correct) buttons[answerIndex].classList.add("correct");
         afterAnswer(correct);
-        const delay = answerAdvanceDelay(correct, correctText);
-        screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, correctText, delay));
+        const fallback = correct ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_WRONG;
+        screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, correctText, visualDelay(correct, correctText)));
         wireFeedbackReplay(correctText);
-        scheduleAdvance(delay);
+        advanceAfterSpeech(correctText, fallback);
       });
     });
   }
@@ -669,10 +712,10 @@
       const correct = placed.length === tgtTokens.length && placed.every((w, i) => w === tgtTokens[i]);
       afterAnswer(correct);
       const answerText = tgtTokens.join(" ");
-      const delay = answerAdvanceDelay(correct, answerText);
-      screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, answerText, delay));
+      const fallback = correct ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_WRONG;
+      screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, answerText, visualDelay(correct, answerText)));
       wireFeedbackReplay(answerText);
-      scheduleAdvance(delay);
+      advanceAfterSpeech(answerText, fallback);
     }
 
     function renderTiles() {

@@ -166,89 +166,72 @@ button.stat:hover { color: var(--navy); }
 /* ---------- home ---------- */
 .screen { flex: 1; padding: 0 20px 60px; }
 
-.hero {
-  padding: 28px 0 22px;
-  border-bottom: 1px dashed var(--line);
-  margin-bottom: 20px;
-}
-.eyebrow {
-  font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700;
-  letter-spacing: 0.1em; color: var(--stamp); margin: 0 0 8px;
-}
-.hero h1 {
-  font-family: var(--font-display); font-size: 2.5rem; margin: 0 0 6px; line-height: 1.1;
-}
-.hero-native {
-  font-family: var(--font-display); font-size: 1.3rem; color: var(--navy); margin: 0 0 14px; font-weight: 700;
-}
-.lede { color: var(--ink-soft); font-size: 0.98rem; line-height: 1.55; max-width: 56ch; margin: 0 0 22px; }
+.waveform { display: flex; align-items: flex-end; gap: 3px; height: 34px; }
+.waveform .bar { width: 4px; border-radius: 2px; background: var(--paper-deep); transition: background 0.2s ease, height 0.3s ease; }
+.waveform .bar.filled { background: var(--navy); }
 
-.progress-row { display: flex; align-items: center; gap: 16px; }
-.ring {
-  --pct: 0;
-  width: 56px; height: 56px; border-radius: 50%;
-  background: conic-gradient(var(--navy) calc(var(--pct) * 1%), var(--paper-deep) 0);
+.level-progress-card {
+  background: var(--paper-raised); border: 1px solid var(--line); border-radius: 12px;
+  padding: 22px 20px; margin: 20px 0 22px; display: flex; align-items: center; gap: 18px;
+}
+.level-progress-card .waveform { flex-shrink: 0; }
+.level-progress-info { flex: 1; }
+.level-progress-info .pct { font-family: var(--font-mono); font-size: 1.6rem; font-weight: 700; color: var(--navy); }
+.level-progress-info .label { font-size: 0.82rem; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 2px; }
+.level-progress-info .count { font-family: var(--font-display); font-size: 1rem; font-weight: 600; margin-top: 4px; }
+
+/* ---------- level roadmap ---------- */
+.roadmap-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.roadmap-arrow {
+  width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid var(--line); background: var(--paper-raised);
+  color: var(--ink); font-size: 1.1rem; line-height: 1; cursor: pointer; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-mono); font-weight: 700; font-size: 0.85rem;
-  position: relative; flex-shrink: 0;
 }
-.ring::before {
-  content: attr(data-pct) "%";
-  position: absolute; inset: 5px; border-radius: 50%;
-  background: var(--paper); display: flex; align-items: center; justify-content: center;
+.roadmap-arrow:hover:not(:disabled) { border-color: var(--navy); color: var(--navy); }
+.roadmap-arrow:disabled { opacity: 0.25; cursor: default; }
+.roadmap-level-info { flex: 1; text-align: center; }
+.roadmap-level-info h2 { font-family: var(--font-display); font-size: 1.1rem; margin: 4px 0 2px; color: var(--ink); }
+.roadmap-level-info .level-badge {
+  font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--navy);
+  background: var(--navy-wash); border: 1px solid var(--navy); border-radius: 6px; padding: 3px 8px;
 }
-.progress-text { display: flex; flex-direction: column; gap: 2px; }
-.progress-text .label { font-size: 0.75rem; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.05em; }
-.progress-text .value { font-family: var(--font-mono); font-weight: 700; font-size: 1.05rem; }
+.level-count { font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-soft); }
+.level-locked-note { font-size: 0.8rem; color: var(--ink-soft); background: var(--paper-raised); border: 1px dashed var(--line); border-radius: 10px; padding: 14px 16px; margin-top: 10px; }
 
-.review-card {
-  display: flex; align-items: center; justify-content: space-between;
-  width: 100%; text-align: left; background: var(--stamp-wash); border: 1px solid var(--stamp);
-  border-radius: 8px; padding: 16px 18px; margin-bottom: 12px; cursor: pointer;
-  font-family: var(--font-body);
+/* Lessons run bottom (lesson 1) to top (last lesson) — column-reverse means
+   the first child in the DOM (lesson 1) ends up visually lowest, so the
+   list can just be built in normal reading order. */
+.roadmap {
+  display: flex; flex-direction: column-reverse; align-items: center; position: relative;
+  padding: 24px 10px 10px; margin-top: 4px; max-height: 60vh; overflow-y: auto;
 }
-.review-card.revision-card { background: var(--gold-wash); border-color: var(--gold); }
-.review-title { font-weight: 700; font-size: 1.02rem; color: var(--ink); }
-.review-sub { font-size: 0.82rem; color: var(--ink-soft); margin-top: 2px; }
-.review-arrow { font-size: 1.3rem; color: var(--ink-soft); }
-
-.level-section { border: 1px solid var(--line); border-radius: 8px; margin-bottom: 14px; overflow: hidden; background: var(--paper-raised); }
-.level-header {
-  display: flex; align-items: center; gap: 12px; padding: 14px 16px; cursor: pointer;
-  list-style: none;
+.roadmap::before {
+  content: ""; position: absolute; left: 50%; top: 24px; bottom: 10px; width: 4px;
+  background: var(--paper-deep); transform: translateX(-50%); z-index: 0; border-radius: 2px;
 }
-.level-header::-webkit-details-marker { display: none; }
-.level-badge {
-  font-family: var(--font-mono); font-weight: 700; font-size: 0.82rem;
-  background: var(--navy); color: var(--paper-raised); border-radius: 4px;
-  width: 26px; height: 26px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+.roadmap-row { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 100%; margin-bottom: 22px; }
+.roadmap-row.left { align-items: flex-start; padding-left: 12%; }
+.roadmap-row.right { align-items: flex-end; padding-right: 12%; }
+.roadmap-node {
+  width: 58px; height: 58px; border-radius: 50%; border: 3px solid var(--paper-deep); background: var(--paper-raised);
+  color: var(--ink-soft); font-family: var(--font-mono); font-weight: 700; font-size: 1.1rem;
+  display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0;
+  box-shadow: 0 3px 0 var(--line); transition: transform 0.1s ease;
 }
-.level-header h2 { font-family: var(--font-display); font-size: 1.15rem; margin: 0; flex: 1; }
-.level-header .native { font-size: 0.85rem; color: var(--ink-soft); font-weight: 400; margin-left: 6px; }
-.level-progress { font-family: var(--font-mono); font-size: 0.82rem; color: var(--ink-soft); }
-
-.path { list-style: none; margin: 0; padding: 4px 16px 16px; display: flex; flex-direction: column; gap: 8px; }
-.path-node { display: flex; align-items: center; gap: 12px; }
-.medallion {
-  width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-mono); font-weight: 700; font-size: 0.85rem;
-  border: 2px solid var(--line); color: var(--ink-soft); background: var(--paper);
+.roadmap-node:active:not(:disabled) { transform: translateY(2px); box-shadow: 0 1px 0 var(--line); }
+.roadmap-node.unlocked { border-color: var(--navy); color: var(--navy); background: var(--navy-wash); }
+.roadmap-node.unlocked.current { box-shadow: 0 3px 0 var(--btn-shadow), 0 0 0 5px var(--navy-wash); }
+.roadmap-node.done { border-color: var(--navy); background: var(--navy); color: var(--paper-raised); box-shadow: 0 3px 0 var(--btn-shadow); }
+.roadmap-node.locked { cursor: default; opacity: 0.6; }
+.roadmap-node:disabled { cursor: default; }
+.roadmap-next-node {
+  width: 64px; height: 64px; border-radius: 50%; border: 3px solid var(--gold); background: var(--gold-wash);
+  font-size: 1.5rem; display: flex; align-items: center; justify-content: center; cursor: pointer;
+  box-shadow: 0 3px 0 var(--btn-shadow);
 }
-.path-node.done .medallion { border-color: var(--navy); background: var(--navy); color: var(--paper-raised); }
-.path-node.current .medallion { border-color: var(--stamp); color: var(--stamp); }
-.node-card {
-  flex: 1; display: flex; align-items: center; justify-content: space-between; gap: 10px;
-  padding: 10px 14px; border-radius: 6px; border: 1px solid var(--line); cursor: pointer;
-  background: var(--paper);
-}
-.path-node.locked .node-card { opacity: 0.5; cursor: default; }
-.node-title { font-weight: 700; font-size: 0.94rem; }
-.node-title .native { font-size: 0.82rem; color: var(--navy); font-weight: 400; margin-left: 6px; }
-.node-desc { font-size: 0.78rem; color: var(--ink-soft); margin-top: 2px; }
-.node-status { font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-soft); flex-shrink: 0; }
-.path-node.current .node-status { color: var(--stamp); font-weight: 700; }
-.path-node.done .node-status { color: var(--navy); }
+.roadmap-label { text-align: center; margin-top: 8px; max-width: 130px; }
+.roadmap-label-en { display: block; font-family: var(--font-display); font-weight: 700; font-size: 0.82rem; color: var(--ink); }
+.roadmap-label-native { display: block; font-size: 0.72rem; color: var(--ink-soft); margin-top: 1px; }
 
 /* ---------- lesson session ---------- */
 .lesson-bar { display: flex; align-items: center; gap: 12px; padding: 16px 0; }
