@@ -103,29 +103,33 @@
     localStorage.setItem(SOUND_KEY, soundMuted ? "muted" : "on");
     updateSoundToggleUI();
   }
+  let _lastBeepError = null;
   function beep(freq, dur) {
     if (soundMuted) return;
     try {
       const ctx = beep._ctx || (beep._ctx = new (window.AudioContext || window.webkitAudioContext)());
       const playTone = () => {
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.frequency.value = freq;
-        osc.type = "sine";
-        gain.gain.setValueAtTime(0.08, ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
-        osc.connect(gain).connect(ctx.destination);
-        osc.start();
-        osc.stop(ctx.currentTime + dur);
+        try {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.frequency.value = freq;
+          osc.type = "sine";
+          gain.gain.setValueAtTime(0.08, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
+          osc.connect(gain).connect(ctx.destination);
+          osc.start();
+          osc.stop(ctx.currentTime + dur);
+          _lastBeepError = null;
+        } catch (e) { _lastBeepError = e.message || String(e); }
       };
       // resume() is async; scheduling the oscillator via ctx.currentTime
       // before it actually resolves means the tone gets scheduled into a
       // context that isn't running yet and never actually plays. iOS
       // suspends the context again after any idle gap, so this bites
       // every beep, not just the first one — must wait for the real resume.
-      if (ctx.state === "suspended") ctx.resume().then(playTone).catch(() => {});
+      if (ctx.state === "suspended") ctx.resume().then(playTone).catch(e => { _lastBeepError = "resume failed: " + (e.message || e); });
       else playTone();
-    } catch (e) { /* audio unavailable */ }
+    } catch (e) { _lastBeepError = e.message || String(e); }
   }
   function playCorrectSound() { beep(880, 0.15); }
   function playIncorrectSound() { beep(220, 0.25); }
@@ -361,6 +365,22 @@
   function wireGlobalUi() {
     themeToggleEl.addEventListener("click", toggleTheme);
     soundToggleEl.addEventListener("click", toggleSound);
+    const testSoundBtn = document.getElementById("testSoundBtn");
+    if (testSoundBtn) {
+      testSoundBtn.addEventListener("click", () => {
+        playCorrectSound();
+        setTimeout(() => {
+          const diagEl = document.getElementById("audioDiagnostic");
+          if (!diagEl) return;
+          const Ctx = window.AudioContext || window.webkitAudioContext;
+          if (!Ctx) { diagEl.textContent = "Web Audio API not supported on this browser."; return; }
+          const ctx = beep._ctx;
+          diagEl.textContent = ctx
+            ? `Audio: state=${ctx.state}, sampleRate=${ctx.sampleRate}, muted=${soundMuted}, error=${_lastBeepError || "none"}`
+            : "AudioContext was never created.";
+        }, 250);
+      });
+    }
     directionToggleEl.addEventListener("click", toggleDirection);
 
     wordsStatEl.addEventListener("click", () => {
