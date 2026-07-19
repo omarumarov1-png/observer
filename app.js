@@ -202,8 +202,11 @@
   const SPEECH_RATE = 0.85;
   const SPEECH_RATE_SLOW = 0.55;
   let _currentUtterance = null;
+  let _speakToken = 0;
   function speak(text, lang, onEnd, rate) {
     if (soundMuted || !("speechSynthesis" in window)) { if (onEnd) onEnd(); return; }
+    const token = ++_speakToken;
+    let settled = false;
     try {
       // Calling cancel() immediately before speak() is a well-known iOS
       // Safari trap: the following speak() can get silently dropped. Only
@@ -216,10 +219,26 @@
       u.rate = rate || SPEECH_RATE;
       const voice = lang === "ru-RU" ? _preferredVoiceRu : _preferredVoiceEn;
       if (voice) u.voice = voice;
-      if (onEnd) { u.onend = onEnd; u.onerror = onEnd; }
+      if (onEnd) {
+        u.onend = () => { settled = true; onEnd(); };
+        u.onerror = () => { settled = true; onEnd(); };
+      }
       _currentUtterance = u; // keep a live reference — some browsers silently
       // drop speech if the utterance is garbage-collected before it plays
       window.speechSynthesis.speak(u);
+      // Some Android builds silently drop an utterance entirely — no error
+      // event, no end event, nothing ever plays. Since advanceAfterSpeech()
+      // gates moving to the next exercise on onEnd firing, a silent drop
+      // used to hang the lesson forever. This watchdog forces onEnd after a
+      // timeout so the app never gets stuck waiting for an event that isn't
+      // coming.
+      if (onEnd) {
+        setTimeout(() => {
+          if (settled || token !== _speakToken) return;
+          settled = true;
+          onEnd();
+        }, 4000);
+      }
     } catch (e) { if (onEnd) onEnd(); }
   }
   function speakAnswer(text, onEnd) {
