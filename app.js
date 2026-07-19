@@ -107,16 +107,24 @@
     if (soundMuted) return;
     try {
       const ctx = beep._ctx || (beep._ctx = new (window.AudioContext || window.webkitAudioContext)());
-      if (ctx.state === "suspended") ctx.resume();
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.frequency.value = freq;
-      osc.type = "sine";
-      gain.gain.setValueAtTime(0.08, ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
-      osc.connect(gain).connect(ctx.destination);
-      osc.start();
-      osc.stop(ctx.currentTime + dur);
+      const playTone = () => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.frequency.value = freq;
+        osc.type = "sine";
+        gain.gain.setValueAtTime(0.08, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
+        osc.connect(gain).connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + dur);
+      };
+      // resume() is async; scheduling the oscillator via ctx.currentTime
+      // before it actually resolves means the tone gets scheduled into a
+      // context that isn't running yet and never actually plays. iOS
+      // suspends the context again after any idle gap, so this bites
+      // every beep, not just the first one — must wait for the real resume.
+      if (ctx.state === "suspended") ctx.resume().then(playTone).catch(() => {});
+      else playTone();
     } catch (e) { /* audio unavailable */ }
   }
   function playCorrectSound() { beep(880, 0.15); }
