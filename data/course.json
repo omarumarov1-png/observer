@@ -400,8 +400,109 @@
             ]
           },
           {
-            "id": "l1-4",
+            "id": "l1-reading-1",
             "number": 4,
+            "title": "What Is an Election Observer?",
+            "titleNative": "Кто такой наблюдатель за выборами?",
+            "description": "An introduction to the role and purpose of election observation.",
+            "readingPassage": {
+              "context": "An introduction to the role and purpose of election observation.",
+              "paragraphs": [
+                {
+                  "en": "An election observer watches an election to check whether it is free, fair, and transparent.",
+                  "ru": "Наблюдатель за выборами следит за выборами, чтобы проверить, являются ли они свободными, честными и прозрачными."
+                },
+                {
+                  "en": "Observers do not take part in the voting process themselves.",
+                  "ru": "Наблюдатели сами не участвуют в процессе голосования."
+                },
+                {
+                  "en": "Instead, they watch, record, and report what they see.",
+                  "ru": "Вместо этого они наблюдают, фиксируют и сообщают о том, что видят."
+                },
+                {
+                  "en": "Observers can be domestic, meaning citizens of the same country, or international.",
+                  "ru": "Наблюдатели могут быть внутренними, то есть гражданами той же страны, или международными."
+                },
+                {
+                  "en": "International observers are often sent by organizations such as the OSCE.",
+                  "ru": "Международных наблюдателей часто направляют такие организации, как ОБСЕ."
+                },
+                {
+                  "en": "Their presence can increase public trust in the election process.",
+                  "ru": "Их присутствие может повысить доверие общества к избирательному процессу."
+                },
+                {
+                  "en": "Observers are trained to remain neutral and never influence voters.",
+                  "ru": "Наблюдателей обучают сохранять нейтралитет и никогда не влиять на избирателей."
+                },
+                {
+                  "en": "Their final reports can help improve future elections.",
+                  "ru": "Их итоговые отчёты могут помочь улучшить будущие выборы."
+                }
+              ]
+            },
+            "exercises": [
+              {
+                "type": "comprehension",
+                "question": "Что проверяет наблюдатель за выборами?",
+                "options": [
+                  "Явку кандидатов",
+                  "Свободны, честны и прозрачны ли выборы",
+                  "Погоду в день выборов",
+                  "Возраст избирателей"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Участвуют ли наблюдатели в самом голосовании?",
+                "options": [
+                  "Да, всегда",
+                  "Нет, они наблюдают и фиксируют",
+                  "Только иногда",
+                  "Не указано"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Какими бывают наблюдатели?",
+                "options": [
+                  "Только внутренними",
+                  "Внутренними или международными",
+                  "Только международными",
+                  "Только правительственными"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Кто часто направляет международных наблюдателей?",
+                "options": [
+                  "Местные партии",
+                  "Организации вроде ОБСЕ",
+                  "СМИ",
+                  "Никто"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Чему обучают наблюдателей?",
+                "options": [
+                  "Влиять на избирателей",
+                  "Сохранять нейтралитет",
+                  "Агитировать за кандидатов",
+                  "Ничему особенному"
+                ],
+                "answerIndex": 1
+              }
+            ]
+          },
+          {
+            "id": "l1-4",
+            "number": 5,
             "title": "The Campaign Period",
             "titleNative": "Предвыборная агитация",
             "description": "Campaigning, candidates, and media coverage",
@@ -530,7 +631,7 @@
           },
           {
             "id": "l1-5",
-            "number": 5,
+            "number": 6,
             "title": "Election Observers",
             "titleNative": "Наблюдатели",
             "description": "Observer mandates, accreditation, and conduct",
@@ -659,7 +760,7 @@
           },
           {
             "id": "l1-6",
-            "number": 6,
+            "number": 7,
             "title": "Electoral Systems",
             "titleNative": "Избирательные системы",
             "description": "Proportional, majoritarian, and mixed systems",
@@ -787,8 +888,109 @@
             ]
           },
           {
+            "id": "l1-reading-2",
+            "number": 8,
+            "title": "The OSCE/ODIHR Mission",
+            "titleNative": "Миссия ОБСЕ/БДИПЧ",
+            "description": "How international observation missions are structured.",
+            "readingPassage": {
+              "context": "How international observation missions are structured.",
+              "paragraphs": [
+                {
+                  "en": "ODIHR stands for the Office for Democratic Institutions and Human Rights.",
+                  "ru": "БДИПЧ означает Бюро по демократическим институтам и правам человека."
+                },
+                {
+                  "en": "It is the OSCE body responsible for organizing election observation missions.",
+                  "ru": "Это орган ОБСЕ, отвечающий за организацию миссий по наблюдению за выборами."
+                },
+                {
+                  "en": "A mission usually begins weeks before election day with a small core team.",
+                  "ru": "Миссия обычно начинается за несколько недель до дня выборов с небольшой основной команды."
+                },
+                {
+                  "en": "This core team studies the legal framework and the political situation.",
+                  "ru": "Эта основная команда изучает правовую базу и политическую ситуацию."
+                },
+                {
+                  "en": "Later, long-term observers are deployed across different regions of the country.",
+                  "ru": "Позже долгосрочные наблюдатели направляются в разные регионы страны."
+                },
+                {
+                  "en": "Just before election day, short-term observers arrive to cover polling stations directly.",
+                  "ru": "Незадолго до дня выборов прибывают краткосрочные наблюдатели для непосредственного наблюдения за избирательными участками."
+                },
+                {
+                  "en": "After the election, the mission publishes a preliminary statement and later a full report.",
+                  "ru": "После выборов миссия публикует предварительное заявление, а позже — полный отчёт."
+                },
+                {
+                  "en": "These reports often include recommendations for future improvements.",
+                  "ru": "Эти отчёты часто содержат рекомендации по будущим улучшениям."
+                }
+              ]
+            },
+            "exercises": [
+              {
+                "type": "comprehension",
+                "question": "За что отвечает БДИПЧ?",
+                "options": [
+                  "За экономику стран",
+                  "За организацию миссий наблюдения за выборами",
+                  "За безопасность границ",
+                  "За налоги"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "С чего обычно начинается миссия?",
+                "options": [
+                  "С полного состава сразу",
+                  "С небольшой основной команды",
+                  "С краткосрочных наблюдателей",
+                  "С публикации отчёта"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Когда прибывают краткосрочные наблюдатели?",
+                "options": [
+                  "За месяцы до выборов",
+                  "Незадолго до дня выборов",
+                  "После выборов",
+                  "Никогда"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что публикуется после выборов?",
+                "options": [
+                  "Ничего",
+                  "Предварительное заявление и полный отчёт",
+                  "Только фотографии",
+                  "Список избирателей"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что часто содержат итоговые отчёты?",
+                "options": [
+                  "Только критику",
+                  "Рекомендации по улучшению",
+                  "Список победителей",
+                  "Ничего важного"
+                ],
+                "answerIndex": 1
+              }
+            ]
+          },
+          {
             "id": "l1-7",
-            "number": 7,
+            "number": 9,
             "title": "Political Parties & Coalitions",
             "titleNative": "Политические партии и коалиции",
             "description": "Parties, alliances, and parliamentary coalitions",
@@ -917,7 +1119,7 @@
           },
           {
             "id": "l1-8",
-            "number": 8,
+            "number": 10,
             "title": "Referendums",
             "titleNative": "Референдумы",
             "description": "Direct votes on constitutional and policy questions",
@@ -1046,7 +1248,7 @@
           },
           {
             "id": "l1-9",
-            "number": 9,
+            "number": 11,
             "title": "Election Types",
             "titleNative": "Виды выборов",
             "description": "Presidential, parliamentary, local, and by-elections",
@@ -1174,8 +1376,109 @@
             ]
           },
           {
+            "id": "l1-reading-3",
+            "number": 12,
+            "title": "Codes of Conduct for Observers",
+            "titleNative": "Кодекс поведения наблюдателей",
+            "description": "The rules that guide observer behavior and professionalism.",
+            "readingPassage": {
+              "context": "The rules that guide observer behavior and professionalism.",
+              "paragraphs": [
+                {
+                  "en": "Every observer must sign a code of conduct before beginning their work.",
+                  "ru": "Каждый наблюдатель должен подписать кодекс поведения перед началом работы."
+                },
+                {
+                  "en": "This code requires strict political neutrality at all times.",
+                  "ru": "Этот кодекс требует строгого политического нейтралитета в любое время."
+                },
+                {
+                  "en": "Observers must not wear any symbols connected to a political party.",
+                  "ru": "Наблюдатели не должны носить никакие символы, связанные с политической партией."
+                },
+                {
+                  "en": "They are not allowed to give their personal opinion about candidates.",
+                  "ru": "Им не разрешается высказывать личное мнение о кандидатах."
+                },
+                {
+                  "en": "Observers must always show identification at the polling station.",
+                  "ru": "Наблюдатели всегда должны предъявлять удостоверение личности на избирательном участке."
+                },
+                {
+                  "en": "They should not interfere with the work of the polling staff.",
+                  "ru": "Им не следует вмешиваться в работу сотрудников участка."
+                },
+                {
+                  "en": "If they witness a serious violation, they must report it through official channels.",
+                  "ru": "Если они становятся свидетелями серьёзного нарушения, они должны сообщить об этом по официальным каналам."
+                },
+                {
+                  "en": "Following the code of conduct protects the credibility of the whole mission.",
+                  "ru": "Соблюдение кодекса поведения защищает доверие ко всей миссии."
+                }
+              ]
+            },
+            "exercises": [
+              {
+                "type": "comprehension",
+                "question": "Что должен подписать каждый наблюдатель?",
+                "options": [
+                  "Контракт с партией",
+                  "Кодекс поведения",
+                  "Список избирателей",
+                  "Ничего"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что требует этот кодекс?",
+                "options": [
+                  "Поддержку одной партии",
+                  "Строгий политический нейтралитет",
+                  "Публичные заявления",
+                  "Ничего особенного"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Могут ли наблюдатели высказывать мнение о кандидатах?",
+                "options": [
+                  "Да, всегда",
+                  "Нет, не разрешается",
+                  "Только в конце дня",
+                  "Не указано"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что наблюдатель должен всегда показывать на участке?",
+                "options": [
+                  "Паспорт кандидата",
+                  "Удостоверение личности",
+                  "Бюллетень",
+                  "Ничего"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что защищает соблюдение кодекса поведения?",
+                "options": [
+                  "Только самого наблюдателя",
+                  "Доверие ко всей миссии",
+                  "Бюджет миссии",
+                  "Ничего"
+                ],
+                "answerIndex": 1
+              }
+            ]
+          },
+          {
             "id": "l1-10",
-            "number": 10,
+            "number": 13,
             "title": "The Right to Vote",
             "titleNative": "Право голоса",
             "description": "Suffrage, eligibility, and its limits",
@@ -1312,7 +1615,7 @@
         "lessons": [
           {
             "id": "l2-1",
-            "number": 11,
+            "number": 14,
             "title": "Election Officials & Roles",
             "titleNative": "Обязанности членов комиссии",
             "description": "Roles and responsibilities of polling station staff",
@@ -1441,7 +1744,7 @@
           },
           {
             "id": "l2-2",
-            "number": 12,
+            "number": 15,
             "title": "Polling Station Setup & Logistics",
             "titleNative": "Организация избирательного участка",
             "description": "Preparing and equipping the voting premises",
@@ -1570,7 +1873,7 @@
           },
           {
             "id": "l2-3",
-            "number": 13,
+            "number": 16,
             "title": "Voter Education & Outreach",
             "titleNative": "Информирование избирателей",
             "description": "Public information campaigns and voter outreach",
@@ -1698,8 +2001,109 @@
             ]
           },
           {
+            "id": "l2-reading-1",
+            "number": 17,
+            "title": "The Election Commission",
+            "titleNative": "Избирательная комиссия",
+            "description": "The body responsible for running an election.",
+            "readingPassage": {
+              "context": "The body responsible for running an election.",
+              "paragraphs": [
+                {
+                  "en": "The election commission is the body responsible for organizing an election.",
+                  "ru": "Избирательная комиссия — это орган, отвечающий за организацию выборов."
+                },
+                {
+                  "en": "It usually has a central commission and many lower-level commissions.",
+                  "ru": "Обычно существует центральная комиссия и множество комиссий более низкого уровня."
+                },
+                {
+                  "en": "The central commission sets the overall rules and the election calendar.",
+                  "ru": "Центральная комиссия устанавливает общие правила и календарь выборов."
+                },
+                {
+                  "en": "Regional commissions manage the process within their own territory.",
+                  "ru": "Региональные комиссии управляют процессом на своей территории."
+                },
+                {
+                  "en": "Precinct commissions work directly at individual polling stations.",
+                  "ru": "Участковые комиссии работают непосредственно на отдельных избирательных участках."
+                },
+                {
+                  "en": "Commission members are often selected to represent different political parties.",
+                  "ru": "Членов комиссии часто отбирают так, чтобы представлять разные политические партии."
+                },
+                {
+                  "en": "This balance is meant to build trust and prevent unfair advantage.",
+                  "ru": "Такой баланс призван укрепить доверие и предотвратить несправедливое преимущество."
+                },
+                {
+                  "en": "Observers often study the commission's decisions before election day.",
+                  "ru": "Наблюдатели часто изучают решения комиссии до дня выборов."
+                }
+              ]
+            },
+            "exercises": [
+              {
+                "type": "comprehension",
+                "question": "За что отвечает избирательная комиссия?",
+                "options": [
+                  "За подсчёт налогов",
+                  "За организацию выборов",
+                  "За печать газет",
+                  "За безопасность страны"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что устанавливает центральная комиссия?",
+                "options": [
+                  "Погоду",
+                  "Общие правила и календарь выборов",
+                  "Список кандидатов",
+                  "Ничего"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Где работают участковые комиссии?",
+                "options": [
+                  "В столице",
+                  "На отдельных избирательных участках",
+                  "В судах",
+                  "Дома"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Зачем в комиссию отбирают представителей разных партий?",
+                "options": [
+                  "Случайно",
+                  "Чтобы укрепить доверие и баланс",
+                  "Для экономии денег",
+                  "Без причины"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что часто изучают наблюдатели до дня выборов?",
+                "options": [
+                  "Погоду",
+                  "Решения комиссии",
+                  "Личную жизнь кандидатов",
+                  "Ничего"
+                ],
+                "answerIndex": 1
+              }
+            ]
+          },
+          {
             "id": "l2-4",
-            "number": 14,
+            "number": 18,
             "title": "Special & Mobile Voting",
             "titleNative": "Специальные формы голосования",
             "description": "Mobile ballot boxes, home voting, and institutional voting",
@@ -1828,7 +2232,7 @@
           },
           {
             "id": "l2-5",
-            "number": 15,
+            "number": 19,
             "title": "Party & Candidate Registration",
             "titleNative": "Регистрация партий и кандидатов",
             "description": "Nomination, signatures, and candidate registration",
@@ -1957,7 +2361,7 @@
           },
           {
             "id": "l2-6",
-            "number": 16,
+            "number": 20,
             "title": "Election Calendar & Budget",
             "titleNative": "Избирательный календарь и бюджет",
             "description": "Timelines and financing of the election process",
@@ -2085,8 +2489,109 @@
             ]
           },
           {
+            "id": "l2-reading-2",
+            "number": 21,
+            "title": "Voter Registration",
+            "titleNative": "Регистрация избирателей",
+            "description": "How voter lists are compiled and checked before an election.",
+            "readingPassage": {
+              "context": "How voter lists are compiled and checked before an election.",
+              "paragraphs": [
+                {
+                  "en": "Voter registration is the process of compiling a list of citizens allowed to vote.",
+                  "ru": "Регистрация избирателей — это процесс составления списка граждан, имеющих право голосовать."
+                },
+                {
+                  "en": "In many countries, this list is created automatically from state records.",
+                  "ru": "Во многих странах этот список создаётся автоматически на основе государственных данных."
+                },
+                {
+                  "en": "In other countries, citizens must register themselves in advance.",
+                  "ru": "В других странах граждане должны регистрироваться самостоятельно заранее."
+                },
+                {
+                  "en": "An accurate voter list helps prevent people from voting more than once.",
+                  "ru": "Точный список избирателей помогает предотвратить голосование одного человека более одного раза."
+                },
+                {
+                  "en": "Citizens usually have the right to check whether their name is on the list.",
+                  "ru": "Граждане обычно имеют право проверить, есть ли их имя в списке."
+                },
+                {
+                  "en": "If a name is missing or wrong, there is often a process to correct it.",
+                  "ru": "Если имя отсутствует или указано неверно, обычно существует процедура его исправления."
+                },
+                {
+                  "en": "Observers pay close attention to how transparent this process is.",
+                  "ru": "Наблюдатели уделяют пристальное внимание тому, насколько прозрачен этот процесс."
+                },
+                {
+                  "en": "A poorly managed voter list can seriously damage trust in an election.",
+                  "ru": "Плохо составленный список избирателей может серьёзно подорвать доверие к выборам."
+                }
+              ]
+            },
+            "exercises": [
+              {
+                "type": "comprehension",
+                "question": "Что такое регистрация избирателей?",
+                "options": [
+                  "Подсчёт бюллетеней",
+                  "Составление списка граждан, имеющих право голосовать",
+                  "Печать плакатов",
+                  "Выбор наблюдателей"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Как список избирателей создаётся в некоторых странах?",
+                "options": [
+                  "Вручную каждый год",
+                  "Автоматически из госданных",
+                  "Случайным образом",
+                  "Никак"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что помогает предотвратить точный список?",
+                "options": [
+                  "Повторное голосование",
+                  "Опоздание на участок",
+                  "Плохую погоду",
+                  "Ничего"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что могут сделать граждане, если их имени нет в списке?",
+                "options": [
+                  "Ничего",
+                  "Использовать процедуру исправления",
+                  "Пожаловаться в СМИ",
+                  "Пропустить выборы"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что может подорвать плохой список избирателей?",
+                "options": [
+                  "Экономику",
+                  "Доверие к выборам",
+                  "Погоду",
+                  "Ничего важного"
+                ],
+                "answerIndex": 1
+              }
+            ]
+          },
+          {
             "id": "l2-7",
-            "number": 17,
+            "number": 22,
             "title": "Training of Election Officials",
             "titleNative": "Обучение членов комиссий",
             "description": "Preparing commission staff for their duties",
@@ -2215,7 +2720,7 @@
           },
           {
             "id": "l2-8",
-            "number": 18,
+            "number": 23,
             "title": "Out-of-Country & Diaspora Voting",
             "titleNative": "Голосование за рубежом",
             "description": "Embassy voting and citizens abroad",
@@ -2344,7 +2849,7 @@
           },
           {
             "id": "l2-9",
-            "number": 19,
+            "number": 24,
             "title": "Ballot Design & Printing",
             "titleNative": "Оформление и печать бюллетеней",
             "description": "Producing secure, accurate ballots",
@@ -2472,8 +2977,109 @@
             ]
           },
           {
+            "id": "l2-reading-3",
+            "number": 25,
+            "title": "Setting Up a Polling Station",
+            "titleNative": "Организация избирательного участка",
+            "description": "The layout and materials that make up a polling station.",
+            "readingPassage": {
+              "context": "The layout and materials that make up a polling station.",
+              "paragraphs": [
+                {
+                  "en": "A polling station must be set up carefully before it opens to voters.",
+                  "ru": "Избирательный участок должен быть тщательно подготовлен до открытия для избирателей."
+                },
+                {
+                  "en": "Ballot boxes are checked and sealed in front of witnesses.",
+                  "ru": "Урны для голосования проверяются и опечатываются в присутствии свидетелей."
+                },
+                {
+                  "en": "Voting booths must guarantee the secrecy of each ballot.",
+                  "ru": "Кабины для голосования должны гарантировать тайну каждого бюллетеня."
+                },
+                {
+                  "en": "Enough ballot papers must be delivered for the expected number of voters.",
+                  "ru": "Должно быть доставлено достаточно бюллетеней для ожидаемого числа избирателей."
+                },
+                {
+                  "en": "Clear signs help voters find the entrance, the booths, and the exit.",
+                  "ru": "Чёткие указатели помогают избирателям найти вход, кабины и выход."
+                },
+                {
+                  "en": "Stations should also be accessible for voters with disabilities.",
+                  "ru": "Участки также должны быть доступны для избирателей с ограниченными возможностями."
+                },
+                {
+                  "en": "Staff members are assigned specific roles before the station opens.",
+                  "ru": "Сотрудникам назначаются конкретные роли до открытия участка."
+                },
+                {
+                  "en": "Observers often arrive early to watch this whole preparation process.",
+                  "ru": "Наблюдатели часто приезжают заранее, чтобы наблюдать за всем этим процессом подготовки."
+                }
+              ]
+            },
+            "exercises": [
+              {
+                "type": "comprehension",
+                "question": "Что делают с урнами перед открытием участка?",
+                "options": [
+                  "Ничего",
+                  "Проверяют и опечатывают при свидетелях",
+                  "Уносят домой",
+                  "Разбивают"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что должны гарантировать кабины для голосования?",
+                "options": [
+                  "Скорость",
+                  "Тайну бюллетеня",
+                  "Красоту",
+                  "Ничего"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Для кого должны быть доступны участки?",
+                "options": [
+                  "Только для молодых",
+                  "Для избирателей с ограниченными возможностями тоже",
+                  "Только для мужчин",
+                  "Ни для кого особенного"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Когда сотрудникам назначают роли?",
+                "options": [
+                  "После закрытия участка",
+                  "До открытия участка",
+                  "Никогда",
+                  "Во время подсчёта"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Когда наблюдатели часто приезжают на участок?",
+                "options": [
+                  "Поздно вечером",
+                  "Рано, чтобы видеть подготовку",
+                  "Только после выборов",
+                  "Никогда"
+                ],
+                "answerIndex": 1
+              }
+            ]
+          },
+          {
             "id": "l2-10",
-            "number": 20,
+            "number": 26,
             "title": "Election Day Staffing",
             "titleNative": "Персонал в день голосования",
             "description": "Staffing, roles, and coordination on voting day",
@@ -2610,7 +3216,7 @@
         "lessons": [
           {
             "id": "l3-1",
-            "number": 21,
+            "number": 27,
             "title": "Opening the Polling Station",
             "titleNative": "Открытие участка",
             "description": "Morning procedures before voting begins",
@@ -2739,7 +3345,7 @@
           },
           {
             "id": "l3-2",
-            "number": 22,
+            "number": 28,
             "title": "The Voting Process",
             "titleNative": "Процесс голосования",
             "description": "The mechanics of casting a ballot",
@@ -2868,7 +3474,7 @@
           },
           {
             "id": "l3-3",
-            "number": 23,
+            "number": 29,
             "title": "Voter Identification & Verification",
             "titleNative": "Идентификация избирателей",
             "description": "Checking identity documents and preventing fraud",
@@ -2996,8 +3602,109 @@
             ]
           },
           {
+            "id": "l3-reading-1",
+            "number": 30,
+            "title": "Opening the Polling Station",
+            "titleNative": "Открытие избирательного участка",
+            "description": "The morning procedures that begin election day.",
+            "readingPassage": {
+              "context": "The morning procedures that begin election day.",
+              "paragraphs": [
+                {
+                  "en": "Election day officially begins with the opening procedure at each polling station.",
+                  "ru": "День выборов официально начинается с процедуры открытия на каждом избирательном участке."
+                },
+                {
+                  "en": "Staff members show everyone present that the ballot boxes are empty.",
+                  "ru": "Сотрудники показывают всем присутствующим, что урны для голосования пусты."
+                },
+                {
+                  "en": "The empty boxes are then sealed in front of witnesses and observers.",
+                  "ru": "Затем пустые урны опечатываются в присутствии свидетелей и наблюдателей."
+                },
+                {
+                  "en": "The number of ballots received is recorded before voting starts.",
+                  "ru": "Количество полученных бюллетеней записывается до начала голосования."
+                },
+                {
+                  "en": "Party representatives and observers can ask questions during this procedure.",
+                  "ru": "Представители партий и наблюдатели могут задавать вопросы в ходе этой процедуры."
+                },
+                {
+                  "en": "Any delay or irregularity at opening is noted carefully by observers.",
+                  "ru": "Любая задержка или нарушение при открытии тщательно фиксируется наблюдателями."
+                },
+                {
+                  "en": "Once everything is confirmed, the station officially opens for voters.",
+                  "ru": "После того как всё подтверждено, участок официально открывается для избирателей."
+                },
+                {
+                  "en": "A calm and transparent opening sets a good tone for the rest of the day.",
+                  "ru": "Спокойное и прозрачное открытие задаёт хороший тон на весь оставшийся день."
+                }
+              ]
+            },
+            "exercises": [
+              {
+                "type": "comprehension",
+                "question": "С чего официально начинается день выборов?",
+                "options": [
+                  "С подсчёта голосов",
+                  "С процедуры открытия участка",
+                  "С обеда",
+                  "Ни с чего особенного"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что показывают сотрудники в начале?",
+                "options": [
+                  "Список кандидатов",
+                  "Что урны пусты",
+                  "Погоду",
+                  "Ничего"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что записывают до начала голосования?",
+                "options": [
+                  "Имена всех избирателей",
+                  "Количество полученных бюллетеней",
+                  "Погоду",
+                  "Ничего"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Кто может задавать вопросы во время открытия?",
+                "options": [
+                  "Никто",
+                  "Представители партий и наблюдатели",
+                  "Только полиция",
+                  "Только СМИ"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что тщательно фиксируют наблюдатели?",
+                "options": [
+                  "Погоду",
+                  "Задержки или нарушения",
+                  "Цвет урн",
+                  "Ничего"
+                ],
+                "answerIndex": 1
+              }
+            ]
+          },
+          {
             "id": "l3-4",
-            "number": 24,
+            "number": 31,
             "title": "Queue Management & Security",
             "titleNative": "Очередь и безопасность",
             "description": "Crowd control and order at the polling station",
@@ -3126,7 +3833,7 @@
           },
           {
             "id": "l3-5",
-            "number": 25,
+            "number": 32,
             "title": "Closing & Counting",
             "titleNative": "Закрытие и подсчёт голосов",
             "description": "End-of-day procedures and the vote count",
@@ -3255,7 +3962,7 @@
           },
           {
             "id": "l3-6",
-            "number": 26,
+            "number": 33,
             "title": "Assisted & Proxy Voting",
             "titleNative": "Голосование с помощью и по доверенности",
             "description": "Helping voters who need assistance",
@@ -3383,8 +4090,109 @@
             ]
           },
           {
+            "id": "l3-reading-2",
+            "number": 34,
+            "title": "Observing the Voting Process",
+            "titleNative": "Наблюдение за процессом голосования",
+            "description": "What observers watch for while voting is underway.",
+            "readingPassage": {
+              "context": "What observers watch for while voting is underway.",
+              "paragraphs": [
+                {
+                  "en": "During voting, observers stay in the polling station but do not interfere.",
+                  "ru": "Во время голосования наблюдатели остаются на участке, но не вмешиваются."
+                },
+                {
+                  "en": "They check that each voter's identity is verified correctly.",
+                  "ru": "Они проверяют, что личность каждого избирателя удостоверяется правильно."
+                },
+                {
+                  "en": "They watch whether voters can mark their ballot in complete privacy.",
+                  "ru": "Они следят за тем, могут ли избиратели отметить бюллетень в полной тайне."
+                },
+                {
+                  "en": "Observers note if there are long lines or unusual delays.",
+                  "ru": "Наблюдатели отмечают, есть ли длинные очереди или необычные задержки."
+                },
+                {
+                  "en": "They also watch for any sign of pressure or intimidation of voters.",
+                  "ru": "Они также следят за любыми признаками давления или запугивания избирателей."
+                },
+                {
+                  "en": "The presence of unauthorized people inside the station is also recorded.",
+                  "ru": "Присутствие посторонних лиц на участке также фиксируется."
+                },
+                {
+                  "en": "Observers usually fill out a standard checklist throughout the day.",
+                  "ru": "Наблюдатели обычно заполняют стандартный контрольный список в течение дня."
+                },
+                {
+                  "en": "This checklist helps compare the same standards across many stations.",
+                  "ru": "Этот контрольный список помогает сравнивать одни и те же стандарты на разных участках."
+                }
+              ]
+            },
+            "exercises": [
+              {
+                "type": "comprehension",
+                "question": "Вмешиваются ли наблюдатели в процесс голосования?",
+                "options": [
+                  "Да, часто",
+                  "Нет, они не вмешиваются",
+                  "Только если попросят",
+                  "Не указано"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что проверяют наблюдатели у каждого избирателя?",
+                "options": [
+                  "Возраст",
+                  "Правильность удостоверения личности",
+                  "Одежду",
+                  "Ничего"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "За чем следят наблюдатели, кроме очередей?",
+                "options": [
+                  "За модой",
+                  "За давлением или запугиванием избирателей",
+                  "За погодой",
+                  "Ни за чем"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что фиксируется, если на участке появляются посторонние?",
+                "options": [
+                  "Ничего",
+                  "Их присутствие",
+                  "Только их имена",
+                  "Их одежда"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что заполняют наблюдатели в течение дня?",
+                "options": [
+                  "Ничего",
+                  "Стандартный контрольный список",
+                  "Личный дневник",
+                  "Список кандидатов"
+                ],
+                "answerIndex": 1
+              }
+            ]
+          },
+          {
             "id": "l3-7",
-            "number": 27,
+            "number": 35,
             "title": "Spoiled & Invalid Ballots",
             "titleNative": "Испорченные и недействительные бюллетени",
             "description": "Handling invalid votes during the count",
@@ -3513,7 +4321,7 @@
           },
           {
             "id": "l3-8",
-            "number": 28,
+            "number": 36,
             "title": "Incidents & Irregularities",
             "titleNative": "Инциденты и нарушения",
             "description": "Recognizing and responding to problems on voting day",
@@ -3642,7 +4450,7 @@
           },
           {
             "id": "l3-9",
-            "number": 29,
+            "number": 37,
             "title": "Election Day Communication",
             "titleNative": "Связь в день голосования",
             "description": "Reporting channels and coordination on voting day",
@@ -3770,8 +4578,109 @@
             ]
           },
           {
+            "id": "l3-reading-3",
+            "number": 38,
+            "title": "Closing and Counting the Vote",
+            "titleNative": "Закрытие и подсчёт голосов",
+            "description": "The end-of-day procedures for closing a station and counting ballots.",
+            "readingPassage": {
+              "context": "The end-of-day procedures for closing a station and counting ballots.",
+              "paragraphs": [
+                {
+                  "en": "The polling station closes at a fixed time announced in advance.",
+                  "ru": "Избирательный участок закрывается в фиксированное время, объявленное заранее."
+                },
+                {
+                  "en": "Voters already waiting in line at closing time are usually still allowed to vote.",
+                  "ru": "Избирателям, уже стоящим в очереди на момент закрытия, обычно всё же разрешают проголосовать."
+                },
+                {
+                  "en": "After closing, staff count the number of unused ballots first.",
+                  "ru": "После закрытия сотрудники сначала подсчитывают количество неиспользованных бюллетеней."
+                },
+                {
+                  "en": "Then the ballot boxes are opened in front of everyone present.",
+                  "ru": "Затем урны для голосования вскрываются в присутствии всех присутствующих."
+                },
+                {
+                  "en": "Each ballot is shown clearly before it is sorted and counted.",
+                  "ru": "Каждый бюллетень чётко показывается, прежде чем его рассортируют и подсчитают."
+                },
+                {
+                  "en": "Observers watch closely to make sure the count matches official procedures.",
+                  "ru": "Наблюдатели внимательно следят за тем, чтобы подсчёт соответствовал официальным процедурам."
+                },
+                {
+                  "en": "The results from this station are then recorded in an official protocol.",
+                  "ru": "Результаты с этого участка затем фиксируются в официальном протоколе."
+                },
+                {
+                  "en": "Copies of the protocol are often given to party representatives and observers.",
+                  "ru": "Копии протокола часто выдаются представителям партий и наблюдателям."
+                }
+              ]
+            },
+            "exercises": [
+              {
+                "type": "comprehension",
+                "question": "Когда закрывается избирательный участок?",
+                "options": [
+                  "Когда захотят сотрудники",
+                  "В фиксированное объявленное время",
+                  "Никогда",
+                  "Через час после открытия"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что сначала подсчитывают после закрытия?",
+                "options": [
+                  "Голоса за кандидатов",
+                  "Неиспользованные бюллетени",
+                  "Число наблюдателей",
+                  "Ничего"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Как показывают каждый бюллетень?",
+                "options": [
+                  "Прячут его",
+                  "Чётко показывают перед подсчётом",
+                  "Уничтожают сразу",
+                  "Никак"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "За чем следят наблюдатели во время подсчёта?",
+                "options": [
+                  "За модой сотрудников",
+                  "Соответствием официальным процедурам",
+                  "За погодой",
+                  "Ни за чем"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Кому часто выдают копии протокола?",
+                "options": [
+                  "Никому",
+                  "Представителям партий и наблюдателям",
+                  "Только полиции",
+                  "Только журналистам"
+                ],
+                "answerIndex": 1
+              }
+            ]
+          },
+          {
             "id": "l3-10",
-            "number": 30,
+            "number": 39,
             "title": "Voter Turnout & Statistics",
             "titleNative": "Явка избирателей и статистика",
             "description": "Tracking and interpreting participation data",
@@ -3908,7 +4817,7 @@
         "lessons": [
           {
             "id": "l4-1",
-            "number": 31,
+            "number": 40,
             "title": "Vote Tabulation & Transmission",
             "titleNative": "Табуляция и передача результатов",
             "description": "Summarizing and reporting official results",
@@ -4037,7 +4946,7 @@
           },
           {
             "id": "l4-2",
-            "number": 32,
+            "number": 41,
             "title": "Recounts & Results Disputes",
             "titleNative": "Пересчёт голосов и споры о результатах",
             "description": "Challenging and reviewing vote counts",
@@ -4166,7 +5075,7 @@
           },
           {
             "id": "l4-3",
-            "number": 33,
+            "number": 42,
             "title": "The Electoral Legal Framework",
             "titleNative": "Избирательное законодательство",
             "description": "Constitution, election law, and legal structure",
@@ -4294,8 +5203,109 @@
             ]
           },
           {
+            "id": "l4-reading-1",
+            "number": 43,
+            "title": "From Ballots to Results",
+            "titleNative": "От бюллетеней к результатам",
+            "description": "How counted votes travel through the system to become official results.",
+            "readingPassage": {
+              "context": "How counted votes travel through the system to become official results.",
+              "paragraphs": [
+                {
+                  "en": "After counting at a polling station, results are recorded in a signed protocol.",
+                  "ru": "После подсчёта на избирательном участке результаты фиксируются в подписанном протоколе."
+                },
+                {
+                  "en": "This protocol is then transmitted to a higher-level election commission.",
+                  "ru": "Затем этот протокол передаётся в вышестоящую избирательную комиссию."
+                },
+                {
+                  "en": "Some countries transmit results electronically to speed up the process.",
+                  "ru": "В некоторых странах результаты передаются электронно, чтобы ускорить процесс."
+                },
+                {
+                  "en": "Electronic transmission must still be checked against the paper protocol.",
+                  "ru": "Электронную передачу всё равно необходимо сверять с бумажным протоколом."
+                },
+                {
+                  "en": "Any complaint about the results can usually be filed within a legal deadline.",
+                  "ru": "Любую жалобу на результаты обычно можно подать в установленный законом срок."
+                },
+                {
+                  "en": "Courts or election commissions review these complaints according to the law.",
+                  "ru": "Суды или избирательные комиссии рассматривают эти жалобы в соответствии с законом."
+                },
+                {
+                  "en": "Only after all complaints are resolved are the final results considered official.",
+                  "ru": "Только после рассмотрения всех жалоб результаты считаются окончательными."
+                },
+                {
+                  "en": "This legal framework is meant to protect the integrity of the whole election.",
+                  "ru": "Эта правовая база призвана защитить целостность всего избирательного процесса."
+                }
+              ]
+            },
+            "exercises": [
+              {
+                "type": "comprehension",
+                "question": "Куда передаётся протокол после подсчёта на участке?",
+                "options": [
+                  "В СМИ",
+                  "В вышестоящую избирательную комиссию",
+                  "В посольство",
+                  "Никуда"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "С чем нужно сверять электронную передачу результатов?",
+                "options": [
+                  "С прогнозом погоды",
+                  "С бумажным протоколом",
+                  "С соцопросами",
+                  "Ни с чем"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что можно подать в установленный срок?",
+                "options": [
+                  "Заявление на отпуск",
+                  "Жалобу на результаты",
+                  "Налоговую декларацию",
+                  "Ничего"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Кто рассматривает жалобы на результаты?",
+                "options": [
+                  "Только пресса",
+                  "Суды или избирательные комиссии",
+                  "Наблюдатели сами",
+                  "Никто"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Когда результаты считаются окончательными?",
+                "options": [
+                  "Сразу после подсчёта",
+                  "После рассмотрения всех жалоб",
+                  "Через год",
+                  "Никогда"
+                ],
+                "answerIndex": 1
+              }
+            ]
+          },
+          {
             "id": "l4-4",
-            "number": 34,
+            "number": 44,
             "title": "International Standards & Commitments",
             "titleNative": "Международные стандарты",
             "description": "OSCE commitments and democratic election principles",
@@ -4424,7 +5434,7 @@
           },
           {
             "id": "l4-5",
-            "number": 35,
+            "number": 45,
             "title": "Complaints, Appeals & Violations",
             "titleNative": "Жалобы, апелляции и нарушения",
             "description": "The dispute-resolution process and election violations",
@@ -4561,7 +5571,7 @@
         "lessons": [
           {
             "id": "l5-1",
-            "number": 36,
+            "number": 46,
             "title": "Methodology & Code of Conduct",
             "titleNative": "Методология наблюдения и кодекс поведения",
             "description": "How observers work and the rules that bind them",
@@ -4690,7 +5700,7 @@
           },
           {
             "id": "l5-2",
-            "number": 37,
+            "number": 47,
             "title": "Meetings with Stakeholders",
             "titleNative": "Встречи с заинтересованными сторонами",
             "description": "Engaging civil society, parties, media, and authorities",
@@ -4819,7 +5829,7 @@
           },
           {
             "id": "l5-3",
-            "number": 38,
+            "number": 48,
             "title": "Interim Reports & Preliminary Statements",
             "titleNative": "Промежуточные отчёты и заявления",
             "description": "Documenting findings and communicating conclusions",
@@ -4947,8 +5957,109 @@
             ]
           },
           {
+            "id": "l5-reading-1",
+            "number": 49,
+            "title": "Writing an Observation Report",
+            "titleNative": "Составление отчёта наблюдателя",
+            "description": "The standards observers follow when writing up what they witnessed.",
+            "readingPassage": {
+              "context": "The standards observers follow when writing up what they witnessed.",
+              "paragraphs": [
+                {
+                  "en": "A good observation report is based only on facts, not personal opinions.",
+                  "ru": "Хороший отчёт наблюдателя основан только на фактах, а не на личных мнениях."
+                },
+                {
+                  "en": "Observers write down what they directly saw, not what someone told them happened.",
+                  "ru": "Наблюдатели записывают то, что видели непосредственно, а не то, что им рассказали."
+                },
+                {
+                  "en": "Reports usually include the time, location, and a clear description of each event.",
+                  "ru": "Отчёты обычно включают время, место и чёткое описание каждого события."
+                },
+                {
+                  "en": "Photographs or documents can support a report, when they are allowed.",
+                  "ru": "Фотографии или документы могут подкреплять отчёт, если это разрешено."
+                },
+                {
+                  "en": "Vague language like \"something seemed wrong\" is avoided in a proper report.",
+                  "ru": "Расплывчатые формулировки вроде «что-то показалось не так» в правильном отчёте не используются."
+                },
+                {
+                  "en": "Reports are usually submitted daily to the coordination center of the mission.",
+                  "ru": "Отчёты обычно ежедневно передаются в координационный центр миссии."
+                },
+                {
+                  "en": "These daily reports are later combined into the mission's overall assessment.",
+                  "ru": "Эти ежедневные отчёты позже объединяются в общую оценку миссии."
+                },
+                {
+                  "en": "A precise, factual report gives real weight to the mission's final conclusions.",
+                  "ru": "Точный, основанный на фактах отчёт придаёт вес итоговым выводам миссии."
+                }
+              ]
+            },
+            "exercises": [
+              {
+                "type": "comprehension",
+                "question": "На чём основан хороший отчёт наблюдателя?",
+                "options": [
+                  "На слухах",
+                  "Только на фактах",
+                  "На личных мнениях",
+                  "На догадках"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что записывают наблюдатели?",
+                "options": [
+                  "То, что видели сами",
+                  "То, что им рассказали",
+                  "Только слухи",
+                  "Ничего конкретного"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что обычно включает отчёт?",
+                "options": [
+                  "Только эмоции",
+                  "Время, место и описание события",
+                  "Только имена",
+                  "Ничего"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Какой язык избегают в правильном отчёте?",
+                "options": [
+                  "Точный",
+                  "Расплывчатый, вроде «что-то не так»",
+                  "Официальный",
+                  "Простой"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Куда обычно ежедневно передаются отчёты?",
+                "options": [
+                  "В СМИ",
+                  "В координационный центр миссии",
+                  "Никуда",
+                  "В посольство"
+                ],
+                "answerIndex": 1
+              }
+            ]
+          },
+          {
             "id": "l5-4",
-            "number": 39,
+            "number": 50,
             "title": "Security & Logistics",
             "titleNative": "Безопасность и логистика",
             "description": "Field safety, transport, and mission logistics",
@@ -5077,7 +6188,7 @@
           },
           {
             "id": "l5-5",
-            "number": 40,
+            "number": 51,
             "title": "Long-Term vs Short-Term Observation",
             "titleNative": "Долгосрочное и краткосрочное наблюдение",
             "description": "How the two observer roles differ and complement each other",
@@ -5214,7 +6325,7 @@
         "lessons": [
           {
             "id": "l6-1",
-            "number": 41,
+            "number": 52,
             "title": "Media Monitoring",
             "titleNative": "Мониторинг средств массовой информации",
             "description": "Tracking fairness and balance in press coverage",
@@ -5343,7 +6454,7 @@
           },
           {
             "id": "l6-2",
-            "number": 42,
+            "number": 53,
             "title": "Campaign Finance Monitoring",
             "titleNative": "Мониторинг финансирования избирательных кампаний",
             "description": "Tracking donations, spending limits, and transparency",
@@ -5472,7 +6583,7 @@
           },
           {
             "id": "l6-3",
-            "number": 43,
+            "number": 54,
             "title": "Gender Equality in Elections",
             "titleNative": "Гендерное равенство на выборах",
             "description": "Women's representation and participation in the process",
@@ -5600,8 +6711,109 @@
             ]
           },
           {
+            "id": "l6-reading-1",
+            "number": 55,
+            "title": "Election Technology and Its Challenges",
+            "titleNative": "Избирательные технологии и их вызовы",
+            "description": "New technologies used in elections and the questions they raise for observers.",
+            "readingPassage": {
+              "context": "New technologies used in elections and the questions they raise for observers.",
+              "paragraphs": [
+                {
+                  "en": "Some countries now use electronic voting machines instead of paper ballots.",
+                  "ru": "Некоторые страны теперь используют электронные машины для голосования вместо бумажных бюллетеней."
+                },
+                {
+                  "en": "These machines can make voting faster and counting more accurate.",
+                  "ru": "Эти машины могут делать голосование быстрее, а подсчёт — точнее."
+                },
+                {
+                  "en": "However, they also raise new questions about transparency and trust.",
+                  "ru": "Однако они также поднимают новые вопросы о прозрачности и доверии."
+                },
+                {
+                  "en": "A voter cannot always see with their own eyes how a machine recorded their vote.",
+                  "ru": "Избиратель не всегда может собственными глазами увидеть, как машина зафиксировала его голос."
+                },
+                {
+                  "en": "For this reason, many systems also print a paper record as backup.",
+                  "ru": "По этой причине во многих системах также печатается бумажная запись в качестве резервной копии."
+                },
+                {
+                  "en": "Observers must be trained specifically to understand this kind of technology.",
+                  "ru": "Наблюдателей необходимо специально обучать пониманию такой технологии."
+                },
+                {
+                  "en": "Cybersecurity has become an important part of modern election observation.",
+                  "ru": "Кибербезопасность стала важной частью современного наблюдения за выборами."
+                },
+                {
+                  "en": "Balancing convenience with transparency remains a central challenge today.",
+                  "ru": "Баланс между удобством и прозрачностью остаётся сегодня центральной проблемой."
+                }
+              ]
+            },
+            "exercises": [
+              {
+                "type": "comprehension",
+                "question": "Что используют некоторые страны вместо бумажных бюллетеней?",
+                "options": [
+                  "Ничего нового",
+                  "Электронные машины для голосования",
+                  "Телефонные звонки",
+                  "Открытки"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Какие вопросы поднимают эти машины?",
+                "options": [
+                  "О погоде",
+                  "О прозрачности и доверии",
+                  "О цене бумаги",
+                  "Никаких"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что часто печатается как резервная копия?",
+                "options": [
+                  "Список кандидатов",
+                  "Бумажная запись голоса",
+                  "Билет на выборы",
+                  "Ничего"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Чему должны быть специально обучены наблюдатели?",
+                "options": [
+                  "Игре в шахматы",
+                  "Пониманию новой технологии",
+                  "Кулинарии",
+                  "Ничему"
+                ],
+                "answerIndex": 1
+              },
+              {
+                "type": "comprehension",
+                "question": "Что остаётся центральной проблемой сегодня?",
+                "options": [
+                  "Баланс удобства и прозрачности",
+                  "Выбор цвета бюллетеня",
+                  "Ничего",
+                  "Погода в день выборов"
+                ],
+                "answerIndex": 1
+              }
+            ]
+          },
+          {
             "id": "l6-4",
-            "number": 44,
+            "number": 56,
             "title": "Disability & Accessibility",
             "titleNative": "Люди с инвалидностью и доступность",
             "description": "Ensuring the process is accessible to everyone",
@@ -5730,7 +6942,7 @@
           },
           {
             "id": "l6-5",
-            "number": 45,
+            "number": 57,
             "title": "New Voting Technologies",
             "titleNative": "Новые технологии голосования",
             "description": "Electronic voting, e-tabulation, and cybersecurity",
