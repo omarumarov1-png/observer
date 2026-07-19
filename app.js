@@ -304,12 +304,16 @@
   function enTokens(s) {
     return s.trim().replace(/[.,!?;:«»"—–]/g, "").split(/\s+/).filter(Boolean);
   }
-  // Unlike a sequential language course, Observer's topics are largely
-  // independent reference modules (e.g. an observer deployed on election day
-  // needs that lesson immediately, not after finishing earlier ones) — so
-  // every lesson is always open, with no completion-gated progression.
+  // Observer's topics are largely independent reference modules (e.g. an
+  // observer deployed on election day needs that topic immediately, not
+  // after finishing earlier ones) — so every level's first lesson is always
+  // open, regardless of progress in other levels. Lessons after the first
+  // within a level still unlock sequentially, same as a normal course.
   function isLessonUnlocked(flatIndex) {
-    return true;
+    const lesson = flatLessons[flatIndex];
+    const levelStartFlatIndex = flatLessons.findIndex(l => l.levelId === lesson.levelId);
+    if (flatIndex === levelStartFlatIndex) return true;
+    return progress.completedLessons.includes(flatLessons[flatIndex - 1].id);
   }
   function harvestWords(ex) {
     // Always collect the Russian side — this is a Russian term bank regardless of practice direction.
