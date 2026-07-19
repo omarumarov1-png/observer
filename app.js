@@ -389,6 +389,27 @@
     return html;
   }
 
+  // Real geometry of every lesson node, in the roadmap's own content-space
+  // coordinates (i.e. unaffected by current scroll position) — the single
+  // source of truth for both the connecting path and the jump buttons.
+  // Deliberately never touches scrollHeight/scrollWidth: an absolutely
+  // positioned SVG child can itself inflate a scrolling container's
+  // scrollHeight once sized, which was silently corrupting both the path
+  // (clipped/misdrawn) and the jump targets (overshooting into empty space).
+  function roadmapNodePoints(roadmapEl) {
+    const nodeEls = Array.from(roadmapEl.querySelectorAll(".roadmap-node, .roadmap-next-node"));
+    const containerRect = roadmapEl.getBoundingClientRect();
+    return nodeEls.map(n => {
+      const r = n.getBoundingClientRect();
+      return {
+        x: r.left + r.width / 2 - containerRect.left + roadmapEl.scrollLeft,
+        y: r.top + r.height / 2 - containerRect.top + roadmapEl.scrollTop,
+        top: r.top - containerRect.top + roadmapEl.scrollTop,
+        done: n.classList.contains("done"),
+      };
+    });
+  }
+
   // Traces an actual road through the zigzagged lesson nodes — measured
   // from real layout rather than guessed from CSS, since the left/center/
   // right offsets are percentage-based and shift with container width.
@@ -398,17 +419,8 @@
   function drawRoadmapPath() {
     const roadmapEl = document.getElementById("roadmapEl");
     if (!roadmapEl) return;
-    const nodeEls = Array.from(roadmapEl.querySelectorAll(".roadmap-node, .roadmap-next-node"));
-    if (nodeEls.length < 2) return;
-    const containerRect = roadmapEl.getBoundingClientRect();
-    const points = nodeEls.map(n => {
-      const r = n.getBoundingClientRect();
-      return {
-        x: r.left + r.width / 2 - containerRect.left + roadmapEl.scrollLeft,
-        y: r.top + r.height / 2 - containerRect.top + roadmapEl.scrollTop,
-        done: n.classList.contains("done"),
-      };
-    });
+    const points = roadmapNodePoints(roadmapEl);
+    if (points.length < 2) return;
     function segmentPath(pts) {
       let d = `M ${pts[0].x} ${pts[0].y}`;
       for (let i = 1; i < pts.length; i++) {
@@ -428,14 +440,28 @@
       svg.setAttribute("class", "roadmap-path-svg");
       roadmapEl.insertBefore(svg, roadmapEl.firstChild);
     }
-    svg.setAttribute("width", roadmapEl.scrollWidth);
-    svg.setAttribute("height", roadmapEl.scrollHeight);
+    const maxY = Math.max(...points.map(p => p.y)) + 60;
+    svg.setAttribute("width", roadmapEl.clientWidth);
+    svg.setAttribute("height", maxY);
     let inner = `<defs><linearGradient id="roadmapGrad" x1="0" y1="1" x2="0" y2="0">
       <stop offset="0%" stop-color="var(--navy)"/><stop offset="100%" stop-color="var(--gold)"/>
     </linearGradient></defs>`;
-    if (aheadPts.length >= 2) inner += `<path d="${segmentPath(aheadPts)}" fill="none" stroke="var(--paper-deep)" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 15"/>`;
-    if (walkedPts.length >= 2) inner += `<path d="${segmentPath(walkedPts)}" fill="none" stroke="url(#roadmapGrad)" stroke-width="5" stroke-linecap="round"/>`;
+    if (aheadPts.length >= 2) inner += `<path d="${segmentPath(aheadPts)}" fill="none" stroke="var(--paper-deep)" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 13"/>`;
+    if (walkedPts.length >= 2) inner += `<path d="${segmentPath(walkedPts)}" fill="none" stroke="url(#roadmapGrad)" stroke-width="6" stroke-linecap="round"/>`;
     svg.innerHTML = inner;
+  }
+  // Scrolls to the true topmost or bottommost lesson node — computed from
+  // real node positions, not scrollHeight (see roadmapNodePoints above).
+  function scrollRoadmapToEdge(edge) {
+    const roadmapEl = document.getElementById("roadmapEl");
+    if (!roadmapEl) return;
+    const points = roadmapNodePoints(roadmapEl);
+    if (!points.length) return;
+    const tops = points.map(p => p.top);
+    const targetY = edge === "top"
+      ? Math.min(...tops) - 24
+      : Math.max(...tops) - roadmapEl.clientHeight + 100;
+    roadmapEl.scrollTo({ top: Math.max(0, targetY), behavior: "smooth" });
   }
   let _roadmapResizeQueued = false;
   window.addEventListener("resize", () => {
@@ -528,9 +554,9 @@
       </div>
       ${!levelLessons.length
         ? `<div class="level-locked-note">Lessons for ${level.badge} are still being prepared and will appear here soon.</div>`
-        : `<div class="roadmap" id="roadmapEl">
+        : `<div class="roadmap-wrap">
+            <div class="roadmap" id="roadmapEl">${nodesHtml}</div>
             <button class="roadmap-jump roadmap-jump-top" id="jumpTopBtn" title="Jump to top" aria-label="Jump to top">⇈</button>
-            ${nodesHtml}
             <button class="roadmap-jump roadmap-jump-bottom" id="jumpBottomBtn" title="Jump to first lesson" aria-label="Jump to first lesson">⇊</button>
            </div>`
       }
@@ -538,13 +564,8 @@
 
     const jumpTopBtn = document.getElementById("jumpTopBtn");
     const jumpBottomBtn = document.getElementById("jumpBottomBtn");
-    if (jumpTopBtn) jumpTopBtn.addEventListener("click", () => {
-      document.getElementById("roadmapEl").scrollTo({ top: 0, behavior: "smooth" });
-    });
-    if (jumpBottomBtn) jumpBottomBtn.addEventListener("click", () => {
-      const el = document.getElementById("roadmapEl");
-      el.scrollTo({ top: el.scrollHeight, behavior: "smooth" });
-    });
+    if (jumpTopBtn) jumpTopBtn.addEventListener("click", () => scrollRoadmapToEdge("top"));
+    if (jumpBottomBtn) jumpBottomBtn.addEventListener("click", () => scrollRoadmapToEdge("bottom"));
 
     document.getElementById("prevLevelBtn").addEventListener("click", () => {
       if (!prevLevel) return;

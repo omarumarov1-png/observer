@@ -201,11 +201,14 @@ button.stat:hover { color: var(--navy); }
 /* Lessons run bottom (lesson 1) to top (last lesson) — column-reverse means
    the first child in the DOM (lesson 1) ends up visually lowest, so the
    list can just be built in normal reading order. */
+.roadmap-wrap { position: relative; }
 .roadmap {
   display: flex; flex-direction: column-reverse; align-items: center; position: relative;
   padding: 24px 10px 10px; margin-top: 4px; max-height: 60vh; overflow-y: auto;
 }
 .roadmap-path-svg { position: absolute; top: 0; left: 0; z-index: 0; pointer-events: none; }
+/* Positioned relative to .roadmap-wrap (not .roadmap, which scrolls) so these
+   stay pinned to the visible corners regardless of scroll position. */
 .roadmap-jump {
   position: absolute; right: 8px; z-index: 3; width: 40px; height: 40px; border-radius: 50%;
   border: 1.5px solid var(--line); background: var(--paper-raised); color: var(--ink-soft);
