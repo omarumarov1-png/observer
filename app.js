@@ -200,8 +200,9 @@
     window.speechSynthesis.onvoiceschanged = refreshVoices;
   }
   const SPEECH_RATE = 0.85;
+  const SPEECH_RATE_SLOW = 0.55;
   let _currentUtterance = null;
-  function speak(text, lang, onEnd) {
+  function speak(text, lang, onEnd, rate) {
     if (soundMuted || !("speechSynthesis" in window)) { if (onEnd) onEnd(); return; }
     try {
       // Calling cancel() immediately before speak() is a well-known iOS
@@ -212,7 +213,7 @@
       }
       const u = new SpeechSynthesisUtterance(text);
       u.lang = lang;
-      u.rate = SPEECH_RATE;
+      u.rate = rate || SPEECH_RATE;
       const voice = lang === "ru-RU" ? _preferredVoiceRu : _preferredVoiceEn;
       if (voice) u.voice = voice;
       if (onEnd) { u.onend = onEnd; u.onerror = onEnd; }
@@ -223,6 +224,12 @@
   }
   function speakAnswer(text, onEnd) {
     speak(text, direction === "ru-en" ? "en-US" : "ru-RU", onEnd);
+  }
+  // Speaks whichever side is currently the "shown/prompt" language (the
+  // opposite of speakAnswer, which always speaks the answer side) — used by
+  // the listening exercise types, where the prompt itself is audio-only.
+  function speakSource(text, onEnd, rate) {
+    speak(text, direction === "ru-en" ? "ru-RU" : "en-US", onEnd, rate);
   }
   // Estimate for the feedback timer bar's animation-duration only (cosmetic;
   // the actual advance is driven by the real TTS "end" event below).
@@ -508,15 +515,15 @@
       const flatIndex = flatLessons.indexOf(lesson);
       const unlocked = isLessonUnlocked(flatIndex);
       const done = progress.completedLessons.includes(lesson.id);
-      // With no completion-gated locking, "current" instead marks the first
-      // not-yet-done lesson in the level — a single "you are here" pointer,
-      // not every open node.
-      const isCurrent = !done && !currentAssigned;
+      const isReading = !!lesson.readingPassage;
+      // "current" marks the first not-yet-done, unlocked lesson in the level
+      // — a single "you are here" pointer, not every open node.
+      const isCurrent = !done && unlocked && !currentAssigned;
       if (isCurrent) currentAssigned = true;
       rowsHtml += `
         <div class="trail-row">
-          <button class="trail-node ${done ? "done" : unlocked ? "unlocked" : "locked"} ${isCurrent ? "current" : ""}" data-lesson="${lesson.id}" ${unlocked ? "" : "disabled"} aria-label="${lesson.title}">
-            ${done ? "✓" : unlocked ? lesson.number : "🔒"}
+          <button class="trail-node ${done ? "done" : unlocked ? "unlocked" : "locked"} ${isCurrent ? "current" : ""} ${isReading ? "reading" : ""}" data-lesson="${lesson.id}" ${unlocked ? "" : "disabled"} aria-label="${lesson.title}">
+            ${done ? "✓" : !unlocked ? "🔒" : isReading ? "📖" : lesson.number}
           </button>
           <div class="trail-info"><span class="trail-title">${lesson.title}</span><span class="trail-title-native">${lesson.titleNative || ""}</span></div>
         </div>
@@ -665,6 +672,9 @@
     const ex = currentExercise();
     if (ex.type === "multiple-choice") renderMultipleChoice(ex);
     else if (ex.type === "word-bank") renderWordBank(ex);
+    else if (ex.type === "listening") renderListening(ex);
+    else if (ex.type === "listening-tap") renderListeningTap(ex);
+    else if (ex.type === "comprehension") renderComprehension(ex);
   }
 
   function renderFeedback(correct, correctText, delay) {
@@ -828,6 +838,259 @@
       });
     }
     renderTiles();
+  }
+
+  // ---- listening ----
+  // A shared audio "stage": a big play button with pulsing rings that
+  // animate only while the TTS is actually speaking (driven by speak()'s
+  // real onEnd callback, not a fixed timer), plus a slow-motion (turtle)
+  // replay for catching words you missed the first time.
+  function audioStageHtml(big) {
+    return `
+      <div class="audio-stage${big ? " audio-stage-lg" : ""}">
+        <button class="listen-play-btn" id="listenPlayBtn" type="button" aria-label="Listen">
+          <span class="audio-rings"><span></span><span></span><span></span></span>
+          <span class="audio-icon">🔊</span>
+        </button>
+        <button class="listen-slow-btn" id="listenSlowBtn" type="button" title="Slow" aria-label="Listen slowly">🐢</button>
+      </div>
+    `;
+  }
+  function wireAudioStage(text) {
+    const stage = document.querySelector(".audio-stage");
+    const playBtn = document.getElementById("listenPlayBtn");
+    const slowBtn = document.getElementById("listenSlowBtn");
+    function play(rate) {
+      stage.classList.add("playing");
+      speakSource(text, () => stage.classList.remove("playing"), rate);
+    }
+    playBtn.addEventListener("click", () => play());
+    slowBtn.addEventListener("click", () => play(SPEECH_RATE_SLOW));
+    return play;
+  }
+
+  // Plays the source-language sentence and asks the learner to pick its
+  // translation — multiple-choice rather than free-text, matching the
+  // no-typing feel of the rest of the app.
+  function renderListening(ex) {
+    const srcText = direction === "ru-en" ? ex.ru : ex.en;
+    const correctText = direction === "ru-en" ? ex.en : ex.ru;
+    const siblingTexts = (ex._sourceLesson.exercises || [])
+      .filter(e => !(e.ru === ex.ru && e.en === ex.en))
+      .map(e => direction === "ru-en" ? e.en : e.ru);
+    const pool = Array.from(new Set(siblingTexts.filter(t => t !== correctText)));
+    const distractors = shuffled(pool).slice(0, 3);
+    const options = shuffled([correctText, ...distractors]);
+    const answerIndex = options.indexOf(correctText);
+    const optionsHtml = options.map((opt, i) =>
+      `<button class="option" data-i="${i}">${opt}</button>`
+    ).join("");
+
+    renderLessonChrome(`
+      <div class="card">
+        <div class="prompt-kicker">Listen and choose the translation</div>
+        ${audioStageHtml(true)}
+        <div class="options">${optionsHtml}</div>
+      </div>
+    `);
+    const play = wireAudioStage(srcText);
+    play();
+
+    const buttons = screenEl.querySelectorAll(".option");
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        buttons.forEach(b => b.disabled = true);
+        const i = Number(btn.dataset.i);
+        const correct = i === answerIndex;
+        btn.classList.add(correct ? "correct" : "incorrect");
+        if (!correct) buttons[answerIndex].classList.add("correct");
+        afterAnswer(correct);
+        const fallback = correct ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_WRONG;
+        screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, correctText, visualDelay(correct, correctText)));
+        wireFeedbackReplay(correctText);
+        advanceAfterSpeech(correctText, fallback);
+      });
+    });
+  }
+
+  // Plays the source-language sentence and asks the learner to reconstruct
+  // its translation by tapping word tiles — the audio version of word-bank.
+  function renderListeningTap(ex) {
+    const srcText = direction === "ru-en" ? ex.ru : ex.en;
+    const tgtText = direction === "ru-en" ? ex.en : ex.ru;
+    const tgtTokens = direction === "ru-en" ? enTokens(tgtText) : ruTokens(tgtText);
+    const bank = shuffled(tgtTokens);
+    let placed = [];
+
+    renderLessonChrome(`
+      <div class="card">
+        <div class="prompt-kicker">Listen and rebuild the translation</div>
+        ${audioStageHtml(false)}
+        <div class="bank-target" id="bankTarget"></div>
+        <div class="bank-pool" id="bankPool"></div>
+      </div>
+    `);
+    const play = wireAudioStage(srcText);
+    play();
+
+    const targetEl = document.getElementById("bankTarget");
+    const poolEl = document.getElementById("bankPool");
+    let submitted = false;
+
+    function submit() {
+      if (submitted) return;
+      submitted = true;
+      poolEl.querySelectorAll(".bank-tile").forEach(b => b.disabled = true);
+      targetEl.querySelectorAll(".bank-tile").forEach(b => b.disabled = true);
+      const correct = placed.length === tgtTokens.length && placed.every((w, i) => w === tgtTokens[i]);
+      afterAnswer(correct);
+      const answerText = tgtTokens.join(" ");
+      const fallback = correct ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_WRONG;
+      screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, answerText, visualDelay(correct, answerText)));
+      wireFeedbackReplay(answerText);
+      advanceAfterSpeech(answerText, fallback);
+    }
+
+    function renderTiles() {
+      targetEl.innerHTML = placed.map((w, i) => `<button class="bank-tile" data-target-i="${i}">${w}</button>`).join("");
+      const usedIdx = new Set();
+      placed.forEach(w => {
+        const idx = bank.findIndex((b, i) => b === w && !usedIdx.has(i));
+        if (idx !== -1) usedIdx.add(idx);
+      });
+      poolEl.innerHTML = bank.map((w, i) =>
+        `<button class="bank-tile ${usedIdx.has(i) ? "placed" : ""}" data-pool-i="${i}" ${usedIdx.has(i) ? "disabled" : ""}>${w}</button>`
+      ).join("");
+
+      poolEl.querySelectorAll(".bank-tile:not(.placed)").forEach(btn => {
+        btn.addEventListener("click", () => {
+          placed.push(btn.textContent);
+          renderTiles();
+          if (placed.length === tgtTokens.length) setTimeout(submit, 150);
+        });
+      });
+      targetEl.querySelectorAll(".bank-tile").forEach(btn => {
+        btn.addEventListener("click", () => {
+          if (submitted) return;
+          const i = Number(btn.dataset.targetI);
+          placed.splice(i, 1);
+          renderTiles();
+        });
+      });
+    }
+    renderTiles();
+  }
+
+  // ---- reading comprehension ----
+  function passagePanel(lesson) {
+    const rows = lesson.readingPassage.paragraphs.map((p, i) => `
+      <div class="passage-line" data-line="${i}">
+        <p class="passage-en">${p.en}</p>
+        <p class="passage-ru hidden">${p.ru}</p>
+      </div>
+    `).join("");
+    const context = lesson.readingPassage.context
+      ? `<p class="context-note">${lesson.readingPassage.context}</p>` : "";
+    return `
+      <details class="passage-panel" open>
+        <summary>${lesson.title} <span class="ru-summary">${lesson.titleNative || ""}</span></summary>
+        ${context}
+        <div class="passage-controls">
+          <button class="translit-toggle" id="passageToggle">Show Russian</button>
+          <button class="passage-listen-btn" id="passageListenBtn" title="Listen to the passage" aria-label="Listen to the passage">🔊 Listen</button>
+        </div>
+        ${rows}
+      </details>
+    `;
+  }
+  function wirePassageToggle() {
+    const btn = document.getElementById("passageToggle");
+    if (!btn) return;
+    btn.addEventListener("click", () => {
+      const lines = document.querySelectorAll(".passage-ru");
+      const hide = !lines[0].classList.contains("hidden");
+      lines.forEach(l => l.classList.toggle("hidden", hide));
+      btn.textContent = hide ? "Show Russian" : "Hide Russian";
+    });
+  }
+  let _passagePlaying = false;
+  let _passageToken = 0;
+  function wirePassageListen(lesson) {
+    const btn = document.getElementById("passageListenBtn");
+    if (!btn) return;
+    const paragraphs = lesson.readingPassage.paragraphs;
+    const lineEls = Array.from(document.querySelectorAll(".passage-line"));
+    btn.addEventListener("click", () => {
+      if (_passagePlaying) {
+        _passageToken++;
+        window.speechSynthesis.cancel();
+        _passagePlaying = false;
+        btn.textContent = "🔊 Listen";
+        lineEls.forEach(l => l.classList.remove("speaking"));
+        return;
+      }
+      if (soundMuted || !("speechSynthesis" in window)) return;
+      window.speechSynthesis.cancel();
+      _passagePlaying = true;
+      btn.textContent = "⏹ Stop";
+      const token = ++_passageToken;
+      let i = 0;
+      function step() {
+        if (token !== _passageToken || i >= paragraphs.length) {
+          if (token === _passageToken) { _passagePlaying = false; btn.textContent = "🔊 Listen"; }
+          lineEls.forEach(l => l.classList.remove("speaking"));
+          return;
+        }
+        lineEls.forEach(l => l.classList.remove("speaking"));
+        if (lineEls[i]) lineEls[i].classList.add("speaking");
+        const u = new SpeechSynthesisUtterance(paragraphs[i].en);
+        u.lang = "en-US";
+        u.rate = SPEECH_RATE;
+        if (_preferredVoiceEn) u.voice = _preferredVoiceEn;
+        let advanced = false;
+        u.onend = u.onerror = () => {
+          if (advanced || token !== _passageToken) return;
+          advanced = true;
+          i++;
+          setTimeout(step, 150);
+        };
+        window.speechSynthesis.speak(u);
+      }
+      step();
+    });
+  }
+  function renderComprehension(ex) {
+    const lesson = ex._sourceLesson;
+    const options = ex.options.map((opt, i) =>
+      `<button class="option" data-i="${i}">${opt}</button>`
+    ).join("");
+
+    renderLessonChrome(`
+      ${passagePanel(lesson)}
+      <div class="card">
+        <div class="prompt-kicker">Check your understanding</div>
+        <div class="prompt-native">${ex.question}</div>
+        <div class="options" id="options">${options}</div>
+      </div>
+    `);
+    wirePassageToggle();
+    wirePassageListen(lesson);
+
+    let answered = false;
+    document.querySelectorAll("#options .option").forEach(btn => {
+      btn.addEventListener("click", () => {
+        if (answered) return;
+        answered = true;
+        const i = Number(btn.dataset.i);
+        const correct = i === ex.answerIndex;
+        document.querySelectorAll("#options .option").forEach(b => b.disabled = true);
+        btn.classList.add(correct ? "correct" : "incorrect");
+        if (!correct) document.querySelector(`#options .option[data-i="${ex.answerIndex}"]`).classList.add("correct");
+        afterAnswer(correct);
+        screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, ex.options[ex.answerIndex]));
+        scheduleAdvance(correct ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_WRONG);
+      });
+    });
   }
 
   // ---------- SESSION COMPLETE ----------

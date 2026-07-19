@@ -231,6 +231,9 @@ button.stat:hover { color: var(--navy); }
 .trail-node.done { border-color: var(--navy); background: var(--navy); color: var(--paper-raised); box-shadow: 0 3px 0 var(--btn-shadow); }
 .trail-node.locked { cursor: default; opacity: 0.6; }
 .trail-node:disabled { cursor: default; }
+.trail-node.reading { border-color: var(--gold); }
+.trail-node.reading.unlocked { color: var(--gold); background: var(--gold-wash); border-color: var(--gold); }
+.trail-node.reading.unlocked.current { box-shadow: 0 3px 0 var(--btn-shadow), 0 0 0 5px var(--gold-wash); }
 .trail-next-node { border-color: var(--gold); background: var(--gold-wash); font-size: 1.5rem; }
 .trail-info { display: flex; flex-direction: column; min-width: 0; }
 .trail-title { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; color: var(--ink); }
@@ -269,6 +272,64 @@ button.stat:hover { color: var(--navy); }
 }
 .bank-tile:hover { border-color: var(--navy); }
 .bank-tile.placed { opacity: 0.35; cursor: default; }
+
+/* The listening "stage": a big play button with pulsing rings that only
+   animate while audio is actually speaking (driven by speak()'s onEnd
+   callback, not a fixed timer), plus a slow-motion (turtle) replay. */
+.audio-stage { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
+.audio-stage-lg { justify-content: center; margin-bottom: 22px; }
+.listen-play-btn {
+  position: relative; width: 64px; height: 64px; border-radius: 50%; flex-shrink: 0;
+  border: none; background: var(--gold); color: var(--paper-raised); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 0 var(--btn-shadow); transition: transform 0.1s ease;
+}
+.audio-stage-lg .listen-play-btn { width: 84px; height: 84px; }
+.listen-play-btn:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--btn-shadow); }
+.audio-icon { font-size: 1.6rem; position: relative; z-index: 2; }
+.audio-stage-lg .audio-icon { font-size: 2.1rem; }
+.audio-rings { position: absolute; inset: 0; border-radius: 50%; pointer-events: none; }
+.audio-rings span {
+  position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--gold); opacity: 0;
+}
+.audio-stage.playing .audio-rings span { animation: audio-ring-pulse 1.4s ease-out infinite; }
+.audio-stage.playing .audio-rings span:nth-child(2) { animation-delay: 0.4s; }
+.audio-stage.playing .audio-rings span:nth-child(3) { animation-delay: 0.8s; }
+.audio-stage.playing .listen-play-btn { animation: audio-btn-bob 0.6s ease-in-out infinite alternate; }
+@keyframes audio-ring-pulse { 0% { opacity: 0.55; transform: scale(1); } 100% { opacity: 0; transform: scale(1.9); } }
+@keyframes audio-btn-bob { from { transform: scale(1); } to { transform: scale(1.06); } }
+.listen-slow-btn {
+  width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--line); flex-shrink: 0;
+  background: var(--paper-raised); color: var(--ink-soft); font-size: 1.1rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: border-color 0.12s ease, color 0.12s ease;
+}
+.listen-slow-btn:hover { border-color: var(--navy); color: var(--navy); }
+
+/* ---------- reading comprehension ---------- */
+.passage-panel {
+  background: var(--paper-raised); border: 1px solid var(--line); border-radius: 10px;
+  padding: 22px 24px; margin-bottom: 18px;
+}
+.passage-panel summary {
+  font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--ink);
+  cursor: pointer; margin-bottom: 4px;
+}
+.passage-panel .ru-summary { font-family: var(--font-body); font-weight: 400; font-size: 0.85rem; color: var(--ink-soft); }
+.passage-panel .context-note { font-size: 0.85rem; color: var(--ink-soft); margin: 6px 0 16px; }
+.passage-controls { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+.translit-toggle, .passage-listen-btn {
+  font-family: var(--font-mono); font-size: 0.78rem; padding: 8px 14px; border-radius: 8px;
+  border: 1.5px solid var(--line); background: var(--paper); color: var(--ink-soft); cursor: pointer;
+  transition: border-color 0.12s ease, color 0.12s ease;
+}
+.translit-toggle:hover, .passage-listen-btn:hover { border-color: var(--navy); color: var(--navy); }
+.passage-line { padding: 10px 0; border-top: 1px solid var(--line); }
+.passage-line:first-of-type { border-top: none; }
+.passage-line.speaking { background: var(--gold-wash); border-radius: 6px; padding-left: 8px; padding-right: 8px; }
+.passage-en { font-family: var(--font-body); font-size: 1rem; line-height: 1.5; color: var(--ink); margin: 0 0 4px; }
+.passage-ru { font-size: 0.88rem; color: var(--ink-soft); margin: 0; }
+.passage-ru.hidden { display: none; }
 
 .feedback { position: fixed; left: 0; right: 0; bottom: 0; padding: 18px 20px; display: flex; align-items: center; gap: 14px; justify-content: space-between; }
 .feedback.correct { background: var(--navy-wash); border-top: 2px solid var(--navy); }

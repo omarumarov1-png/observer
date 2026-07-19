@@ -93,6 +93,51 @@
                 "type": "multiple-choice",
                 "ru": "Каждый избиратель голосует лично.",
                 "en": "Every voter votes in person."
+              },
+              {
+                "type": "listening",
+                "ru": "Выборы пройдут в следующее воскресенье.",
+                "en": "The election will take place next Sunday."
+              },
+              {
+                "type": "listening",
+                "ru": "Каждый избиратель имеет право проголосовать один раз.",
+                "en": "Every voter has the right to vote once."
+              },
+              {
+                "type": "listening",
+                "ru": "Бюллетень нужно опустить в урну для голосования.",
+                "en": "The ballot must be placed in the ballot box."
+              },
+              {
+                "type": "listening",
+                "ru": "На этом избирательном участке зарегистрировано две тысячи избирателей.",
+                "en": "Two thousand voters are registered at this polling station."
+              },
+              {
+                "type": "listening",
+                "ru": "Кандидат выступил с речью перед голосованием.",
+                "en": "The candidate gave a speech before the voting."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Выборы пройдут в следующее воскресенье.",
+                "en": "The election will take place next Sunday."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Каждый избиратель имеет право проголосовать один раз.",
+                "en": "Every voter has the right to vote once."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Бюллетень нужно опустить в урну для голосования.",
+                "en": "The ballot must be placed in the ballot box."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "На этом избирательном участке зарегистрировано две тысячи избирателей.",
+                "en": "Two thousand voters are registered at this polling station."
               }
             ]
           },
@@ -177,6 +222,51 @@
                 "type": "multiple-choice",
                 "ru": "Заместитель председателя временно исполнял обязанности председателя.",
                 "en": "The deputy chairperson temporarily performed the duties of the chairperson."
+              },
+              {
+                "type": "listening",
+                "ru": "Центральная избирательная комиссия отвечает за организацию выборов.",
+                "en": "The Central Election Commission is responsible for organizing elections."
+              },
+              {
+                "type": "listening",
+                "ru": "Председатель комиссии открыл заседание в девять часов.",
+                "en": "The chairperson of the commission opened the meeting at nine o'clock."
+              },
+              {
+                "type": "listening",
+                "ru": "Участковая избирательная комиссия состоит из семи членов.",
+                "en": "The precinct election commission consists of seven members."
+              },
+              {
+                "type": "listening",
+                "ru": "Секретарь комиссии ведёт протокол заседания.",
+                "en": "The commission's secretary keeps the minutes of the meeting."
+              },
+              {
+                "type": "listening",
+                "ru": "Члены комиссии подсчитали голоса после закрытия участка.",
+                "en": "The commission members counted the votes after the station closed."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Центральная избирательная комиссия отвечает за организацию выборов.",
+                "en": "The Central Election Commission is responsible for organizing elections."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Председатель комиссии открыл заседание в девять часов.",
+                "en": "The chairperson of the commission opened the meeting at nine o'clock."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Участковая избирательная комиссия состоит из семи членов.",
+                "en": "The precinct election commission consists of seven members."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Секретарь комиссии ведёт протокол заседания.",
+                "en": "The commission's secretary keeps the minutes of the meeting."
               }
             ]
           },
@@ -261,6 +351,51 @@
                 "type": "multiple-choice",
                 "ru": "Наблюдатели проверили точность списка избирателей на участке.",
                 "en": "The observers checked the accuracy of the voter list at the station."
+              },
+              {
+                "type": "listening",
+                "ru": "Список избирателей был вывешен на участке за неделю до выборов.",
+                "en": "The voter list was posted at the polling station a week before the election."
+              },
+              {
+                "type": "listening",
+                "ru": "Каждый гражданин должен проверить своё имя в списке избирателей.",
+                "en": "Every citizen should check their name on the voter list."
+              },
+              {
+                "type": "listening",
+                "ru": "Избиратель подал заявление об исключении из списка по прежнему адресу.",
+                "en": "The voter submitted an application to be removed from the list at the previous address."
+              },
+              {
+                "type": "listening",
+                "ru": "Регистрация избирателей завершилась за десять дней до голосования.",
+                "en": "Voter registration ended ten days before the vote."
+              },
+              {
+                "type": "listening",
+                "ru": "В список были включены только совершеннолетние граждане.",
+                "en": "Only adult citizens were included on the list."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Список избирателей был вывешен на участке за неделю до выборов.",
+                "en": "The voter list was posted at the polling station a week before the election."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Каждый гражданин должен проверить своё имя в списке избирателей.",
+                "en": "Every citizen should check their name on the voter list."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Избиратель подал заявление об исключении из списка по прежнему адресу.",
+                "en": "The voter submitted an application to be removed from the list at the previous address."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Регистрация избирателей завершилась за десять дней до голосования.",
+                "en": "Voter registration ended ten days before the vote."
               }
             ]
           },
@@ -345,6 +480,51 @@
                 "type": "multiple-choice",
                 "ru": "Каждый кандидат получил равное эфирное время на государственном телевидении.",
                 "en": "Each candidate received equal airtime on state television."
+              },
+              {
+                "type": "listening",
+                "ru": "Предвыборная агитация началась за месяц до дня голосования.",
+                "en": "The election campaign began a month before voting day."
+              },
+              {
+                "type": "listening",
+                "ru": "Кандидат провёл встречу с избирателями в местном доме культуры.",
+                "en": "The candidate held a meeting with voters at the local cultural center."
+              },
+              {
+                "type": "listening",
+                "ru": "Закон запрещает агитацию в день голосования.",
+                "en": "The law prohibits campaigning on voting day."
+              },
+              {
+                "type": "listening",
+                "ru": "Партия разместила плакаты по всему городу.",
+                "en": "The party placed posters throughout the city."
+              },
+              {
+                "type": "listening",
+                "ru": "Кандидаты приняли участие в теледебатах накануне выборов.",
+                "en": "The candidates took part in televised debates on the eve of the election."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Предвыборная агитация началась за месяц до дня голосования.",
+                "en": "The election campaign began a month before voting day."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Кандидат провёл встречу с избирателями в местном доме культуры.",
+                "en": "The candidate held a meeting with voters at the local cultural center."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Закон запрещает агитацию в день голосования.",
+                "en": "The law prohibits campaigning on voting day."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Партия разместила плакаты по всему городу.",
+                "en": "The party placed posters throughout the city."
               }
             ]
           },
@@ -429,6 +609,51 @@
                 "type": "multiple-choice",
                 "ru": "Наблюдателям было отказано в доступе к протоколу подсчёта голосов.",
                 "en": "The observers were denied access to the vote-count protocol."
+              },
+              {
+                "type": "listening",
+                "ru": "Международные наблюдатели прибыли в страну за неделю до выборов.",
+                "en": "International observers arrived in the country a week before the election."
+              },
+              {
+                "type": "listening",
+                "ru": "Наблюдатель предъявил аккредитацию на входе в участок.",
+                "en": "The observer presented accreditation at the entrance to the polling station."
+              },
+              {
+                "type": "listening",
+                "ru": "Долгосрочные наблюдатели следят за ходом всей избирательной кампании.",
+                "en": "Long-term observers monitor the entire election campaign."
+              },
+              {
+                "type": "listening",
+                "ru": "Краткосрочные наблюдатели прибывают непосредственно перед днём голосования.",
+                "en": "Short-term observers arrive right before voting day."
+              },
+              {
+                "type": "listening",
+                "ru": "Наблюдатель имеет право свободно перемещаться по участку.",
+                "en": "An observer has the right to move freely around the polling station."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Международные наблюдатели прибыли в страну за неделю до выборов.",
+                "en": "International observers arrived in the country a week before the election."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Наблюдатель предъявил аккредитацию на входе в участок.",
+                "en": "The observer presented accreditation at the entrance to the polling station."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Долгосрочные наблюдатели следят за ходом всей избирательной кампании.",
+                "en": "Long-term observers monitor the entire election campaign."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Краткосрочные наблюдатели прибывают непосредственно перед днём голосования.",
+                "en": "Short-term observers arrive right before voting day."
               }
             ]
           },
@@ -513,6 +738,51 @@
                 "type": "multiple-choice",
                 "ru": "Выбор избирательной системы существенно влияет на политический ландшафт страны.",
                 "en": "The choice of electoral system significantly affects the country's political landscape."
+              },
+              {
+                "type": "listening",
+                "ru": "Страна использует пропорциональную избирательную систему на парламентских выборах.",
+                "en": "The country uses a proportional electoral system for parliamentary elections."
+              },
+              {
+                "type": "listening",
+                "ru": "Мажоритарная система предполагает избрание одного депутата от округа.",
+                "en": "The majoritarian system involves electing one deputy per district."
+              },
+              {
+                "type": "listening",
+                "ru": "Смешанная избирательная система сочетает элементы обеих систем.",
+                "en": "A mixed electoral system combines elements of both systems."
+              },
+              {
+                "type": "listening",
+                "ru": "Избирательный порог составляет пять процентов голосов.",
+                "en": "The electoral threshold is five percent of the vote."
+              },
+              {
+                "type": "listening",
+                "ru": "Партийные списки распределяются по методу наибольшего остатка.",
+                "en": "Party lists are allocated using the largest remainder method."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Страна использует пропорциональную избирательную систему на парламентских выборах.",
+                "en": "The country uses a proportional electoral system for parliamentary elections."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Мажоритарная система предполагает избрание одного депутата от округа.",
+                "en": "The majoritarian system involves electing one deputy per district."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Смешанная избирательная система сочетает элементы обеих систем.",
+                "en": "A mixed electoral system combines elements of both systems."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Избирательный порог составляет пять процентов голосов.",
+                "en": "The electoral threshold is five percent of the vote."
               }
             ]
           },
@@ -597,6 +867,51 @@
                 "type": "multiple-choice",
                 "ru": "Партийная система страны остаётся довольно раздробленной.",
                 "en": "The country's party system remains rather fragmented."
+              },
+              {
+                "type": "listening",
+                "ru": "В стране зарегистрировано более двадцати политических партий.",
+                "en": "More than twenty political parties are registered in the country."
+              },
+              {
+                "type": "listening",
+                "ru": "Две партии объединились в коалицию перед выборами.",
+                "en": "Two parties formed a coalition before the election."
+              },
+              {
+                "type": "listening",
+                "ru": "Правящая партия удерживает большинство мест в парламенте.",
+                "en": "The ruling party holds a majority of seats in parliament."
+              },
+              {
+                "type": "listening",
+                "ru": "Оппозиционная коалиция выдвинула единого кандидата.",
+                "en": "The opposition coalition nominated a single candidate."
+              },
+              {
+                "type": "listening",
+                "ru": "Новая партия была основана бывшими членами парламента.",
+                "en": "A new party was founded by former members of parliament."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "В стране зарегистрировано более двадцати политических партий.",
+                "en": "More than twenty political parties are registered in the country."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Две партии объединились в коалицию перед выборами.",
+                "en": "Two parties formed a coalition before the election."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Правящая партия удерживает большинство мест в парламенте.",
+                "en": "The ruling party holds a majority of seats in parliament."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Оппозиционная коалиция выдвинула единого кандидата.",
+                "en": "The opposition coalition nominated a single candidate."
               }
             ]
           },
@@ -681,6 +996,51 @@
                 "type": "multiple-choice",
                 "ru": "Проведение референдума требует значительных финансовых затрат.",
                 "en": "Holding a referendum requires significant financial expenditure."
+              },
+              {
+                "type": "listening",
+                "ru": "Референдум по вопросу конституционной реформы назначен на осень.",
+                "en": "A referendum on constitutional reform is scheduled for the autumn."
+              },
+              {
+                "type": "listening",
+                "ru": "Граждане проголосовали на референдуме за вступление в международную организацию.",
+                "en": "Citizens voted in the referendum in favor of joining the international organization."
+              },
+              {
+                "type": "listening",
+                "ru": "Явка на референдуме должна превысить установленный законом порог.",
+                "en": "Turnout in the referendum must exceed the legally established threshold."
+              },
+              {
+                "type": "listening",
+                "ru": "Вопрос референдума был сформулирован ясно и недвусмысленно.",
+                "en": "The referendum question was formulated clearly and unambiguously."
+              },
+              {
+                "type": "listening",
+                "ru": "Итоги референдума являются обязательными для исполнения.",
+                "en": "The results of the referendum are binding."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Референдум по вопросу конституционной реформы назначен на осень.",
+                "en": "A referendum on constitutional reform is scheduled for the autumn."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Граждане проголосовали на референдуме за вступление в международную организацию.",
+                "en": "Citizens voted in the referendum in favor of joining the international organization."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Явка на референдуме должна превысить установленный законом порог.",
+                "en": "Turnout in the referendum must exceed the legally established threshold."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Вопрос референдума был сформулирован ясно и недвусмысленно.",
+                "en": "The referendum question was formulated clearly and unambiguously."
               }
             ]
           },
@@ -765,6 +1125,51 @@
                 "type": "multiple-choice",
                 "ru": "Каждый вид выборов регулируется отдельным разделом избирательного кодекса.",
                 "en": "Each type of election is regulated by a separate section of the electoral code."
+              },
+              {
+                "type": "listening",
+                "ru": "Президентские выборы проводятся раз в шесть лет.",
+                "en": "Presidential elections are held once every six years."
+              },
+              {
+                "type": "listening",
+                "ru": "Парламентские выборы назначены на первое воскресенье октября.",
+                "en": "Parliamentary elections are scheduled for the first Sunday of October."
+              },
+              {
+                "type": "listening",
+                "ru": "Местные выборы определяют состав городского совета.",
+                "en": "Local elections determine the composition of the city council."
+              },
+              {
+                "type": "listening",
+                "ru": "Промежуточные выборы восполняют вакантное место в парламенте.",
+                "en": "By-elections fill a vacant seat in parliament."
+              },
+              {
+                "type": "listening",
+                "ru": "Региональные выборы прошли одновременно в пяти областях.",
+                "en": "Regional elections were held simultaneously in five provinces."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Президентские выборы проводятся раз в шесть лет.",
+                "en": "Presidential elections are held once every six years."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Парламентские выборы назначены на первое воскресенье октября.",
+                "en": "Parliamentary elections are scheduled for the first Sunday of October."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Местные выборы определяют состав городского совета.",
+                "en": "Local elections determine the composition of the city council."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Промежуточные выборы восполняют вакантное место в парламенте.",
+                "en": "By-elections fill a vacant seat in parliament."
               }
             ]
           },
@@ -849,6 +1254,51 @@
                 "type": "multiple-choice",
                 "ru": "Защита права голоса остаётся приоритетом для международного сообщества.",
                 "en": "Protecting the right to vote remains a priority for the international community."
+              },
+              {
+                "type": "listening",
+                "ru": "Право голоса гарантировано каждому гражданину страны.",
+                "en": "The right to vote is guaranteed to every citizen of the country."
+              },
+              {
+                "type": "listening",
+                "ru": "Всеобщее избирательное право было закреплено в конституции столетие назад.",
+                "en": "Universal suffrage was enshrined in the constitution a century ago."
+              },
+              {
+                "type": "listening",
+                "ru": "Осуждённые за тяжкие преступления временно лишаются права голоса.",
+                "en": "Those convicted of serious crimes are temporarily deprived of the right to vote."
+              },
+              {
+                "type": "listening",
+                "ru": "Гражданин, признанный судом недееспособным, не может участвовать в голосовании.",
+                "en": "A citizen declared legally incompetent by a court cannot participate in voting."
+              },
+              {
+                "type": "listening",
+                "ru": "Право голоса распространяется на граждан, проживающих за рубежом.",
+                "en": "The right to vote extends to citizens living abroad."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Право голоса гарантировано каждому гражданину страны.",
+                "en": "The right to vote is guaranteed to every citizen of the country."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Всеобщее избирательное право было закреплено в конституции столетие назад.",
+                "en": "Universal suffrage was enshrined in the constitution a century ago."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Осуждённые за тяжкие преступления временно лишаются права голоса.",
+                "en": "Those convicted of serious crimes are temporarily deprived of the right to vote."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Гражданин, признанный судом недееспособным, не может участвовать в голосовании.",
+                "en": "A citizen declared legally incompetent by a court cannot participate in voting."
               }
             ]
           }
@@ -941,6 +1391,51 @@
                 "type": "multiple-choice",
                 "ru": "Обязанности членов комиссии закреплены в законе.",
                 "en": "The duties of commission members are established by law."
+              },
+              {
+                "type": "listening",
+                "ru": "Каждый член комиссии выполняет свою определённую роль.",
+                "en": "Each commission member performs their own specific role."
+              },
+              {
+                "type": "listening",
+                "ru": "Заведующий участком отвечает за общий порядок в день голосования.",
+                "en": "The polling station manager is responsible for overall order on voting day."
+              },
+              {
+                "type": "listening",
+                "ru": "Один член комиссии выдаёт бюллетени избирателям.",
+                "en": "One commission member issues ballots to voters."
+              },
+              {
+                "type": "listening",
+                "ru": "Технический секретарь оформляет всю необходимую документацию.",
+                "en": "The technical secretary prepares all necessary documentation."
+              },
+              {
+                "type": "listening",
+                "ru": "Наблюдатель от партии следит за соблюдением процедуры.",
+                "en": "The party observer monitors compliance with the procedure."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Каждый член комиссии выполняет свою определённую роль.",
+                "en": "Each commission member performs their own specific role."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Заведующий участком отвечает за общий порядок в день голосования.",
+                "en": "The polling station manager is responsible for overall order on voting day."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Один член комиссии выдаёт бюллетени избирателям.",
+                "en": "One commission member issues ballots to voters."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Технический секретарь оформляет всю необходимую документацию.",
+                "en": "The technical secretary prepares all necessary documentation."
               }
             ]
           },
@@ -1025,6 +1520,51 @@
                 "type": "multiple-choice",
                 "ru": "Табличка с номером участка размещена у входа.",
                 "en": "A sign with the polling station number is placed at the entrance."
+              },
+              {
+                "type": "listening",
+                "ru": "Избирательный участок должен быть доступен для людей с инвалидностью.",
+                "en": "The polling station must be accessible for people with disabilities."
+              },
+              {
+                "type": "listening",
+                "ru": "Помещение для голосования было подготовлено накануне вечером.",
+                "en": "The voting premises were prepared the evening before."
+              },
+              {
+                "type": "listening",
+                "ru": "На каждом участке установлено не менее двух кабин для голосования.",
+                "en": "Each polling station has at least two voting booths installed."
+              },
+              {
+                "type": "listening",
+                "ru": "Информационные стенды разместили при входе на участок.",
+                "en": "Information boards were placed at the entrance to the polling station."
+              },
+              {
+                "type": "listening",
+                "ru": "Освещение в помещении должно быть достаточным для чтения бюллетеня.",
+                "en": "The lighting in the room must be sufficient for reading the ballot."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Избирательный участок должен быть доступен для людей с инвалидностью.",
+                "en": "The polling station must be accessible for people with disabilities."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Помещение для голосования было подготовлено накануне вечером.",
+                "en": "The voting premises were prepared the evening before."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "На каждом участке установлено не менее двух кабин для голосования.",
+                "en": "Each polling station has at least two voting booths installed."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Информационные стенды разместили при входе на участок.",
+                "en": "Information boards were placed at the entrance to the polling station."
               }
             ]
           },
@@ -1109,6 +1649,51 @@
                 "type": "multiple-choice",
                 "ru": "Каждый избиратель получил письмо с информацией о своём участке.",
                 "en": "Every voter received a letter with information about their polling station."
+              },
+              {
+                "type": "listening",
+                "ru": "Комиссия провела кампанию по информированию избирателей.",
+                "en": "The commission conducted a voter information campaign."
+              },
+              {
+                "type": "listening",
+                "ru": "Брошюры с разъяснением процедуры голосования раздали в почтовые ящики.",
+                "en": "Brochures explaining the voting procedure were distributed to mailboxes."
+              },
+              {
+                "type": "listening",
+                "ru": "Телевизионная реклама объяснила избирателям, как заполнять бюллетень.",
+                "en": "A television advertisement explained to voters how to fill out the ballot."
+              },
+              {
+                "type": "listening",
+                "ru": "Волонтёры помогали пожилым людям разобраться в новых правилах.",
+                "en": "Volunteers helped elderly people understand the new rules."
+              },
+              {
+                "type": "listening",
+                "ru": "На сайте комиссии опубликовали инструкцию для избирателей.",
+                "en": "The commission published instructions for voters on its website."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Комиссия провела кампанию по информированию избирателей.",
+                "en": "The commission conducted a voter information campaign."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Брошюры с разъяснением процедуры голосования раздали в почтовые ящики.",
+                "en": "Brochures explaining the voting procedure were distributed to mailboxes."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Телевизионная реклама объяснила избирателям, как заполнять бюллетень.",
+                "en": "A television advertisement explained to voters how to fill out the ballot."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Волонтёры помогали пожилым людям разобраться в новых правилах.",
+                "en": "Volunteers helped elderly people understand the new rules."
               }
             ]
           },
@@ -1193,6 +1778,51 @@
                 "type": "multiple-choice",
                 "ru": "Голосование вне помещения участка строго регламентировано законом.",
                 "en": "Voting outside the polling station premises is strictly regulated by law."
+              },
+              {
+                "type": "listening",
+                "ru": "Передвижная урна для голосования используется для больных избирателей.",
+                "en": "A mobile ballot box is used for sick voters."
+              },
+              {
+                "type": "listening",
+                "ru": "Избиратель, находящийся в больнице, подал заявку на голосование на дому.",
+                "en": "A voter who is in the hospital submitted a request to vote at home."
+              },
+              {
+                "type": "listening",
+                "ru": "Комиссия организовала голосование в домах престарелых.",
+                "en": "The commission organized voting in nursing homes."
+              },
+              {
+                "type": "listening",
+                "ru": "Заключённые голосуют в специально оборудованном помещении тюрьмы.",
+                "en": "Prisoners vote in a specially equipped room in the prison."
+              },
+              {
+                "type": "listening",
+                "ru": "Два члена комиссии сопровождают передвижную урну.",
+                "en": "Two commission members accompany the mobile ballot box."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Передвижная урна для голосования используется для больных избирателей.",
+                "en": "A mobile ballot box is used for sick voters."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Избиратель, находящийся в больнице, подал заявку на голосование на дому.",
+                "en": "A voter who is in the hospital submitted a request to vote at home."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Комиссия организовала голосование в домах престарелых.",
+                "en": "The commission organized voting in nursing homes."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Заключённые голосуют в специально оборудованном помещении тюрьмы.",
+                "en": "Prisoners vote in a specially equipped room in the prison."
               }
             ]
           },
@@ -1277,6 +1907,51 @@
                 "type": "multiple-choice",
                 "ru": "Крайний срок регистрации кандидатов истёк в полночь.",
                 "en": "The deadline for candidate registration expired at midnight."
+              },
+              {
+                "type": "listening",
+                "ru": "Партия подала документы на регистрацию за два месяца до выборов.",
+                "en": "The party submitted documents for registration two months before the election."
+              },
+              {
+                "type": "listening",
+                "ru": "Кандидат собрал необходимое количество подписей избирателей.",
+                "en": "The candidate collected the required number of voter signatures."
+              },
+              {
+                "type": "listening",
+                "ru": "Комиссия отказала кандидату в регистрации из-за неполного пакета документов.",
+                "en": "The commission denied the candidate's registration due to an incomplete set of documents."
+              },
+              {
+                "type": "listening",
+                "ru": "Каждая партия обязана предоставить финансовый отчёт при регистрации.",
+                "en": "Every party is required to submit a financial report upon registration."
+              },
+              {
+                "type": "listening",
+                "ru": "Список зарегистрированных кандидатов был опубликован на следующий день.",
+                "en": "The list of registered candidates was published the next day."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Партия подала документы на регистрацию за два месяца до выборов.",
+                "en": "The party submitted documents for registration two months before the election."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Кандидат собрал необходимое количество подписей избирателей.",
+                "en": "The candidate collected the required number of voter signatures."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Комиссия отказала кандидату в регистрации из-за неполного пакета документов.",
+                "en": "The commission denied the candidate's registration due to an incomplete set of documents."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Каждая партия обязана предоставить финансовый отчёт при регистрации.",
+                "en": "Every party is required to submit a financial report upon registration."
               }
             ]
           },
@@ -1361,6 +2036,51 @@
                 "type": "multiple-choice",
                 "ru": "Каждый этап избирательного процесса имеет строго установленный срок.",
                 "en": "Every stage of the election process has a strictly established deadline."
+              },
+              {
+                "type": "listening",
+                "ru": "Избирательный календарь устанавливает сроки всех этапов выборов.",
+                "en": "The election calendar establishes the deadlines for all stages of the election."
+              },
+              {
+                "type": "listening",
+                "ru": "Бюджет выборов утверждается парламентом за год до голосования.",
+                "en": "The election budget is approved by parliament a year before the vote."
+              },
+              {
+                "type": "listening",
+                "ru": "Комиссия опубликовала подробный график предвыборных мероприятий.",
+                "en": "The commission published a detailed schedule of pre-election activities."
+              },
+              {
+                "type": "listening",
+                "ru": "Государство выделило дополнительные средства на организацию выборов.",
+                "en": "The state allocated additional funds for organizing the election."
+              },
+              {
+                "type": "listening",
+                "ru": "Избирательный календарь предусматривает восемь недель на регистрацию кандидатов.",
+                "en": "The election calendar provides eight weeks for candidate registration."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Избирательный календарь устанавливает сроки всех этапов выборов.",
+                "en": "The election calendar establishes the deadlines for all stages of the election."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Бюджет выборов утверждается парламентом за год до голосования.",
+                "en": "The election budget is approved by parliament a year before the vote."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Комиссия опубликовала подробный график предвыборных мероприятий.",
+                "en": "The commission published a detailed schedule of pre-election activities."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Государство выделило дополнительные средства на организацию выборов.",
+                "en": "The state allocated additional funds for organizing the election."
               }
             ]
           },
@@ -1445,6 +2165,51 @@
                 "type": "multiple-choice",
                 "ru": "Качественное обучение снижает вероятность процедурных ошибок в день голосования.",
                 "en": "Quality training reduces the likelihood of procedural errors on voting day."
+              },
+              {
+                "type": "listening",
+                "ru": "Все члены комиссии прошли обязательное обучение перед выборами.",
+                "en": "All commission members completed mandatory training before the election."
+              },
+              {
+                "type": "listening",
+                "ru": "Тренинг охватил процедуры выдачи бюллетеней и подсчёта голосов.",
+                "en": "The training covered ballot issuance and vote-counting procedures."
+              },
+              {
+                "type": "listening",
+                "ru": "Учебные материалы были розданы каждому участнику тренинга.",
+                "en": "Training materials were distributed to each training participant."
+              },
+              {
+                "type": "listening",
+                "ru": "Опытные инструкторы провели практическое занятие для новых членов комиссии.",
+                "en": "Experienced instructors conducted a practical session for new commission members."
+              },
+              {
+                "type": "listening",
+                "ru": "Тестирование по итогам обучения прошли все сотрудники участков.",
+                "en": "All polling station staff passed the test at the end of the training."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Все члены комиссии прошли обязательное обучение перед выборами.",
+                "en": "All commission members completed mandatory training before the election."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Тренинг охватил процедуры выдачи бюллетеней и подсчёта голосов.",
+                "en": "The training covered ballot issuance and vote-counting procedures."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Учебные материалы были розданы каждому участнику тренинга.",
+                "en": "Training materials were distributed to each training participant."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Опытные инструкторы провели практическое занятие для новых членов комиссии.",
+                "en": "Experienced instructors conducted a practical session for new commission members."
               }
             ]
           },
@@ -1529,6 +2294,51 @@
                 "type": "multiple-choice",
                 "ru": "Организация процесса голосования за рубежом требует тесной координации с дипломатическими службами.",
                 "en": "Organizing the voting process abroad requires close coordination with diplomatic services."
+              },
+              {
+                "type": "listening",
+                "ru": "Граждане, проживающие за границей, голосуют в помещениях посольств.",
+                "en": "Citizens living abroad vote at embassy premises."
+              },
+              {
+                "type": "listening",
+                "ru": "Консульство организовало голосование для соотечественников за рубежом.",
+                "en": "The consulate organized voting for compatriots abroad."
+              },
+              {
+                "type": "listening",
+                "ru": "Избиратель зарегистрировался для голосования по почте.",
+                "en": "The voter registered to vote by mail."
+              },
+              {
+                "type": "listening",
+                "ru": "Число избирательных участков за рубежом увеличилось в этом году.",
+                "en": "The number of polling stations abroad increased this year."
+              },
+              {
+                "type": "listening",
+                "ru": "Дипломатическая миссия обеспечила безопасность избирательного участка.",
+                "en": "The diplomatic mission ensured the security of the polling station."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Граждане, проживающие за границей, голосуют в помещениях посольств.",
+                "en": "Citizens living abroad vote at embassy premises."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Консульство организовало голосование для соотечественников за рубежом.",
+                "en": "The consulate organized voting for compatriots abroad."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Избиратель зарегистрировался для голосования по почте.",
+                "en": "The voter registered to vote by mail."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Число избирательных участков за рубежом увеличилось в этом году.",
+                "en": "The number of polling stations abroad increased this year."
               }
             ]
           },
@@ -1613,6 +2423,51 @@
                 "type": "multiple-choice",
                 "ru": "Прозрачность процесса печати бюллетеней укрепляет доверие к выборам.",
                 "en": "Transparency of the ballot printing process strengthens trust in the election."
+              },
+              {
+                "type": "listening",
+                "ru": "Дизайн бюллетеня был утверждён центральной избирательной комиссией.",
+                "en": "The ballot design was approved by the central election commission."
+              },
+              {
+                "type": "listening",
+                "ru": "Бюллетени печатались на специальной защищённой бумаге.",
+                "en": "The ballots were printed on special secure paper."
+              },
+              {
+                "type": "listening",
+                "ru": "Каждый бюллетень содержит уникальный водяной знак.",
+                "en": "Each ballot contains a unique watermark."
+              },
+              {
+                "type": "listening",
+                "ru": "Печать бюллетеней проходила под наблюдением представителей всех партий.",
+                "en": "The printing of ballots took place under the observation of representatives of all parties."
+              },
+              {
+                "type": "listening",
+                "ru": "Типография доставила бюллетени на склад за неделю до выборов.",
+                "en": "The printing house delivered the ballots to the warehouse a week before the election."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Дизайн бюллетеня был утверждён центральной избирательной комиссией.",
+                "en": "The ballot design was approved by the central election commission."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Бюллетени печатались на специальной защищённой бумаге.",
+                "en": "The ballots were printed on special secure paper."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Каждый бюллетень содержит уникальный водяной знак.",
+                "en": "Each ballot contains a unique watermark."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Печать бюллетеней проходила под наблюдением представителей всех партий.",
+                "en": "The printing of ballots took place under the observation of representatives of all parties."
               }
             ]
           },
@@ -1697,6 +2552,51 @@
                 "type": "multiple-choice",
                 "ru": "Слаженная работа персонала обеспечила бесперебойную работу участка.",
                 "en": "Well-coordinated staff work ensured the smooth operation of the polling station."
+              },
+              {
+                "type": "listening",
+                "ru": "На каждом участке в день голосования работает не менее семи человек.",
+                "en": "At least seven people work at each polling station on voting day."
+              },
+              {
+                "type": "listening",
+                "ru": "Резервный персонал был подготовлен на случай отсутствия основных членов комиссии.",
+                "en": "Reserve staff were prepared in case of absence of core commission members."
+              },
+              {
+                "type": "listening",
+                "ru": "Каждому сотруднику участка присвоена определённая функция.",
+                "en": "Each polling station worker was assigned a specific function."
+              },
+              {
+                "type": "listening",
+                "ru": "Комиссия наняла временный персонал только для дня голосования.",
+                "en": "The commission hired temporary staff only for voting day."
+              },
+              {
+                "type": "listening",
+                "ru": "Работа персонала участка продолжается до завершения подсчёта голосов.",
+                "en": "The work of the polling station staff continues until the vote count is completed."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "На каждом участке в день голосования работает не менее семи человек.",
+                "en": "At least seven people work at each polling station on voting day."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Резервный персонал был подготовлен на случай отсутствия основных членов комиссии.",
+                "en": "Reserve staff were prepared in case of absence of core commission members."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Каждому сотруднику участка присвоена определённая функция.",
+                "en": "Each polling station worker was assigned a specific function."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Комиссия наняла временный персонал только для дня голосования.",
+                "en": "The commission hired temporary staff only for voting day."
               }
             ]
           }
@@ -1789,6 +2689,51 @@
                 "type": "multiple-choice",
                 "ru": "Члены комиссии принесли присягу перед открытием участка.",
                 "en": "Commission members took an oath before the polling station opened."
+              },
+              {
+                "type": "listening",
+                "ru": "Комиссия начала работу в шесть часов утра.",
+                "en": "The commission started work at six o'clock in the morning."
+              },
+              {
+                "type": "listening",
+                "ru": "Председатель показал наблюдателям пустые урны перед началом голосования.",
+                "en": "The chairperson showed the observers the empty ballot boxes before voting began."
+              },
+              {
+                "type": "listening",
+                "ru": "Комиссия зафиксировала количество бюллетеней в протоколе открытия.",
+                "en": "The commission recorded the number of ballots in the opening protocol."
+              },
+              {
+                "type": "listening",
+                "ru": "Урны были опечатаны в присутствии наблюдателей.",
+                "en": "The ballot boxes were sealed in the presence of observers."
+              },
+              {
+                "type": "listening",
+                "ru": "Первый избиратель проголосовал ровно в восемь часов.",
+                "en": "The first voter cast their vote at exactly eight o'clock."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Комиссия начала работу в шесть часов утра.",
+                "en": "The commission started work at six o'clock in the morning."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Председатель показал наблюдателям пустые урны перед началом голосования.",
+                "en": "The chairperson showed the observers the empty ballot boxes before voting began."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Комиссия зафиксировала количество бюллетеней в протоколе открытия.",
+                "en": "The commission recorded the number of ballots in the opening protocol."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Урны были опечатаны в присутствии наблюдателей.",
+                "en": "The ballot boxes were sealed in the presence of observers."
               }
             ]
           },
@@ -1873,6 +2818,51 @@
                 "type": "multiple-choice",
                 "ru": "Избиратель может проголосовать только на своём избирательном участке.",
                 "en": "A voter can only vote at their own polling station."
+              },
+              {
+                "type": "listening",
+                "ru": "Избиратель получил бюллетень после предъявления паспорта.",
+                "en": "The voter received a ballot after presenting a passport."
+              },
+              {
+                "type": "listening",
+                "ru": "Избиратель поставил отметку напротив выбранного кандидата.",
+                "en": "The voter placed a mark next to the chosen candidate."
+              },
+              {
+                "type": "listening",
+                "ru": "Каждый избиратель расписывается в списке при получении бюллетеня.",
+                "en": "Every voter signs the list upon receiving the ballot."
+              },
+              {
+                "type": "listening",
+                "ru": "Избиратель сложил бюллетень и опустил его в урну.",
+                "en": "The voter folded the ballot and placed it in the ballot box."
+              },
+              {
+                "type": "listening",
+                "ru": "В кабине для голосования одновременно может находиться только один человек.",
+                "en": "Only one person may be in the voting booth at a time."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Избиратель получил бюллетень после предъявления паспорта.",
+                "en": "The voter received a ballot after presenting a passport."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Избиратель поставил отметку напротив выбранного кандидата.",
+                "en": "The voter placed a mark next to the chosen candidate."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Каждый избиратель расписывается в списке при получении бюллетеня.",
+                "en": "Every voter signs the list upon receiving the ballot."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Избиратель сложил бюллетень и опустил его в урну.",
+                "en": "The voter folded the ballot and placed it in the ballot box."
               }
             ]
           },
@@ -1957,6 +2947,51 @@
                 "type": "multiple-choice",
                 "ru": "Проверка личности занимает не более одной минуты.",
                 "en": "Identity verification takes no more than one minute."
+              },
+              {
+                "type": "listening",
+                "ru": "Член комиссии сверил фотографию в паспорте с личностью избирателя.",
+                "en": "The commission member checked the photo in the passport against the voter's identity."
+              },
+              {
+                "type": "listening",
+                "ru": "Удостоверение личности является обязательным условием для голосования.",
+                "en": "An identity document is a mandatory requirement for voting."
+              },
+              {
+                "type": "listening",
+                "ru": "Избиратель предъявил водительские права вместо паспорта.",
+                "en": "The voter presented a driver's license instead of a passport."
+              },
+              {
+                "type": "listening",
+                "ru": "Комиссия отказала в выдаче бюллетеня из-за просроченного документа.",
+                "en": "The commission refused to issue a ballot due to an expired document."
+              },
+              {
+                "type": "listening",
+                "ru": "Личность избирателя была подтверждена с помощью биометрических данных.",
+                "en": "The voter's identity was confirmed using biometric data."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Член комиссии сверил фотографию в паспорте с личностью избирателя.",
+                "en": "The commission member checked the photo in the passport against the voter's identity."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Удостоверение личности является обязательным условием для голосования.",
+                "en": "An identity document is a mandatory requirement for voting."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Избиратель предъявил водительские права вместо паспорта.",
+                "en": "The voter presented a driver's license instead of a passport."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Комиссия отказала в выдаче бюллетеня из-за просроченного документа.",
+                "en": "The commission refused to issue a ballot due to an expired document."
               }
             ]
           },
@@ -2041,6 +3076,51 @@
                 "type": "multiple-choice",
                 "ru": "Безопасность избирателей является приоритетом для комиссии.",
                 "en": "Voter safety is a priority for the commission."
+              },
+              {
+                "type": "listening",
+                "ru": "У входа на участок образовалась длинная очередь.",
+                "en": "A long queue formed at the entrance to the polling station."
+              },
+              {
+                "type": "listening",
+                "ru": "Сотрудники участка регулировали движение очереди внутри помещения.",
+                "en": "Polling station staff regulated the movement of the queue inside the premises."
+              },
+              {
+                "type": "listening",
+                "ru": "Комиссия установила ограничение на количество людей в помещении.",
+                "en": "The commission established a limit on the number of people in the premises."
+              },
+              {
+                "type": "listening",
+                "ru": "Охрана обеспечивала порядок на протяжении всего дня голосования.",
+                "en": "Security maintained order throughout the entire voting day."
+              },
+              {
+                "type": "listening",
+                "ru": "Пожилым избирателям разрешили пройти без очереди.",
+                "en": "Elderly voters were allowed to go through without waiting in line."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "У входа на участок образовалась длинная очередь.",
+                "en": "A long queue formed at the entrance to the polling station."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Сотрудники участка регулировали движение очереди внутри помещения.",
+                "en": "Polling station staff regulated the movement of the queue inside the premises."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Комиссия установила ограничение на количество людей в помещении.",
+                "en": "The commission established a limit on the number of people in the premises."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Охрана обеспечивала порядок на протяжении всего дня голосования.",
+                "en": "Security maintained order throughout the entire voting day."
               }
             ]
           },
@@ -2125,6 +3205,51 @@
                 "type": "multiple-choice",
                 "ru": "Подсчёт голосов на этом участке прошёл прозрачно и организованно.",
                 "en": "The vote count at this station was conducted transparently and in an organized manner."
+              },
+              {
+                "type": "listening",
+                "ru": "Участок закрылся ровно в назначенное время.",
+                "en": "The polling station closed at exactly the designated time."
+              },
+              {
+                "type": "listening",
+                "ru": "Избиратели, стоявшие в очереди до закрытия, всё равно смогли проголосовать.",
+                "en": "Voters who were in the queue before closing were still able to vote."
+              },
+              {
+                "type": "listening",
+                "ru": "Комиссия начала подсчёт голосов сразу после закрытия участка.",
+                "en": "The commission began counting the votes immediately after the polling station closed."
+              },
+              {
+                "type": "listening",
+                "ru": "Неиспользованные бюллетени были подсчитаны и погашены.",
+                "en": "Unused ballots were counted and cancelled."
+              },
+              {
+                "type": "listening",
+                "ru": "Каждый бюллетень зачитывался вслух перед всеми присутствующими.",
+                "en": "Each ballot was read aloud in front of everyone present."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Участок закрылся ровно в назначенное время.",
+                "en": "The polling station closed at exactly the designated time."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Избиратели, стоявшие в очереди до закрытия, всё равно смогли проголосовать.",
+                "en": "Voters who were in the queue before closing were still able to vote."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Комиссия начала подсчёт голосов сразу после закрытия участка.",
+                "en": "The commission began counting the votes immediately after the polling station closed."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Неиспользованные бюллетени были подсчитаны и погашены.",
+                "en": "Unused ballots were counted and cancelled."
               }
             ]
           },
@@ -2209,6 +3334,51 @@
                 "type": "multiple-choice",
                 "ru": "Правила голосования с помощью разъясняются избирателю заранее.",
                 "en": "The rules for assisted voting are explained to the voter in advance."
+              },
+              {
+                "type": "listening",
+                "ru": "Избиратель с ограниченными возможностями попросил помощи при заполнении бюллетеня.",
+                "en": "A voter with disabilities asked for help filling out the ballot."
+              },
+              {
+                "type": "listening",
+                "ru": "Закон разрешает голосование по доверенности в исключительных случаях.",
+                "en": "The law allows proxy voting in exceptional cases."
+              },
+              {
+                "type": "listening",
+                "ru": "Сопровождающее лицо не имеет права влиять на выбор избирателя.",
+                "en": "The assisting person has no right to influence the voter's choice."
+              },
+              {
+                "type": "listening",
+                "ru": "Избиратель, не умеющий читать, получил помощь члена комиссии.",
+                "en": "A voter who cannot read received help from a commission member."
+              },
+              {
+                "type": "listening",
+                "ru": "Доверенное лицо должно предъявить документ, подтверждающий полномочия.",
+                "en": "The proxy must present a document confirming their authority."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Избиратель с ограниченными возможностями попросил помощи при заполнении бюллетеня.",
+                "en": "A voter with disabilities asked for help filling out the ballot."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Закон разрешает голосование по доверенности в исключительных случаях.",
+                "en": "The law allows proxy voting in exceptional cases."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Сопровождающее лицо не имеет права влиять на выбор избирателя.",
+                "en": "The assisting person has no right to influence the voter's choice."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Избиратель, не умеющий читать, получил помощь члена комиссии.",
+                "en": "A voter who cannot read received help from a commission member."
               }
             ]
           },
@@ -2293,6 +3463,51 @@
                 "type": "multiple-choice",
                 "ru": "Прозрачное определение недействительных бюллетеней укрепляет доверие к подсчёту.",
                 "en": "Transparent determination of invalid ballots strengthens confidence in the count."
+              },
+              {
+                "type": "listening",
+                "ru": "Избиратель случайно испортил бюллетень и попросил новый.",
+                "en": "The voter accidentally spoiled the ballot and asked for a new one."
+              },
+              {
+                "type": "listening",
+                "ru": "Бюллетень признаётся недействительным при отсутствии печати участка.",
+                "en": "A ballot is declared invalid if it lacks the polling station's stamp."
+              },
+              {
+                "type": "listening",
+                "ru": "Комиссия отложила недействительные бюллетени в отдельный конверт.",
+                "en": "The commission set aside the invalid ballots in a separate envelope."
+              },
+              {
+                "type": "listening",
+                "ru": "Отметка сразу за нескольких кандидатов делает бюллетень недействительным.",
+                "en": "A mark for more than one candidate makes the ballot invalid."
+              },
+              {
+                "type": "listening",
+                "ru": "Испорченные бюллетени погашаются и не учитываются при подсчёте.",
+                "en": "Spoiled ballots are cancelled and not counted."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Избиратель случайно испортил бюллетень и попросил новый.",
+                "en": "The voter accidentally spoiled the ballot and asked for a new one."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Бюллетень признаётся недействительным при отсутствии печати участка.",
+                "en": "A ballot is declared invalid if it lacks the polling station's stamp."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Комиссия отложила недействительные бюллетени в отдельный конверт.",
+                "en": "The commission set aside the invalid ballots in a separate envelope."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Отметка сразу за нескольких кандидатов делает бюллетень недействительным.",
+                "en": "A mark for more than one candidate makes the ballot invalid."
               }
             ]
           },
@@ -2377,6 +3592,51 @@
                 "type": "multiple-choice",
                 "ru": "Оперативное реагирование на нарушения предотвратило эскалацию конфликта.",
                 "en": "A prompt response to violations prevented the escalation of the conflict."
+              },
+              {
+                "type": "listening",
+                "ru": "Наблюдатель зафиксировал инцидент в своём отчёте с указанием времени.",
+                "en": "The observer recorded the incident in their report with the time noted."
+              },
+              {
+                "type": "listening",
+                "ru": "На участке произошёл конфликт между представителями двух партий.",
+                "en": "A conflict occurred at the polling station between representatives of two parties."
+              },
+              {
+                "type": "listening",
+                "ru": "Комиссия немедленно отреагировала на сообщение о нарушении процедуры.",
+                "en": "The commission immediately responded to a report of a procedural violation."
+              },
+              {
+                "type": "listening",
+                "ru": "Незаконное присутствие постороннего лица в кабине для голосования было пресечено.",
+                "en": "The unauthorized presence of an outside person in the voting booth was stopped."
+              },
+              {
+                "type": "listening",
+                "ru": "Наблюдатель сообщил координатору о серьёзном нарушении на участке.",
+                "en": "The observer reported a serious violation at the polling station to the coordinator."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Наблюдатель зафиксировал инцидент в своём отчёте с указанием времени.",
+                "en": "The observer recorded the incident in their report with the time noted."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "На участке произошёл конфликт между представителями двух партий.",
+                "en": "A conflict occurred at the polling station between representatives of two parties."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Комиссия немедленно отреагировала на сообщение о нарушении процедуры.",
+                "en": "The commission immediately responded to a report of a procedural violation."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Незаконное присутствие постороннего лица в кабине для голосования было пресечено.",
+                "en": "The unauthorized presence of an outside person in the voting booth was stopped."
               }
             ]
           },
@@ -2461,6 +3721,51 @@
                 "type": "multiple-choice",
                 "ru": "Эффективная связь в день голосования обеспечивает своевременное реагирование на проблемы.",
                 "en": "Effective communication on voting day ensures a timely response to problems."
+              },
+              {
+                "type": "listening",
+                "ru": "Каждый наблюдатель обязан регулярно выходить на связь с координатором.",
+                "en": "Every observer is required to regularly check in with the coordinator."
+              },
+              {
+                "type": "listening",
+                "ru": "Участковая комиссия сообщает данные о явке каждые два часа.",
+                "en": "The precinct commission reports turnout data every two hours."
+              },
+              {
+                "type": "listening",
+                "ru": "Центр связи миссии работал непрерывно в течение всего дня голосования.",
+                "en": "The mission's communication center operated continuously throughout voting day."
+              },
+              {
+                "type": "listening",
+                "ru": "Наблюдатель использовал мобильное приложение для передачи отчёта в реальном времени.",
+                "en": "The observer used a mobile application to submit the report in real time."
+              },
+              {
+                "type": "listening",
+                "ru": "Сбой мобильной связи временно затруднил передачу данных с отдалённого участка.",
+                "en": "A mobile network outage temporarily hindered data transmission from a remote polling station."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Каждый наблюдатель обязан регулярно выходить на связь с координатором.",
+                "en": "Every observer is required to regularly check in with the coordinator."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Участковая комиссия сообщает данные о явке каждые два часа.",
+                "en": "The precinct commission reports turnout data every two hours."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Центр связи миссии работал непрерывно в течение всего дня голосования.",
+                "en": "The mission's communication center operated continuously throughout voting day."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Наблюдатель использовал мобильное приложение для передачи отчёта в реальном времени.",
+                "en": "The observer used a mobile application to submit the report in real time."
               }
             ]
           },
@@ -2545,6 +3850,51 @@
                 "type": "multiple-choice",
                 "ru": "Итоговые данные о явке были включены в заключительный отчёт миссии.",
                 "en": "The final turnout data was included in the mission's concluding report."
+              },
+              {
+                "type": "listening",
+                "ru": "Явка избирателей к полудню составила тридцать процентов.",
+                "en": "Voter turnout by noon was thirty percent."
+              },
+              {
+                "type": "listening",
+                "ru": "Комиссия публикует данные о явке каждые четыре часа.",
+                "en": "The commission publishes turnout data every four hours."
+              },
+              {
+                "type": "listening",
+                "ru": "Итоговая явка на этих выборах превысила показатель прошлых выборов.",
+                "en": "The final turnout in this election exceeded the figure from the previous election."
+              },
+              {
+                "type": "listening",
+                "ru": "Статистика явки различается в зависимости от региона страны.",
+                "en": "Turnout statistics vary depending on the region of the country."
+              },
+              {
+                "type": "listening",
+                "ru": "Низкая явка вызвала вопросы о легитимности результатов выборов.",
+                "en": "Low turnout raised questions about the legitimacy of the election results."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Явка избирателей к полудню составила тридцать процентов.",
+                "en": "Voter turnout by noon was thirty percent."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Комиссия публикует данные о явке каждые четыре часа.",
+                "en": "The commission publishes turnout data every four hours."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Итоговая явка на этих выборах превысила показатель прошлых выборов.",
+                "en": "The final turnout in this election exceeded the figure from the previous election."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Статистика явки различается в зависимости от региона страны.",
+                "en": "Turnout statistics vary depending on the region of the country."
               }
             ]
           }
@@ -2637,6 +3987,51 @@
                 "type": "multiple-choice",
                 "ru": "Официальные результаты были опубликованы в государственной газете.",
                 "en": "The official results were published in the state newspaper."
+              },
+              {
+                "type": "listening",
+                "ru": "Территориальная комиссия суммировала данные со всех участков.",
+                "en": "The territorial commission summed up the data from all polling stations."
+              },
+              {
+                "type": "listening",
+                "ru": "Итоговые протоколы были отсканированы и отправлены в центральную комиссию.",
+                "en": "The final protocols were scanned and sent to the central commission."
+              },
+              {
+                "type": "listening",
+                "ru": "Предварительные результаты появились на сайте комиссии через два часа.",
+                "en": "Preliminary results appeared on the commission's website after two hours."
+              },
+              {
+                "type": "listening",
+                "ru": "Каждая цифра в протоколе была проверена дважды.",
+                "en": "Every figure in the protocol was checked twice."
+              },
+              {
+                "type": "listening",
+                "ru": "Данные с удалённых участков передавались по спутниковой связи.",
+                "en": "Data from remote polling stations was transmitted via satellite communication."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Территориальная комиссия суммировала данные со всех участков.",
+                "en": "The territorial commission summed up the data from all polling stations."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Итоговые протоколы были отсканированы и отправлены в центральную комиссию.",
+                "en": "The final protocols were scanned and sent to the central commission."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Предварительные результаты появились на сайте комиссии через два часа.",
+                "en": "Preliminary results appeared on the commission's website after two hours."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Каждая цифра в протоколе была проверена дважды.",
+                "en": "Every figure in the protocol was checked twice."
               }
             ]
           },
@@ -2721,6 +4116,51 @@
                 "type": "multiple-choice",
                 "ru": "Спор о результатах голосования разрешился мирным путём.",
                 "en": "The dispute over the voting results was resolved peacefully."
+              },
+              {
+                "type": "listening",
+                "ru": "Кандидат потребовал пересчёта голосов из-за минимального разрыва.",
+                "en": "The candidate demanded a recount due to the narrow margin."
+              },
+              {
+                "type": "listening",
+                "ru": "Суд удовлетворил ходатайство о пересчёте бюллетеней на трёх участках.",
+                "en": "The court granted the petition for a recount of ballots at three polling stations."
+              },
+              {
+                "type": "listening",
+                "ru": "Пересчёт голосов проводился в присутствии представителей обеих сторон.",
+                "en": "The recount was conducted in the presence of representatives of both sides."
+              },
+              {
+                "type": "listening",
+                "ru": "Результаты пересчёта совпали с первоначальными данными.",
+                "en": "The results of the recount matched the original data."
+              },
+              {
+                "type": "listening",
+                "ru": "Комиссия отклонила требование о пересчёте как необоснованное.",
+                "en": "The commission rejected the recount request as unfounded."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Кандидат потребовал пересчёта голосов из-за минимального разрыва.",
+                "en": "The candidate demanded a recount due to the narrow margin."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Суд удовлетворил ходатайство о пересчёте бюллетеней на трёх участках.",
+                "en": "The court granted the petition for a recount of ballots at three polling stations."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Пересчёт голосов проводился в присутствии представителей обеих сторон.",
+                "en": "The recount was conducted in the presence of representatives of both sides."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Результаты пересчёта совпали с первоначальными данными.",
+                "en": "The results of the recount matched the original data."
               }
             ]
           },
@@ -2805,6 +4245,51 @@
                 "type": "multiple-choice",
                 "ru": "Закон обязывает комиссию публиковать все свои решения.",
                 "en": "The law obliges the commission to publish all of its decisions."
+              },
+              {
+                "type": "listening",
+                "ru": "Избирательное законодательство было изменено за год до выборов.",
+                "en": "The electoral legislation was amended a year before the election."
+              },
+              {
+                "type": "listening",
+                "ru": "Конституция гарантирует каждому гражданину право избирать и быть избранным.",
+                "en": "The constitution guarantees every citizen the right to vote and to be elected."
+              },
+              {
+                "type": "listening",
+                "ru": "Новый закон о выборах вступил в силу с первого января.",
+                "en": "The new election law came into force on the first of January."
+              },
+              {
+                "type": "listening",
+                "ru": "Избирательный кодекс регулирует все этапы избирательного процесса.",
+                "en": "The electoral code regulates all stages of the election process."
+              },
+              {
+                "type": "listening",
+                "ru": "Парламент принял поправки к закону о политических партиях.",
+                "en": "Parliament passed amendments to the law on political parties."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Избирательное законодательство было изменено за год до выборов.",
+                "en": "The electoral legislation was amended a year before the election."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Конституция гарантирует каждому гражданину право избирать и быть избранным.",
+                "en": "The constitution guarantees every citizen the right to vote and to be elected."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Новый закон о выборах вступил в силу с первого января.",
+                "en": "The new election law came into force on the first of January."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Избирательный кодекс регулирует все этапы избирательного процесса.",
+                "en": "The electoral code regulates all stages of the election process."
               }
             ]
           },
@@ -2889,6 +4374,51 @@
                 "type": "multiple-choice",
                 "ru": "Соблюдение международных обязательств укрепляет доверие к результатам выборов.",
                 "en": "Compliance with international commitments strengthens confidence in the election results."
+              },
+              {
+                "type": "listening",
+                "ru": "Страна взяла на себя обязательства по проведению демократических выборов.",
+                "en": "The country committed to holding democratic elections."
+              },
+              {
+                "type": "listening",
+                "ru": "Миссия оценивает выборы в соответствии с международными стандартами.",
+                "en": "The mission assesses the election in accordance with international standards."
+              },
+              {
+                "type": "listening",
+                "ru": "Копенгагенский документ устанавливает базовые обязательства государств-участников.",
+                "en": "The Copenhagen Document establishes basic commitments of participating states."
+              },
+              {
+                "type": "listening",
+                "ru": "Международные наблюдатели опираются на общепризнанные принципы демократических выборов.",
+                "en": "International observers rely on universally recognized principles of democratic elections."
+              },
+              {
+                "type": "listening",
+                "ru": "Страна пригласила международных наблюдателей в соответствии со своими обязательствами.",
+                "en": "The country invited international observers in accordance with its commitments."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Страна взяла на себя обязательства по проведению демократических выборов.",
+                "en": "The country committed to holding democratic elections."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Миссия оценивает выборы в соответствии с международными стандартами.",
+                "en": "The mission assesses the election in accordance with international standards."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Копенгагенский документ устанавливает базовые обязательства государств-участников.",
+                "en": "The Copenhagen Document establishes basic commitments of participating states."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Международные наблюдатели опираются на общепризнанные принципы демократических выборов.",
+                "en": "International observers rely on universally recognized principles of democratic elections."
               }
             ]
           },
@@ -2973,6 +4503,51 @@
                 "type": "multiple-choice",
                 "ru": "Прозрачный механизм подачи жалоб укрепляет доверие к выборам.",
                 "en": "A transparent complaint-filing mechanism strengthens trust in the election."
+              },
+              {
+                "type": "listening",
+                "ru": "Наблюдатель подал жалобу на нарушение процедуры голосования.",
+                "en": "The observer filed a complaint about a violation of the voting procedure."
+              },
+              {
+                "type": "listening",
+                "ru": "Комиссия обязана рассмотреть жалобу в течение установленного срока.",
+                "en": "The commission is required to review a complaint within the established deadline."
+              },
+              {
+                "type": "listening",
+                "ru": "Представитель кандидата обжаловал решение участковой комиссии.",
+                "en": "The candidate's representative appealed the decision of the precinct commission."
+              },
+              {
+                "type": "listening",
+                "ru": "Жалоба была подана в письменной форме с указанием всех обстоятельств.",
+                "en": "The complaint was submitted in writing with all circumstances specified."
+              },
+              {
+                "type": "listening",
+                "ru": "Суд отклонил апелляцию из-за отсутствия достаточных доказательств.",
+                "en": "The court rejected the appeal due to insufficient evidence."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Наблюдатель подал жалобу на нарушение процедуры голосования.",
+                "en": "The observer filed a complaint about a violation of the voting procedure."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Комиссия обязана рассмотреть жалобу в течение установленного срока.",
+                "en": "The commission is required to review a complaint within the established deadline."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Представитель кандидата обжаловал решение участковой комиссии.",
+                "en": "The candidate's representative appealed the decision of the precinct commission."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Жалоба была подана в письменной форме с указанием всех обстоятельств.",
+                "en": "The complaint was submitted in writing with all circumstances specified."
               }
             ]
           }
@@ -3065,6 +4640,51 @@
                 "type": "multiple-choice",
                 "ru": "Соблюдение методологии гарантирует последовательность выводов миссии.",
                 "en": "Adherence to the methodology ensures the consistency of the mission's conclusions."
+              },
+              {
+                "type": "listening",
+                "ru": "Наблюдатель обязан сохранять строгий нейтралитет на протяжении всей миссии.",
+                "en": "An observer must maintain strict neutrality throughout the mission."
+              },
+              {
+                "type": "listening",
+                "ru": "Методология миссии основана на систематическом сборе информации.",
+                "en": "The mission's methodology is based on the systematic collection of information."
+              },
+              {
+                "type": "listening",
+                "ru": "Каждый наблюдатель подписывает кодекс поведения перед началом работы.",
+                "en": "Every observer signs the code of conduct before starting work."
+              },
+              {
+                "type": "listening",
+                "ru": "Наблюдателям запрещено выражать публичную поддержку какому-либо кандидату.",
+                "en": "Observers are prohibited from publicly expressing support for any candidate."
+              },
+              {
+                "type": "listening",
+                "ru": "Отчёты наблюдателей основываются исключительно на личных наблюдениях.",
+                "en": "Observers' reports are based solely on personal observations."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Наблюдатель обязан сохранять строгий нейтралитет на протяжении всей миссии.",
+                "en": "An observer must maintain strict neutrality throughout the mission."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Методология миссии основана на систематическом сборе информации.",
+                "en": "The mission's methodology is based on the systematic collection of information."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Каждый наблюдатель подписывает кодекс поведения перед началом работы.",
+                "en": "Every observer signs the code of conduct before starting work."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Наблюдателям запрещено выражать публичную поддержку какому-либо кандидату.",
+                "en": "Observers are prohibited from publicly expressing support for any candidate."
               }
             ]
           },
@@ -3149,6 +4769,51 @@
                 "type": "multiple-choice",
                 "ru": "Наблюдатели поблагодарили местных партнёров за оказанное содействие.",
                 "en": "The observers thanked local partners for their assistance."
+              },
+              {
+                "type": "listening",
+                "ru": "Наблюдатели встретились с представителями гражданского общества.",
+                "en": "The observers met with representatives of civil society."
+              },
+              {
+                "type": "listening",
+                "ru": "Делегация провела встречу с председателем центральной избирательной комиссии.",
+                "en": "The delegation held a meeting with the chairperson of the central election commission."
+              },
+              {
+                "type": "listening",
+                "ru": "Наблюдатели побеседовали с представителями всех основных партий.",
+                "en": "The observers spoke with representatives of all major parties."
+              },
+              {
+                "type": "listening",
+                "ru": "Встреча с журналистами местных изданий прошла в неформальной обстановке.",
+                "en": "The meeting with local media journalists took place in an informal setting."
+              },
+              {
+                "type": "listening",
+                "ru": "Делегация обсудила ситуацию с правозащитными организациями.",
+                "en": "The delegation discussed the situation with human rights organizations."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Наблюдатели встретились с представителями гражданского общества.",
+                "en": "The observers met with representatives of civil society."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Делегация провела встречу с председателем центральной избирательной комиссии.",
+                "en": "The delegation held a meeting with the chairperson of the central election commission."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Наблюдатели побеседовали с представителями всех основных партий.",
+                "en": "The observers spoke with representatives of all major parties."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Встреча с журналистами местных изданий прошла в неформальной обстановке.",
+                "en": "The meeting with local media journalists took place in an informal setting."
               }
             ]
           },
@@ -3233,6 +4898,51 @@
                 "type": "multiple-choice",
                 "ru": "Заявление подчеркнуло важность независимого подсчёта голосов.",
                 "en": "The statement emphasized the importance of an independent vote count."
+              },
+              {
+                "type": "listening",
+                "ru": "Долгосрочные наблюдатели готовят промежуточные отчёты каждые две недели.",
+                "en": "Long-term observers prepare interim reports every two weeks."
+              },
+              {
+                "type": "listening",
+                "ru": "Промежуточный отчёт охватывает предвыборную обстановку в регионе.",
+                "en": "The interim report covers the pre-election situation in the region."
+              },
+              {
+                "type": "listening",
+                "ru": "Пресс-конференция состоялась на следующий день после голосования.",
+                "en": "The press conference took place the day after the vote."
+              },
+              {
+                "type": "listening",
+                "ru": "Заявление миссии содержит предварительные выводы о ходе выборов.",
+                "en": "The mission's statement contains preliminary conclusions about the conduct of the election."
+              },
+              {
+                "type": "listening",
+                "ru": "Каждый отчёт проходит проверку координатором перед публикацией.",
+                "en": "Every report is reviewed by the coordinator before publication."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Долгосрочные наблюдатели готовят промежуточные отчёты каждые две недели.",
+                "en": "Long-term observers prepare interim reports every two weeks."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Промежуточный отчёт охватывает предвыборную обстановку в регионе.",
+                "en": "The interim report covers the pre-election situation in the region."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Пресс-конференция состоялась на следующий день после голосования.",
+                "en": "The press conference took place the day after the vote."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Заявление миссии содержит предварительные выводы о ходе выборов.",
+                "en": "The mission's statement contains preliminary conclusions about the conduct of the election."
               }
             ]
           },
@@ -3317,6 +5027,51 @@
                 "type": "multiple-choice",
                 "ru": "Безопасность наблюдателей остаётся главным приоритетом миссии.",
                 "en": "The safety of observers remains the mission's top priority."
+              },
+              {
+                "type": "listening",
+                "ru": "Служба безопасности миссии провела инструктаж перед выездом на участки.",
+                "en": "The mission's security service conducted a briefing before departure to the polling stations."
+              },
+              {
+                "type": "listening",
+                "ru": "Наблюдателям выдали средства связи на случай чрезвычайной ситуации.",
+                "en": "Observers were issued communication devices in case of emergency."
+              },
+              {
+                "type": "listening",
+                "ru": "Координатор согласовал маршрут поездки с местными властями.",
+                "en": "The coordinator coordinated the travel route with local authorities."
+              },
+              {
+                "type": "listening",
+                "ru": "Каждая группа наблюдателей закреплена за отдельным водителем.",
+                "en": "Each team of observers is assigned to a separate driver."
+              },
+              {
+                "type": "listening",
+                "ru": "Переводчик сопровождал наблюдателей на протяжении всей поездки.",
+                "en": "An interpreter accompanied the observers throughout the trip."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Служба безопасности миссии провела инструктаж перед выездом на участки.",
+                "en": "The mission's security service conducted a briefing before departure to the polling stations."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Наблюдателям выдали средства связи на случай чрезвычайной ситуации.",
+                "en": "Observers were issued communication devices in case of emergency."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Координатор согласовал маршрут поездки с местными властями.",
+                "en": "The coordinator coordinated the travel route with local authorities."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Каждая группа наблюдателей закреплена за отдельным водителем.",
+                "en": "Each team of observers is assigned to a separate driver."
               }
             ]
           },
@@ -3401,6 +5156,51 @@
                 "type": "multiple-choice",
                 "ru": "Сочетание долгосрочного и краткосрочного наблюдения даёт полную картину выборов.",
                 "en": "The combination of long-term and short-term observation provides a complete picture of the election."
+              },
+              {
+                "type": "listening",
+                "ru": "Долгосрочные наблюдатели прибывают за два месяца до дня голосования.",
+                "en": "Long-term observers arrive two months before voting day."
+              },
+              {
+                "type": "listening",
+                "ru": "Краткосрочные наблюдатели присоединяются к миссии в последнюю неделю.",
+                "en": "Short-term observers join the mission in the final week."
+              },
+              {
+                "type": "listening",
+                "ru": "Долгосрочные наблюдатели следят за предвыборной агитацией в своих регионах.",
+                "en": "Long-term observers monitor the election campaign in their regions."
+              },
+              {
+                "type": "listening",
+                "ru": "Каждый краткосрочный наблюдатель посещает несколько участков в день голосования.",
+                "en": "Each short-term observer visits several polling stations on voting day."
+              },
+              {
+                "type": "listening",
+                "ru": "Долгосрочные наблюдатели анализируют работу избирательных комиссий с самого начала.",
+                "en": "Long-term observers analyze the work of election commissions from the very beginning."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Долгосрочные наблюдатели прибывают за два месяца до дня голосования.",
+                "en": "Long-term observers arrive two months before voting day."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Краткосрочные наблюдатели присоединяются к миссии в последнюю неделю.",
+                "en": "Short-term observers join the mission in the final week."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Долгосрочные наблюдатели следят за предвыборной агитацией в своих регионах.",
+                "en": "Long-term observers monitor the election campaign in their regions."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Каждый краткосрочный наблюдатель посещает несколько участков в день голосования.",
+                "en": "Each short-term observer visits several polling stations on voting day."
               }
             ]
           }
@@ -3493,6 +5293,51 @@
                 "type": "multiple-choice",
                 "ru": "Свобода прессы является необходимым условием справедливых выборов.",
                 "en": "Freedom of the press is a necessary condition for fair elections."
+              },
+              {
+                "type": "listening",
+                "ru": "Группа мониторинга анализировала эфирное время каждого кандидата.",
+                "en": "The monitoring team analyzed the airtime of each candidate."
+              },
+              {
+                "type": "listening",
+                "ru": "Мониторинг СМИ выявил явный перекос в пользу правящей партии.",
+                "en": "Media monitoring revealed a clear bias in favor of the ruling party."
+              },
+              {
+                "type": "listening",
+                "ru": "Каждый выпуск новостей записывался для последующего анализа.",
+                "en": "Every news broadcast was recorded for subsequent analysis."
+              },
+              {
+                "type": "listening",
+                "ru": "Аналитики оценивали тон освещения кандидатов в прессе.",
+                "en": "Analysts assessed the tone of press coverage of the candidates."
+              },
+              {
+                "type": "listening",
+                "ru": "Государственное телевидение обязано предоставлять равное время всем кандидатам.",
+                "en": "State television is required to provide equal time to all candidates."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Группа мониторинга анализировала эфирное время каждого кандидата.",
+                "en": "The monitoring team analyzed the airtime of each candidate."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Мониторинг СМИ выявил явный перекос в пользу правящей партии.",
+                "en": "Media monitoring revealed a clear bias in favor of the ruling party."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Каждый выпуск новостей записывался для последующего анализа.",
+                "en": "Every news broadcast was recorded for subsequent analysis."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Аналитики оценивали тон освещения кандидатов в прессе.",
+                "en": "Analysts assessed the tone of press coverage of the candidates."
               }
             ]
           },
@@ -3577,6 +5422,51 @@
                 "type": "multiple-choice",
                 "ru": "Мониторинг финансирования кампаний является частью общей оценки выборов.",
                 "en": "Monitoring campaign financing is part of the overall election assessment."
+              },
+              {
+                "type": "listening",
+                "ru": "Каждый кандидат обязан отчитаться о расходах на предвыборную кампанию.",
+                "en": "Every candidate is required to report on their election campaign expenses."
+              },
+              {
+                "type": "listening",
+                "ru": "Комиссия проверила источники финансирования избирательного фонда.",
+                "en": "The commission checked the sources of funding for the election fund."
+              },
+              {
+                "type": "listening",
+                "ru": "Анонимные пожертвования в избирательный фонд запрещены законом.",
+                "en": "Anonymous donations to the election fund are prohibited by law."
+              },
+              {
+                "type": "listening",
+                "ru": "Финансовый отчёт кандидата был опубликован для общественного контроля.",
+                "en": "The candidate's financial report was published for public scrutiny."
+              },
+              {
+                "type": "listening",
+                "ru": "Наблюдатели изучили декларации о доходах всех кандидатов.",
+                "en": "Observers examined the income declarations of all candidates."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Каждый кандидат обязан отчитаться о расходах на предвыборную кампанию.",
+                "en": "Every candidate is required to report on their election campaign expenses."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Комиссия проверила источники финансирования избирательного фонда.",
+                "en": "The commission checked the sources of funding for the election fund."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Анонимные пожертвования в избирательный фонд запрещены законом.",
+                "en": "Anonymous donations to the election fund are prohibited by law."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Финансовый отчёт кандидата был опубликован для общественного контроля.",
+                "en": "The candidate's financial report was published for public scrutiny."
               }
             ]
           },
@@ -3661,6 +5551,51 @@
                 "type": "multiple-choice",
                 "ru": "Равное участие мужчин и женщин укрепляет легитимность выборов.",
                 "en": "Equal participation of men and women strengthens the legitimacy of elections."
+              },
+              {
+                "type": "listening",
+                "ru": "Закон устанавливает квоту на представительство женщин в партийных списках.",
+                "en": "The law establishes a quota for women's representation on party lists."
+              },
+              {
+                "type": "listening",
+                "ru": "Женщины составили треть всех зарегистрированных кандидатов.",
+                "en": "Women made up a third of all registered candidates."
+              },
+              {
+                "type": "listening",
+                "ru": "Миссия отметила низкий уровень участия женщин в избирательных комиссиях.",
+                "en": "The mission noted a low level of women's participation in election commissions."
+              },
+              {
+                "type": "listening",
+                "ru": "Гендерное равенство является важным критерием оценки демократических выборов.",
+                "en": "Gender equality is an important criterion for assessing democratic elections."
+              },
+              {
+                "type": "listening",
+                "ru": "Женщина впервые возглавила центральную избирательную комиссию страны.",
+                "en": "A woman headed the country's central election commission for the first time."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Закон устанавливает квоту на представительство женщин в партийных списках.",
+                "en": "The law establishes a quota for women's representation on party lists."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Женщины составили треть всех зарегистрированных кандидатов.",
+                "en": "Women made up a third of all registered candidates."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Миссия отметила низкий уровень участия женщин в избирательных комиссиях.",
+                "en": "The mission noted a low level of women's participation in election commissions."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Гендерное равенство является важным критерием оценки демократических выборов.",
+                "en": "Gender equality is an important criterion for assessing democratic elections."
               }
             ]
           },
@@ -3745,6 +5680,51 @@
                 "type": "multiple-choice",
                 "ru": "Каждый избиратель имеет право голосовать независимо от состояния здоровья.",
                 "en": "Every voter has the right to vote regardless of their state of health."
+              },
+              {
+                "type": "listening",
+                "ru": "Избирательные участки должны быть физически доступны для людей с инвалидностью.",
+                "en": "Polling stations must be physically accessible for people with disabilities."
+              },
+              {
+                "type": "listening",
+                "ru": "Комиссия предоставила бюллетени, напечатанные шрифтом Брайля.",
+                "en": "The commission provided ballots printed in Braille."
+              },
+              {
+                "type": "listening",
+                "ru": "Избиратель с нарушением зрения проголосовал с помощью специального шаблона.",
+                "en": "A voter with a visual impairment voted using a special template."
+              },
+              {
+                "type": "listening",
+                "ru": "Наблюдатели оценили доступность каждого посещённого участка.",
+                "en": "Observers assessed the accessibility of each visited polling station."
+              },
+              {
+                "type": "listening",
+                "ru": "Закон гарантирует право избирателя на помощь по своему выбору.",
+                "en": "The law guarantees a voter's right to assistance of their choice."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Избирательные участки должны быть физически доступны для людей с инвалидностью.",
+                "en": "Polling stations must be physically accessible for people with disabilities."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Комиссия предоставила бюллетени, напечатанные шрифтом Брайля.",
+                "en": "The commission provided ballots printed in Braille."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Избиратель с нарушением зрения проголосовал с помощью специального шаблона.",
+                "en": "A voter with a visual impairment voted using a special template."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Наблюдатели оценили доступность каждого посещённого участка.",
+                "en": "Observers assessed the accessibility of each visited polling station."
               }
             ]
           },
@@ -3829,6 +5809,51 @@
                 "type": "multiple-choice",
                 "ru": "Постепенное внедрение технологий помогает укрепить доверие к процессу.",
                 "en": "The gradual introduction of technologies helps strengthen trust in the process."
+              },
+              {
+                "type": "listening",
+                "ru": "Пилотный проект электронного голосования был запущен в трёх регионах.",
+                "en": "A pilot electronic voting project was launched in three regions."
+              },
+              {
+                "type": "listening",
+                "ru": "Система электронного голосования прошла независимую проверку безопасности.",
+                "en": "The electronic voting system underwent an independent security review."
+              },
+              {
+                "type": "listening",
+                "ru": "Избиратели выразили сомнения относительно надёжности новой технологии.",
+                "en": "Voters expressed doubts about the reliability of the new technology."
+              },
+              {
+                "type": "listening",
+                "ru": "Электронные урны автоматически подсчитывают голоса после закрытия участка.",
+                "en": "Electronic ballot boxes automatically count votes after the polling station closes."
+              },
+              {
+                "type": "listening",
+                "ru": "Технические специалисты обеспечивали работу оборудования в течение всего дня.",
+                "en": "Technical specialists ensured the equipment functioned throughout the day."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Пилотный проект электронного голосования был запущен в трёх регионах.",
+                "en": "A pilot electronic voting project was launched in three regions."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Система электронного голосования прошла независимую проверку безопасности.",
+                "en": "The electronic voting system underwent an independent security review."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Избиратели выразили сомнения относительно надёжности новой технологии.",
+                "en": "Voters expressed doubts about the reliability of the new technology."
+              },
+              {
+                "type": "listening-tap",
+                "ru": "Электронные урны автоматически подсчитывают голоса после закрытия участка.",
+                "en": "Electronic ballot boxes automatically count votes after the polling station closes."
               }
             ]
           }
