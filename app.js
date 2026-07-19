@@ -260,9 +260,12 @@
   function enTokens(s) {
     return s.trim().replace(/[.,!?;:«»"—–]/g, "").split(/\s+/).filter(Boolean);
   }
+  // Unlike a sequential language course, Observer's topics are largely
+  // independent reference modules (e.g. an observer deployed on election day
+  // needs that lesson immediately, not after finishing earlier ones) — so
+  // every lesson is always open, with no completion-gated progression.
   function isLessonUnlocked(flatIndex) {
-    if (flatIndex === 0) return true;
-    return progress.completedLessons.includes(flatLessons[flatIndex - 1].id);
+    return true;
   }
   function harvestWords(ex) {
     // Always collect the Russian side — this is a Russian term bank regardless of practice direction.
@@ -474,7 +477,7 @@
     for (const level of course.levels) {
       const levelLessons = flatLessons.filter(l => l.levelId === level.id);
       if (!levelLessons.length) continue;
-      const hasCurrent = levelLessons.some(l => !progress.completedLessons.includes(l.id) && isLessonUnlocked(flatLessons.indexOf(l)));
+      const hasCurrent = levelLessons.some(l => !progress.completedLessons.includes(l.id));
       if (hasCurrent) return level.id;
     }
     const firstBuilt = course.levels.find(lv => flatLessons.some(l => l.levelId === lv.id));
@@ -507,11 +510,16 @@
     const levelComplete = levelLessons.length > 0 && levelDone === levelLessons.length;
 
     let nodesHtml = "";
+    let currentAssigned = false;
     levelLessons.forEach((lesson, i) => {
       const flatIndex = flatLessons.indexOf(lesson);
       const unlocked = isLessonUnlocked(flatIndex);
       const done = progress.completedLessons.includes(lesson.id);
-      const isCurrent = unlocked && !done;
+      // With no completion-gated locking, "current" instead marks the first
+      // not-yet-done lesson in the level — a single "you are here" pointer,
+      // not every open node.
+      const isCurrent = !done && !currentAssigned;
+      if (isCurrent) currentAssigned = true;
       const offset = ["center", "left", "right"][i % 3];
       nodesHtml += `
         <div class="roadmap-row ${offset}">
