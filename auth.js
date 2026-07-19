@@ -206,6 +206,13 @@
             displayName: this.user.displayName || null,
             progressJson: JSON.stringify(payload),
             updatedAt: serverTimestamp(),
+            // Flat fields (not buried in progressJson) so the Firestore
+            // console's table view is scannable/sortable without opening
+            // every document — this is the "who and how much" view.
+            totalXp: payload.xp || 0,
+            lessonsCompleted: (payload.completedLessons || []).length,
+            streak: payload.streak || 0,
+            lastActiveDate: payload.lastActiveDate || null,
           }, { merge: true }).catch(() => { /* offline — next save will retry */ });
         }, 800);
       },
