@@ -70,6 +70,7 @@ body {
   color: var(--ink);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -164,7 +165,11 @@ button.stat:hover { color: var(--navy); }
 .menu-label { display: none; }
 
 /* ---------- home ---------- */
-.screen { flex: 1; padding: 0 20px 60px; }
+/* min-width: 0 overrides the flex-item default of min-width: auto, which
+   otherwise refuses to shrink below the content's natural intrinsic width —
+   that's what was silently blowing the whole page out to ~760px and pushing
+   roadmap content off-screen on narrow viewports instead of wrapping/clipping. */
+.screen { flex: 1; min-width: 0; padding: 0 20px 60px; }
 
 .waveform { display: flex; align-items: flex-end; gap: 3px; height: 34px; }
 .waveform .bar { width: 4px; border-radius: 2px; background: var(--paper-deep); transition: background 0.2s ease, height 0.3s ease; }
