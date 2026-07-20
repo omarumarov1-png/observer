@@ -306,6 +306,13 @@ button.stat:hover { color: var(--navy); }
 }
 .listen-slow-btn:hover { border-color: var(--navy); color: var(--navy); }
 
+.audio-diag {
+  font-size: 0.85rem; line-height: 1.5; color: #b3452f; background: rgba(179, 69, 47, 0.09);
+  border: 1px solid rgba(179, 69, 47, 0.25); border-radius: 10px; padding: 10px 14px;
+  margin: 0 0 18px;
+}
+.audio-diag.hidden { display: none; }
+
 /* ---------- reading comprehension ---------- */
 .passage-panel {
   background: var(--paper-raised); border: 1px solid var(--line); border-radius: 10px;

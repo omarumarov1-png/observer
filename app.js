@@ -199,12 +199,29 @@
     refreshVoices();
     window.speechSynthesis.onvoiceschanged = refreshVoices;
   }
+  // Many mobile browsers (Android Chrome especially) return an empty voice
+  // list on the first synchronous getVoices() call and never reliably fire
+  // onvoiceschanged (a long-standing Chromium bug) — unlike most desktop
+  // browsers, where onvoiceschanged alone is enough. Poll for up to ~9s as a
+  // cross-platform fallback so voices that load in late still get picked up
+  // instead of leaving TTS permanently silent on some devices.
+  let _voicePollAttempts = 0;
+  function pollVoicesUntilFound() {
+    if (!("speechSynthesis" in window)) return;
+    refreshVoices();
+    if (_preferredVoiceRu || _voicePollAttempts >= 30) return;
+    _voicePollAttempts++;
+    setTimeout(pollVoicesUntilFound, 300);
+  }
+  pollVoicesUntilFound();
   const SPEECH_RATE = 0.85;
   const SPEECH_RATE_SLOW = 0.55;
   let _currentUtterance = null;
   let _speakToken = 0;
-  function speak(text, lang, onEnd, rate) {
+  function speak(text, lang, onEnd, rate, onError) {
     if (soundMuted || !("speechSynthesis" in window)) { if (onEnd) onEnd(); return; }
+    const voice = lang === "ru-RU" ? _preferredVoiceRu : _preferredVoiceEn;
+    if (!voice) { if (onError) onError("no-voice"); if (onEnd) onEnd(); return; }
     const token = ++_speakToken;
     let settled = false;
     try {
@@ -217,12 +234,13 @@
       const u = new SpeechSynthesisUtterance(text);
       u.lang = lang;
       u.rate = rate || SPEECH_RATE;
-      const voice = lang === "ru-RU" ? _preferredVoiceRu : _preferredVoiceEn;
-      if (voice) u.voice = voice;
-      if (onEnd) {
-        u.onend = () => { settled = true; onEnd(); };
-        u.onerror = () => { settled = true; onEnd(); };
-      }
+      u.voice = voice;
+      u.onend = () => { settled = true; if (onEnd) onEnd(); };
+      u.onerror = e => {
+        settled = true;
+        if (onError) onError((e && e.error) || "unknown");
+        if (onEnd) onEnd();
+      };
       _currentUtterance = u; // keep a live reference — some browsers silently
       // drop speech if the utterance is garbage-collected before it plays
       window.speechSynthesis.speak(u);
@@ -232,14 +250,16 @@
       // used to hang the lesson forever. This watchdog forces onEnd after a
       // timeout so the app never gets stuck waiting for an event that isn't
       // coming.
-      if (onEnd) {
-        setTimeout(() => {
-          if (settled || token !== _speakToken) return;
-          settled = true;
-          onEnd();
-        }, 4000);
-      }
-    } catch (e) { if (onEnd) onEnd(); }
+      setTimeout(() => {
+        if (settled || token !== _speakToken) return;
+        settled = true;
+        if (onError) onError("silent-timeout");
+        if (onEnd) onEnd();
+      }, 4000);
+    } catch (e) {
+      if (onError) onError(e.message || String(e));
+      if (onEnd) onEnd();
+    }
   }
   function speakAnswer(text, onEnd) {
     speak(text, direction === "ru-en" ? "en-US" : "ru-RU", onEnd);
@@ -247,8 +267,8 @@
   // Speaks whichever side is currently the "shown/prompt" language (the
   // opposite of speakAnswer, which always speaks the answer side) — used by
   // the listening exercise types, where the prompt itself is audio-only.
-  function speakSource(text, onEnd, rate) {
-    speak(text, direction === "ru-en" ? "ru-RU" : "en-US", onEnd, rate);
+  function speakSource(text, onEnd, rate, onError) {
+    speak(text, direction === "ru-en" ? "ru-RU" : "en-US", onEnd, rate, onError);
   }
   // Estimate for the feedback timer bar's animation-duration only (cosmetic;
   // the actual advance is driven by the real TTS "end" event below).
@@ -873,15 +893,40 @@
         </button>
         <button class="listen-slow-btn" id="listenSlowBtn" type="button" title="Slow" aria-label="Listen slowly">🐢</button>
       </div>
+      <p class="audio-diag hidden" id="audioDiag"></p>
     `;
+  }
+  // Human-readable, actionable message per failure mode, so a device with
+  // broken TTS shows something explainable instead of a button that just
+  // silently does nothing.
+  function audioDiagMessage(kind) {
+    const lang = direction === "ru-en" ? "Russian" : "English";
+    if (kind === "no-voice") {
+      return `No ${lang} voice found on this device. On Android: Settings → System → Languages & input → Text-to-speech output → (gear icon) → Install voice data → ${lang}. Then reload this page.`;
+    }
+    if (kind === "silent-timeout") {
+      return `Nothing played. Your device lists a ${lang} voice but its Text-to-Speech engine may not actually have the voice data installed — check Settings → Text-to-speech output → Install voice data.`;
+    }
+    return `Playback error (${kind}). Try reloading the page, or check your phone's Text-to-Speech settings.`;
+  }
+  function showAudioDiag(el, kind) {
+    if (!el) return;
+    el.textContent = audioDiagMessage(kind);
+    el.classList.remove("hidden");
   }
   function wireAudioStage(text) {
     const stage = document.querySelector(".audio-stage");
     const playBtn = document.getElementById("listenPlayBtn");
     const slowBtn = document.getElementById("listenSlowBtn");
+    const diagEl = document.getElementById("audioDiag");
     function play(rate) {
+      // One last synchronous re-scan in case the background poll gave up
+      // before this particular device finished loading its voice list.
+      const preferred = direction === "ru-en" ? _preferredVoiceRu : _preferredVoiceEn;
+      if (!preferred) refreshVoices();
+      if (diagEl) diagEl.classList.add("hidden");
       stage.classList.add("playing");
-      speakSource(text, () => stage.classList.remove("playing"), rate);
+      speakSource(text, () => stage.classList.remove("playing"), rate, kind => showAudioDiag(diagEl, kind));
     }
     playBtn.addEventListener("click", () => play());
     slowBtn.addEventListener("click", () => play(SPEECH_RATE_SLOW));
@@ -1074,6 +1119,15 @@
           setTimeout(step, 150);
         };
         window.speechSynthesis.speak(u);
+        // Same silent-drop case as the main speak() watchdog: some Android
+        // builds drop an utterance with no end/error event at all, which
+        // used to hang passage playback on that paragraph forever.
+        setTimeout(() => {
+          if (advanced || token !== _passageToken) return;
+          advanced = true;
+          i++;
+          setTimeout(step, 150);
+        }, 4000);
       }
       step();
     });
