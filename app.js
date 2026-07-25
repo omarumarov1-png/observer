@@ -906,9 +906,9 @@
       afterAnswer(correct);
       const answerText = tgtTokens.join(" ");
       const fallback = correct ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_WRONG;
-      screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, answerText, visualDelay(correct, answerText)));
-      wireFeedbackReplay(answerText);
-      advanceAfterSpeech(answerText, fallback);
+      screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, answerText, visualDelay(correct, tgtText)));
+      wireFeedbackReplay(tgtText);
+      advanceAfterSpeech(tgtText, fallback);
     }
 
     function renderTiles() {
@@ -1075,9 +1075,9 @@
       afterAnswer(correct);
       const answerText = tgtTokens.join(" ");
       const fallback = correct ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_WRONG;
-      screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, answerText, visualDelay(correct, answerText)));
-      wireFeedbackReplay(answerText);
-      advanceAfterSpeech(answerText, fallback);
+      screenEl.insertAdjacentHTML("beforeend", renderFeedback(correct, answerText, visualDelay(correct, tgtText)));
+      wireFeedbackReplay(tgtText);
+      advanceAfterSpeech(tgtText, fallback);
     }
 
     function renderTiles() {
