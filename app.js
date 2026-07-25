@@ -38,6 +38,13 @@
   const hoardModal = document.getElementById("hoardModal");
 
   let course = null;
+  // text -> {file, voice}, loaded from data/audio/manifest.json alongside
+  // course.json. Real pre-generated Kokoro voice lines for the English side
+  // only (via the user's local Voicebox app) -- Russian keeps using
+  // speechSynthesis, and English text missing from the manifest (or asked
+  // for at the slow replay rate, which has no bundled variant) falls back
+  // to it too.
+  let audioManifest = {};
   let flatLessons = [];
   let exerciseIndex = new Map();
   let progress = null;
@@ -231,8 +238,34 @@
   const SPEECH_RATE_SLOW = 0.55;
   let _currentUtterance = null;
   let _speakToken = 0;
+  let _currentBundledAudio = null;
+  // Plays a pre-generated recording instead of speechSynthesis. Stops any
+  // other bundled clip first (rapid re-taps/replays), same spirit as the
+  // speechSynthesis cancel-before-speak guard below.
+  function playBundledAudio(entry, onEnd) {
+    if (_currentBundledAudio) { _currentBundledAudio.pause(); _currentBundledAudio = null; }
+    const audio = new Audio(`data/audio/${entry.file}`);
+    _currentBundledAudio = audio;
+    let settled = false;
+    const settle = () => { if (settled) return; settled = true; if (onEnd) onEnd(); };
+    audio.addEventListener("ended", settle, { once: true });
+    audio.addEventListener("error", settle, { once: true });
+    audio.play().catch(settle);
+  }
   function speak(text, lang, onEnd, rate, onError) {
-    if (soundMuted || !("speechSynthesis" in window)) { if (onEnd) onEnd(); return; }
+    if (soundMuted) { if (onEnd) onEnd(); return; }
+    // Only English, only the normal rate has a bundled recording -- Russian,
+    // slow replay, and any sentence missing from the manifest fall through
+    // to speechSynthesis.
+    const bundled = lang === "en-US" && (!rate || rate === SPEECH_RATE) && audioManifest[text];
+    if (bundled) {
+      if (window.speechSynthesis && (window.speechSynthesis.speaking || window.speechSynthesis.pending)) {
+        window.speechSynthesis.cancel();
+      }
+      playBundledAudio(bundled, onEnd);
+      return;
+    }
+    if (!("speechSynthesis" in window)) { if (onEnd) onEnd(); return; }
     const voice = lang === "ru-RU" ? _preferredVoiceRu : _preferredVoiceEn;
     if (!voice) { if (onError) onError("no-voice"); if (onEnd) onEnd(); return; }
     const token = ++_speakToken;
@@ -396,10 +429,16 @@
 
   // ---------- boot ----------
   async function loadCourseData() {
-    const res = await fetch("data/course.json");
+    const [res, manifestRes] = await Promise.all([
+      fetch("data/course.json"),
+      fetch("data/audio/manifest.json").catch(() => null),
+    ]);
     if (!res.ok) throw new Error("Failed to load course data");
     const data = await res.json();
     course = data.course;
+    if (manifestRes && manifestRes.ok) {
+      try { audioManifest = await manifestRes.json(); } catch (e) { audioManifest = {}; }
+    }
 
     flatLessons = [];
     exerciseIndex = new Map();
@@ -1114,13 +1153,14 @@
       if (_passagePlaying) {
         _passageToken++;
         window.speechSynthesis.cancel();
+        if (_currentBundledAudio) { _currentBundledAudio.pause(); _currentBundledAudio = null; }
         _passagePlaying = false;
         btn.textContent = "🔊 Listen";
         lineEls.forEach(l => l.classList.remove("speaking"));
         return;
       }
-      if (soundMuted || !("speechSynthesis" in window)) return;
-      window.speechSynthesis.cancel();
+      if (soundMuted) return;
+      if ("speechSynthesis" in window) window.speechSynthesis.cancel();
       _passagePlaying = true;
       btn.textContent = "⏹ Stop";
       const token = ++_passageToken;
@@ -1133,6 +1173,15 @@
         }
         lineEls.forEach(l => l.classList.remove("speaking"));
         if (lineEls[i]) lineEls[i].classList.add("speaking");
+        const bundled = audioManifest[paragraphs[i].en];
+        if (bundled) {
+          playBundledAudio(bundled, () => {
+            if (token !== _passageToken) return;
+            i++;
+            setTimeout(step, 150);
+          });
+          return;
+        }
         const u = new SpeechSynthesisUtterance(paragraphs[i].en);
         u.lang = "en-US";
         u.rate = SPEECH_RATE;
